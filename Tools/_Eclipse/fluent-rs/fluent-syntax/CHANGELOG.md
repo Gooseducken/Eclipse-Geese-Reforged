@@ -1,0 +1,78 @@
+# Changelog
+
+## Unreleased
+
+## fluent-syntax 0.12.0 (May 20, 2025)
+  - Add module `serializer`
+  - De-ambiguate dependencies vs. features
+  - Cleanup docs
+  - Satiate Clippy
+
+## fluent-syntax 0.11.1 (March 16, 2024)
+  - This is a 'safe harbor' release prior to bringing on non-Mozilla community maintainers
+  - Create generic ftl serializer `fluent_syntax::serializer`
+  - Fix crash when parsing multiline CRLF comment
+  - Treat tab as text, not whitespace, adds `parser::matches_fluent_ws` function
+  - Workspace: Update to Rust 2021
+  - Workspace: Add various missing documentation and fix typos and links
+  - Workspace: Cleanup meta-data using workspaces, use SPDX licenses, etc.
+  - Workspace: Apply rustfmt and clippy lint fixes
+
+## fluent-syntax 0.11.0 (February 9, 2021)
+  - Document the crate.
+  - Switch to use `thiserror` for Error annotations.
+  - Add `iai` benchmarks.
+  - Minor updates to AST names.
+  - Introduce `parse`/`parse_runtime` functions instead of `Parser` struct.
+  - Make `ParserError` use `Range`.
+
+## fluent-syntax 0.10.3 (January 31, 2021)
+  - A bunch of microoptimizations driven by the ioi benchmark.
+
+## fluent-syntax 0.10.2 (January 24, 2021)
+  - Add `parse_runtime` method on `Parser` which skips comments.
+  - Fix handling of empty CRLF lines in mutliline patterns.
+
+## fluent-syntax 0.10.1 (January 3, 2021)
+  - Make `ParserError` `Clone`.
+  - Apply `clippy` lints.
+
+## fluent-syntax 0.10.0 (September 24, 2020)
+  - Refactored AST to be generic over S which enables sliced, or owned ASTs.
+  - Simplified the AST to get it closer to reference AST.
+  - Refactored the parser to be composable.
+  - Moved serde derives onto AST nodes behind `serde` optional feature.
+  - Around 8-10% performance improvement on parsing "browser" and "preferences" contexts.
+
+## fluent-syntax 0.9.3 (March 4, 2020)
+  - Move JSON serialization from tests to source code behind the feature flag.
+  - Fix a minor syntax issue that caused the parser to recognize a comment ending on EOF as Junk.
+  - Add context benchmarks for Firefox contexts - browser and preferences.
+
+## fluent-syntax 0.9.2 (February 13, 2020)
+  - Import updated tests from the reference parser.
+  - Minor parser improvements to align with new tests.
+
+## fluent-syntax 0.9.1 (November 26, 2019)
+  - Dependency updates.
+  - Better test coverage.
+
+## fluent-syntax 0.9.0 (March 26, 2019)
+  - Update to Fluent Syntax 0.9
+  - Unify benchmark testsuite with fluent.js
+
+## fluent-syntax 0.8.0 (January 31, 2019)
+  - Update to Fluent Syntax 0.8
+  - Switch to zero-copy parser
+  - Start using reference FTL fixtures in tests
+  - Switch to criterion for benchmarks
+  - Rust 2018 edition
+
+## fluent-syntax 0.1.1 (August 29, 2018)
+
+  - enable ParserError to be compared.
+
+## fluent-syntax 0.1.0 (July 29, 2018)
+
+  - Initial release of the standalone fluent-syntax.
+    Based on fluent 0.2.0, and syntax 0.5

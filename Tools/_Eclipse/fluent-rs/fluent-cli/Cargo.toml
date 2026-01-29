@@ -1,0 +1,32 @@
+[package]
+name = "fluent-cli"
+description = """
+A collection of developer-oriented command line interface tools for Project Fluent,
+a localization system designed to unleash the entire expressive power of natural language translations.
+"""
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+authors.workspace = true
+categories.workspace = true
+keywords.workspace = true
+readme = "README.md"
+
+[[bin]]
+name = "resolver-cli"
+path = "src/resolver.rs"
+
+[[bin]]
+name = "parser-cli"
+path = "src/main.rs"
+
+[dependencies]
+fluent-bundle.workspace = true
+fluent-syntax.workspace = true
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+annotate-snippets = { version = "0.6", features = ["color"] }
+clap = "2.33"

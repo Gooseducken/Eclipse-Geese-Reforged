@@ -94,10 +94,19 @@ impl FtlFile {
             match entry {
                 fluent_syntax::ast::Entry::Message(message) => {
                     messages.push(MessageWrapper {
-                        inner: message,
+                        inner: FtlMessageType::Message(message),
                         changed: false,
                     });
                 }
+                fluent_syntax::ast::Entry::Term(term) => {
+                    messages.push(MessageWrapper {
+                        inner: FtlMessageType::Term(term),
+                        changed: false,
+                    });
+                }
+                fluent_syntax::ast::Entry::Comment(_) => (),
+                fluent_syntax::ast::Entry::GroupComment(_) => (),
+                fluent_syntax::ast::Entry::ResourceComment(_) => (),
                 _ => {
                     log::error!(
                         "Encountered unused fluent ast entry while parsing file body. Path: {}, Message: {:?}",
@@ -123,7 +132,7 @@ impl FtlFile {
         self.messages.iter().any(|v| v.id() == id)
     }
 
-    pub fn add_message(&mut self, message: fluent_syntax::ast::Message<String>) {
+    pub fn add_message(&mut self, message: FtlMessageType) {
         self.messages.push(MessageWrapper {
             inner: message,
             changed: true,
@@ -140,7 +149,10 @@ impl FtlFile {
             body: self
                 .messages
                 .iter()
-                .map(|v| fluent_syntax::ast::Entry::Message(v.inner.clone()))
+                .map(|v| match v.inner.clone() {
+                    FtlMessageType::Message(message) => fluent_syntax::ast::Entry::Message(message),
+                    FtlMessageType::Term(term) => fluent_syntax::ast::Entry::Term(term),
+                })
                 .collect(),
         };
         let serialized_resource = fluent_syntax::serializer::serialize(&resource);
@@ -155,20 +167,94 @@ pub enum ParseFtlFileError {
     FtlParse(Vec<fluent_syntax::parser::ParserError>),
 }
 
+#[derive(PartialEq, Clone)]
+pub enum FtlMessageType {
+    Message(fluent_syntax::ast::Message<String>),
+    Term(fluent_syntax::ast::Term<String>),
+}
+
+impl FtlMessageType {
+    pub fn set_comment(&mut self, value: Option<fluent_syntax::ast::Comment<String>>) {
+        match self {
+            FtlMessageType::Message(message) => message.comment = value,
+            FtlMessageType::Term(term) => term.comment = value,
+        }
+    }
+
+    pub fn value(&self) -> Option<&fluent_syntax::ast::Pattern<String>> {
+        match &self {
+            FtlMessageType::Message(message) => message.value.as_ref(),
+            FtlMessageType::Term(term) => Some(&term.value),
+        }
+    }
+
+    pub fn set_value(&mut self, value: Option<fluent_syntax::ast::Pattern<String>>) {
+        match self {
+            FtlMessageType::Message(message) => message.value = value,
+            FtlMessageType::Term(term) => term.value = value.unwrap(),
+        }
+    }
+
+    pub fn attributes(&self) -> &Vec<fluent_syntax::ast::Attribute<String>> {
+        match &self {
+            FtlMessageType::Message(message) => &message.attributes,
+            FtlMessageType::Term(term) => &term.attributes,
+        }
+    }
+
+    pub fn set_attributes(&mut self, attributes: Vec<fluent_syntax::ast::Attribute<String>>) {
+        match self {
+            FtlMessageType::Message(message) => message.attributes = attributes,
+            FtlMessageType::Term(term) => term.attributes = attributes,
+        }
+    }
+}
+
 #[derive(PartialEq)]
 pub struct MessageWrapper {
-    inner: fluent_syntax::ast::Message<String>,
+    inner: FtlMessageType,
 
     changed: bool,
 }
 
 impl MessageWrapper {
     pub fn id(&self) -> &fluent_syntax::ast::Identifier<String> {
-        &self.inner.id
+        match &self.inner {
+            FtlMessageType::Message(message) => &message.id,
+            FtlMessageType::Term(term) => &term.id,
+        }
+    }
+
+    pub fn comment(&self) -> Option<&fluent_syntax::ast::Comment<String>> {
+        match &self.inner {
+            FtlMessageType::Message(message) => message.comment.as_ref(),
+            FtlMessageType::Term(term) => term.comment.as_ref(),
+        }
+    }
+
+    pub fn comment_mut(&mut self) -> &mut Option<fluent_syntax::ast::Comment<String>> {
+        match &mut self.inner {
+            FtlMessageType::Message(message) => &mut message.comment,
+            FtlMessageType::Term(term) => &mut term.comment,
+        }
+    }
+
+    pub fn value(&self) -> Option<&fluent_syntax::ast::Pattern<String>> {
+        match &self.inner {
+            FtlMessageType::Message(message) => message.value.as_ref(),
+            FtlMessageType::Term(term) => Some(&term.value),
+        }
+    }
+
+    pub fn attributes(&self) -> &Vec<fluent_syntax::ast::Attribute<String>> {
+        match &self.inner {
+            FtlMessageType::Message(message) => &message.attributes,
+            FtlMessageType::Term(term) => &term.attributes,
+        }
     }
 
     pub fn get_hash(&self) -> Result<Option<[u8; 32]>, GetHashError> {
-        let Some(hash_comment) = &self.inner.comment else {
+        let Some(hash_comment) = self.comment() else {
             return Ok(None);
         };
         if hash_comment.content.is_empty() {
@@ -186,21 +272,21 @@ impl MessageWrapper {
 
     pub fn calculate_hash(&self) -> [u8; 32] {
         let mut hasher = Sha256::new();
-        if let Some(v) = &self.inner.value {
+        if let Some(v) = &self.value() {
             hasher.update(serde_json::to_string(&v).unwrap());
         }
-        for attribute in &self.inner.attributes {
+        for attribute in self.attributes() {
             hasher.update(serde_json::to_string(&attribute).unwrap());
         }
 
         hasher.finalize().into()
     }
 
-    pub fn inner(&self) -> &fluent_syntax::ast::Message<String> {
+    pub fn inner(&self) -> &FtlMessageType {
         &self.inner
     }
 
-    pub fn inner_mut(&mut self) -> ChangeGuard<fluent_syntax::ast::Message<String>> {
+    pub fn inner_mut(&mut self) -> ChangeGuard<FtlMessageType> {
         ChangeGuard::new(&mut self.inner, &mut self.changed)
     }
 }

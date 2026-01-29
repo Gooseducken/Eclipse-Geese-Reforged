@@ -42,15 +42,14 @@ fn main() {
             match message.get_hash() {
                 Ok(Some(v)) => v,
                 Ok(None) => {
-                    message.inner_mut().comment = Some(fluent_syntax::ast::Comment {
+                    *message.comment_mut() = Some(fluent_syntax::ast::Comment {
                         content: vec![format!("HASH: {}", hex::encode(source_hash))],
                     });
                     source_hash
                 }
                 Err(ftl::GetHashError::HashCommentNoPrefix) => {
                     message
-                        .inner_mut()
-                        .comment
+                        .comment_mut()
                         .as_mut()
                         .unwrap()
                         .content
@@ -66,11 +65,11 @@ fn main() {
         if source_hash != target_hash {
             let source_inner = source_message.inner();
             let mut target_inner = message.inner_mut();
-            target_inner.attributes = source_inner.attributes.clone();
-            target_inner.value = source_inner.value.clone();
-            target_inner.comment = Some(fluent_syntax::ast::Comment {
+            target_inner.set_attributes(source_inner.attributes().clone());
+            target_inner.set_value(source_inner.value().cloned());
+            target_inner.set_comment(Some(fluent_syntax::ast::Comment {
                 content: vec![format!("HASH: {}", hex::encode(source_hash))],
-            });
+            }));
         }
     }
 
@@ -85,9 +84,9 @@ fn main() {
 
         if !file.contains_id(message.id()) {
             let mut message_inner = message.inner().clone();
-            message_inner.comment = Some(fluent_syntax::ast::Comment {
+            message_inner.set_comment(Some(fluent_syntax::ast::Comment {
                 content: vec![format!("HASH: {}", hex::encode(message.calculate_hash()))],
-            });
+            }));
             file.add_message(message_inner);
         }
     }
