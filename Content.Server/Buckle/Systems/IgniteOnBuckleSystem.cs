@@ -1,6 +1,7 @@
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Buckle.Components;
+using Content.Shared.Maps;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Buckle.Systems;
@@ -18,6 +19,7 @@ public sealed class IgniteOnBuckleSystem : EntitySystem
         SubscribeLocalEvent<IgniteOnBuckleComponent, UnstrappedEvent>(OnUnstrapped);
 
         SubscribeLocalEvent<ActiveIgniteOnBuckleComponent, MapInitEvent>(ActiveOnInit);
+        SubscribeLocalEvent<ActiveIgniteOnBuckleComponent, PostMapInitEvent>(ActiveOnPostMapInit);
     }
 
     private void OnStrapped(Entity<IgniteOnBuckleComponent> ent, ref StrappedEvent args)
@@ -32,10 +34,22 @@ public sealed class IgniteOnBuckleSystem : EntitySystem
 
     private void ActiveOnInit(Entity<ActiveIgniteOnBuckleComponent> ent, ref MapInitEvent args)
     {
+        Init(ent); // Eclipse
+    }
+
+    // Eclipse-Start
+    private void ActiveOnPostMapInit(EntityUid uid, ActiveIgniteOnBuckleComponent component, PostMapInitEvent args)
+    {
+        Init((uid, component));
+    }
+
+    private void Init(Entity<ActiveIgniteOnBuckleComponent> ent)
+    {
         // Handle this via a separate MapInit so the component can be added by itself if need be.
         ent.Comp.NextIgniteTime = _timing.CurTime + ent.Comp.NextIgniteTime;
         Dirty(ent);
     }
+    // Eclipse-End
 
     private void OnUnstrapped(Entity<IgniteOnBuckleComponent> ent, ref UnstrappedEvent args)
     {

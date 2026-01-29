@@ -9,6 +9,7 @@ using Content.Shared.Database;
 using Content.Shared.Decals;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Maps;
 using Content.Shared.Nutrition.EntitySystems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
@@ -32,6 +33,7 @@ public sealed class CrayonSystem : SharedCrayonSystem
         base.Initialize();
 
         SubscribeLocalEvent<CrayonComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CrayonComponent, PostMapInitEvent>(OnPostMapInit);
         SubscribeLocalEvent<CrayonComponent, CrayonSelectMessage>(OnCrayonBoundUI);
         SubscribeLocalEvent<CrayonComponent, CrayonColorMessage>(OnCrayonBoundUIColor);
         SubscribeLocalEvent<CrayonComponent, UseInHandEvent>(OnCrayonUse);
@@ -41,11 +43,23 @@ public sealed class CrayonSystem : SharedCrayonSystem
 
     private void OnMapInit(Entity<CrayonComponent> ent, ref MapInitEvent args)
     {
+        Init(ent); // Eclipse
+    }
+
+    // Eclipse-Start
+    private void OnPostMapInit(EntityUid uid, CrayonComponent component, PostMapInitEvent args)
+    {
+        Init((uid, component));
+    }
+
+    private void Init(Entity<CrayonComponent> ent)
+    {
         // Get the first one from the catalog and set it as default
         var decal = _prototypeManager.EnumeratePrototypes<DecalPrototype>().FirstOrDefault(x => x.Tags.Contains("crayon"));
         ent.Comp.SelectedState = decal?.ID ?? string.Empty;
         Dirty(ent);
     }
+    // Eclipse-End
 
     // Runs after IngestionSystem so it doesn't bulldoze force-feeding
     private void OnCrayonAfterInteract(EntityUid uid, CrayonComponent component, AfterInteractEvent args)

@@ -18,6 +18,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Anomaly;
 
@@ -50,6 +51,7 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
     {
         base.Initialize();
         SubscribeLocalEvent<AnomalyComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<AnomalyComponent, PostMapInitEvent>(OnPostMapInit);
         SubscribeLocalEvent<AnomalyComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<AnomalyComponent, StartCollideEvent>(OnStartCollide);
         SubscribeLocalEvent<AnomalyStabilityChangedEvent>(OnVesselAnomalyStabilityChanged);
@@ -69,6 +71,13 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
         anomaly.Comp.Continuity = _random.NextFloat(anomaly.Comp.MinContituty, anomaly.Comp.MaxContituty);
         SetBehavior(anomaly, GetRandomBehavior());
     }
+
+    // Eclipse-Start
+    private void OnPostMapInit(EntityUid uid, AnomalyComponent component, PostMapInitEvent args)
+    {
+        component.NextPulseTime = Timing.CurTime + GetPulseLength(component) * 3;
+    }
+    // Eclipse-End
 
     public void ShuffleParticlesEffect(Entity<AnomalyComponent> anomaly)
     {
