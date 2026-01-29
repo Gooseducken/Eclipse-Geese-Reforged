@@ -222,16 +222,16 @@ public abstract partial class SharedGunSystem
 
     private void OnBallisticMapInit(Entity<BallisticAmmoProviderComponent> ent, ref MapInitEvent args)
     {
-        BallisticMapInit(uid, component); // Eclipse
+        BallisticMapInit(ent); // Eclipse
     }
 
     // Eclipse-Start
     private void OnBallisticPostMapInit(EntityUid uid, BallisticAmmoProviderComponent component, PostMapInitEvent args)
     {
-        BallisticMapInit(uid, component);
+        BallisticMapInit((uid, component));
     }
 
-    private void BallisticMapInit(EntityUid uid, BallisticAmmoProviderComponent component)
+    private void BallisticMapInit(Entity<BallisticAmmoProviderComponent> ent)
     {
         // TODO this should be part of the prototype, not set on map init.
         // Alternatively, just track spawned count, instead of unspawned count.
