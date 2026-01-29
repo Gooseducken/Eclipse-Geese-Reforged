@@ -41,6 +41,7 @@ using Content.Server.Construction.Components;
 using Content.Shared.Chat;
 using Content.Shared.Damage.Components;
 using Content.Shared.Temperature.Components;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Kitchen.EntitySystems
 {

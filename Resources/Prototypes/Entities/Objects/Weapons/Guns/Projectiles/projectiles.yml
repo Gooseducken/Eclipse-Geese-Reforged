@@ -381,7 +381,6 @@
     damage:
       types:
         Heat: 14
-  - type: SupermatterFood # Eclipse
   # mining laser real
   - type: GatheringProjectile
   - type: Tag

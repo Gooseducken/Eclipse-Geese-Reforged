@@ -1,6 +1,7 @@
 using Content.Server.Ghost;
 using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Light.EntitySystems;
 

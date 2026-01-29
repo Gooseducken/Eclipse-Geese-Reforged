@@ -11,6 +11,7 @@ using Content.Shared.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Store.Systems;
 

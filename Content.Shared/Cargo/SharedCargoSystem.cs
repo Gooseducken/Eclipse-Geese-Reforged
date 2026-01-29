@@ -5,6 +5,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Shared.Cargo;
 

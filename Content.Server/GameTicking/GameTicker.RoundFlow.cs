@@ -194,25 +194,11 @@ namespace Content.Server.GameTicking
         {
             var ev = RaisePreLoad(proto, options, offset, rot);
 
-            // Eclipse-Start : dynamically set map path
-            var mapPath = ev.GameMap.MapPath;
-            if (ev.GameMap.DynamicMapPath && ev.GameMap.DynamicMapPathGenerator is not null)
-            {
-                mapPath = ev.GameMap.DynamicMapPathGenerator.Generate();
-
-                // Fallback if the map file doesn't exist
-                if (!_resourceManager.UserData.Exists(mapPath) && !_resourceManager.ContentFileExists(mapPath))
-                {
-                    mapPath = ev.GameMap.MapPath;
-                }
-            }
-            // Eclipse-End
-
             if (ev.GameMap.IsGrid)
             {
                 var mapUid = _map.CreateMap(out mapId, runMapInit: options?.InitializeMaps ?? false);
                 if (!_loader.TryLoadGrid(mapId,
-                        mapPath, // Eclipse : dynamically set map path
+                        ev.GameMap.MapPath,
                         out var grid,
                         ev.Options,
                         ev.Offset,
@@ -227,7 +213,7 @@ namespace Content.Server.GameTicking
                 return g;
             }
 
-            if (!_loader.TryLoadMap(mapPath, // Eclipse : dynamically set map path
+            if (!_loader.TryLoadMap(ev.GameMap.MapPath,
                     out var map,
                     out var grids,
                     ev.Options,
@@ -258,25 +244,11 @@ namespace Content.Server.GameTicking
         {
             var ev = RaisePreLoad(proto, opts, offset, rot);
 
-            // Eclipse-Start : dynamically set map path
-            var mapPath = ev.GameMap.MapPath;
-            if (ev.GameMap.DynamicMapPath && ev.GameMap.DynamicMapPathGenerator is not null)
-            {
-                mapPath = ev.GameMap.DynamicMapPathGenerator.Generate();
-
-                // Fallback if the map file doesn't exist
-                if (!_resourceManager.UserData.Exists(mapPath) && !_resourceManager.ContentFileExists(mapPath))
-                {
-                    mapPath = ev.GameMap.MapPath;
-                }
-            }
-            // Eclipse-End
-
             if (ev.GameMap.IsGrid)
             {
                 var mapUid = _map.CreateMap(mapId);
                 if (!_loader.TryLoadGrid(mapId,
-                        mapPath, // Eclipse : dynamically set map path
+                        ev.GameMap.MapPath,
                         out var grid,
                         ev.Options,
                         ev.Offset,
@@ -293,7 +265,7 @@ namespace Content.Server.GameTicking
 
             if (!_loader.TryLoadMapWithId(
                     mapId,
-                    mapPath, // Eclipse : dynamically set map path
+                    ev.GameMap.MapPath,
                     out var map,
                     out var grids,
                     ev.Options,
@@ -324,24 +296,10 @@ namespace Content.Server.GameTicking
             // This is quite different from the other methods, which will actually create a **new** map.
             var ev = RaisePreLoad(proto, opts, offset, rot);
 
-            // Eclipse-Start : dynamically set map path
-            var mapPath = ev.GameMap.MapPath;
-            if (ev.GameMap.DynamicMapPath && ev.GameMap.DynamicMapPathGenerator is not null)
-            {
-                mapPath = ev.GameMap.DynamicMapPathGenerator.Generate();
-
-                // Fallback if the map file doesn't exist
-                if (!_resourceManager.UserData.Exists(mapPath) && !_resourceManager.ContentFileExists(mapPath))
-                {
-                    mapPath = ev.GameMap.MapPath;
-                }
-            }
-            // Eclipse-End
-
             if (ev.GameMap.IsGrid)
             {
                 if (!_loader.TryLoadGrid(targetMap,
-                        mapPath, // Eclipse : dynamically set map path
+                        ev.GameMap.MapPath,
                         out var grid,
                         ev.Options,
                         ev.Offset,
@@ -357,7 +315,7 @@ namespace Content.Server.GameTicking
             }
 
             if (!_loader.TryMergeMap(targetMap,
-                    mapPath, // Eclipse : dynamically set map path
+                    ev.GameMap.MapPath,
                     out var grids,
                     ev.Options,
                     ev.Offset,

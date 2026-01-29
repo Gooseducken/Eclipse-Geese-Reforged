@@ -3,6 +3,7 @@ using Content.Server.Temperature.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Temperature.Components;
 using Robust.Shared.Timing;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Body.Systems;
 

@@ -15,6 +15,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Singularity.EntitySystems;
 

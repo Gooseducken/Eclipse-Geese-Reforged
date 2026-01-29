@@ -5,6 +5,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Chat;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Vocalization.Systems;
 

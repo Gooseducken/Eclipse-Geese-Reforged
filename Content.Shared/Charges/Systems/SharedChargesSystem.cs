@@ -4,6 +4,7 @@ using Content.Shared.Examine;
 using Content.Shared.Rejuvenate;
 using JetBrains.Annotations;
 using Robust.Shared.Timing;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Shared.Charges.Systems;
 

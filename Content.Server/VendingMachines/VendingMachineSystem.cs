@@ -15,6 +15,7 @@ using Content.Shared.VendingMachines;
 using Content.Shared.Wall;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.VendingMachines
 {

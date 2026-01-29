@@ -5,6 +5,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.IdentityManagement.Components;
 using Content.Shared.Prototypes;
 using Robust.Shared.Prototypes;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Clothing.Systems;
 

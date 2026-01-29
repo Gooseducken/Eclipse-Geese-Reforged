@@ -6,6 +6,7 @@ using Content.Shared.Teleportation.Systems;
 using Content.Shared.UserInterface;
 using Content.Shared.Warps;
 using Content.Shared.Whitelist;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Server.Teleportation;
 
