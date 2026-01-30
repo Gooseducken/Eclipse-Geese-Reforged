@@ -22,6 +22,7 @@ using Robust.Shared.Random;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Shared.Hands.Components;
+using Content.Shared.Maps;
 
 namespace Content.Server.Forensics
 {
@@ -48,7 +49,19 @@ namespace Content.Server.Forensics
             SubscribeLocalEvent<DnaComponent, TransferDnaEvent>(OnTransferDnaEvent);
             SubscribeLocalEvent<DnaSubstanceTraceComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
             SubscribeLocalEvent<CleansForensicsComponent, GetVerbsEvent<UtilityVerb>>(OnUtilityVerb);
+
+            SubscribeLocalEvent<ForensicsComponent, PostMapInitEvent>(OnPostMapInit); // Eclipse: clean forensics after init
         }
+
+        // Eclipse-Start: clean forensics after init
+        private void OnPostMapInit(EntityUid uid, ForensicsComponent component, PostMapInitEvent args)
+        {
+            component.Fingerprints.Clear();
+            component.Fibers.Clear();
+            component.DNAs.Clear();
+            component.Residues.Clear();
+        }
+        // Eclipse-End
 
         private void OnSolutionChanged(Entity<DnaSubstanceTraceComponent> ent, ref SolutionContainerChangedEvent ev)
         {

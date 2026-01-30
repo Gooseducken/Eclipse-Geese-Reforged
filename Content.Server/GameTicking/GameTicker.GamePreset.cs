@@ -103,7 +103,7 @@ public sealed partial class GameTicker
 
     private void InitializeGamePreset()
     {
-        SetGamePreset(LobbyEnabled ? _cfg.GetCVar(CCVars.GameLobbyDefaultPreset) : "sandbox");
+        SetGamePreset(LobbyEnabled ? _cfg.GetCVar(CCVars.GameLobbyDefaultPreset) : _cfg.GetCVar(CCVars.GameNoLobbyDefaultPreset)); // Eclipse: control no lobby preset via CVar
     }
 
     public void SetGamePreset(GamePresetPrototype? preset, bool force = false, GamePresetPrototype? decoy = null, int? resetDelay = null)

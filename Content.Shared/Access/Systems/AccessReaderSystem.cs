@@ -20,6 +20,7 @@ using Robust.Shared.Collections;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.Maps; // Eclipse
 
 namespace Content.Shared.Access.Systems;
 
@@ -50,7 +51,16 @@ public sealed class AccessReaderSystem : EntitySystem
 
         SubscribeLocalEvent<AccessReaderComponent, ComponentGetState>(OnGetState);
         SubscribeLocalEvent<AccessReaderComponent, ComponentHandleState>(OnHandleState);
+
+        SubscribeLocalEvent<AccessReaderComponent, PostMapInitEvent>(OnPostMapInit); // Eclipse: remove access logs
     }
+
+    // Eclipse-Start: remove access logs
+    private void OnPostMapInit(EntityUid uid, AccessReaderComponent component, PostMapInitEvent args)
+    {
+        component.AccessLog.Clear();
+    }
+    // Eclipse-End
 
     private void OnExamined(Entity<AccessReaderComponent> ent, ref ExaminedEvent args)
     {

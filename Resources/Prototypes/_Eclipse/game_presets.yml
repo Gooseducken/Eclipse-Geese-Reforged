@@ -1,0 +1,10 @@
+- type: gamePreset
+  id: Frontier
+  alias:
+  - frontier
+  name: frontier-title
+  description: frontier-description
+  showInVote: true
+  supportedMaps: FrontierMapPool
+  rules:
+  - BasicRoundstartVariation
