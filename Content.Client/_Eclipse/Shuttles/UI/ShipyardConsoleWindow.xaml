@@ -1,0 +1,33 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                           xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                           xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
+                           Title="{Loc 'shipyard-console-window-title'}"
+                           MinSize="400 400">
+<BoxContainer Orientation="Vertical">
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+
+        <!-- Shuttle Categories -->
+        <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="False">
+            <Label Text="{Loc 'shipyard-console-window-shuttle-categories'}" Margin="4 0 4 0" />
+            <ItemList Name="Categories" SelectMode="Single" VerticalExpand="True" />
+        </BoxContainer>
+
+        <cc:VSeparator/>
+
+        <!-- Shuttle Selection -->
+
+        <BoxContainer Name="PurchasableShuttles" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="4">
+
+        </BoxContainer>
+
+    </BoxContainer>
+
+    <cc:HSeparator/>
+
+    <GridContainer Columns="3" HorizontalExpand="True" Margin="0 8 0 2">
+        <Button Name="IdButton" Access="Public" Text="{Loc 'id-card-console-window-insert-button'}" />
+        <Button Name="SellShuttleButton" Text="{Loc 'shipyard-console-window-sell-button-text'}" Disabled="True" />
+    </GridContainer>
+
+</BoxContainer>
+</controls:FancyWindow>

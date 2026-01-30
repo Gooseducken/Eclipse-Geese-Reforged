@@ -483,4 +483,13 @@ public enum LogType
     /// Events related to players connecting/disconnecting.
     /// </summary>
     Connection = 104,
+
+    // Eclipse-Start
+
+    /// <summary>
+    /// A player interacted with a shipyard.
+    /// </summary>
+    Shipyard = 300
+
+    // Eclipse-End
 }

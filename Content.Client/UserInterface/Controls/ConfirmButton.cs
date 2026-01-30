@@ -30,6 +30,15 @@ public sealed class ConfirmButton : Button
     /// </summary>
     public new event Action<ButtonEventArgs>? OnPressed;
 
+    // Eclipse-Start
+
+    /// <summary>
+    /// Fired when the button was pressed (before confirmation)
+    /// </summary>
+    public new event Action<ButtonEventArgs>? OnConfirming;
+
+    // Eclipse-End
+
     /// <inheritdoc cref="Button.Text"/>
     /// <remarks>
     /// Hides the buttons text property to be able to sanely replace the button text with
@@ -129,6 +138,7 @@ public sealed class ConfirmButton : Button
                 _nextCooldown  = _gameTiming.CurTime + CooldownTime;
                 _nextReset = _gameTiming.CurTime + ResetTime;
                 Disabled = true;
+                OnConfirming?.Invoke(buttonEvent); // Eclipse
                 break;
             case true:
                 OnPressed?.Invoke(buttonEvent);
@@ -139,4 +149,13 @@ public sealed class ConfirmButton : Button
 
         IsConfirming = !IsConfirming;
     }
+
+    // Eclipse-Start
+    public void ClearConfirmation()
+    {
+        IsConfirming = false;
+        base.Text = Text;
+        DrawModeChanged();
+    }
+    // Eclipse-End
 }

@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerShipyard
+  name: shipyard console
+  description: Used to purchase and sell personal shuttles.
+  components:
+  - type: ShipyardConsole
+    idSlot:
+      name: id-card-console-target-id
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+        - IdCard
+    radioChannel: Common
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+      ShipyardConsole-id: !type:ContainerSlot
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Key:
+        type: ShipyardConsoleBoundUserInterface
+  - type: PointLight
+    radius: 1.5
+    energy: 4.0
+    color: "#43ccb5"
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
