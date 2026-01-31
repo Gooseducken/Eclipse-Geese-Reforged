@@ -1,2 +1,5 @@
-# HASH: bb311e85cc4951948bc9062c586e117129bd82ef4ad17b6e47b75a939ec61160
+### Tables which take damage when a user is dragged onto them
+
+## Showed to users other than the climber
+
 glass-table-shattered-others = { CAPITALIZE($table) } ломается под весом { $climber }!

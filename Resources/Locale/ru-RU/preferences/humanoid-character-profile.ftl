@@ -1,4 +1,5 @@
-# HASH: 9828b62424b5a23c4226ae84a5a2b39f4b432aba6a4845418ceb21e7bad38744
+### UI
+
 # Displayed in the Character prefs window
 humanoid-character-profile-summary =
     Это { $name }. { $gender ->
