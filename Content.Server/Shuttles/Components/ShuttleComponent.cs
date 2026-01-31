@@ -22,7 +22,7 @@ namespace Content.Server.Shuttles.Components
         [ViewVariables(VVAccess.ReadWrite)]
         public float BaseMaxLinearVelocity = 60f;
 
-        public const float MaxAngularVelocity = 4f;
+        public const float MaxAngularVelocity = 1f;  // Eclipse: Lower velocity to make small shuttles more manageable
 
         /// <summary>
         /// The cached thrust available for each cardinal direction

@@ -59,7 +59,7 @@ public sealed partial class ShipyardConsoleWindow : FancyWindow,
                 {
                     Shuttle = entry,
                     ShuttleName = { Text = Loc.GetString(entry!.Name) },
-                    Purchase = { Text = Loc.GetString("shipyard-console-purchase-available"), Disabled = !canPurchase },
+                    Purchase = { Text = Loc.GetString("shipyard-console-window-purchase-available"), Disabled = !canPurchase },
                     Price = { Text = "1$" },
                 };
 
