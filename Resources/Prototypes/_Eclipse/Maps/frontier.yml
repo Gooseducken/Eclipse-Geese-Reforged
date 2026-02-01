@@ -1,7 +1,7 @@
 - type: gameMap
   id: Frontier
   mapName: 'Frontier Station'
-  mapPath: /Maps/_Eclipse/newfrontier.yml
+  mapPath: /Maps/_Eclipse/NewFrontier.yml
   minPlayers: 0
   stations:
     Frontier:
