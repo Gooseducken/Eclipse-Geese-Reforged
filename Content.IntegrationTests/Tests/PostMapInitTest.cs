@@ -84,6 +84,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
+            /*
             "Dev",
             "TestTeg",
             "Fland",
@@ -102,6 +103,8 @@ namespace Content.IntegrationTests.Tests
             "dm01-entryway",
             "Exo",
             "Snowball",
+            */
+            "Frontier", // Eclipse : only test relevant map
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
