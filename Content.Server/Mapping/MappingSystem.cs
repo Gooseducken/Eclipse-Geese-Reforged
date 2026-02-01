@@ -60,7 +60,7 @@ public sealed class MappingSystem : EntitySystem
         if (!_autosaveEnabled)
             return;
 
-        foreach (var (uid, (time, name))in _currentlyAutosaving)
+        foreach (var (uid, (time, name)) in _currentlyAutosaving)
         {
             if (_timing.RealTime <= time)
                 continue;
@@ -76,7 +76,8 @@ public sealed class MappingSystem : EntitySystem
             var saveDir = Path.Combine(_cfg.GetCVar(CCVars.AutosaveDirectory), name).Replace(Path.DirectorySeparatorChar, '/');
             _resMan.UserData.CreateDir(new ResPath(saveDir).ToRootedPath());
 
-            var path = new ResPath(Path.Combine(saveDir, $"{DateTime.Now:yyyy-M-dd_HH.mm.ss}-AUTO.yml"));
+            var savePath = Path.Combine(saveDir, $"{DateTime.Now:yyyy-M-dd_HH.mm.ss}-AUTO.yml").Replace(Path.DirectorySeparatorChar, '/');
+            var path = new ResPath(savePath);
             Log.Info($"Autosaving map {name} ({uid}) to {path}. Next save in {ReadableTimeLeft(uid)} seconds.");
 
             if (HasComp<MapComponent>(uid))
@@ -104,7 +105,7 @@ public sealed class MappingSystem : EntitySystem
             ToggleAutosave(uid.Value, path);
     }
 
-    public void ToggleAutosave(EntityUid uid, string? path=null)
+    public void ToggleAutosave(EntityUid uid, string? path = null)
     {
         if (!_autosaveEnabled)
             return;
