@@ -1,64 +1,76 @@
-# HASH: 142967ed19d057e29b42403b9259da7fbf0c097b32df4194af0109cdf0f999d7
-marking-TattooVoxHeartLeftArm-heart_l_arm = Vox Left Arm Tattoo (Heart)
-# HASH: 142967ed19d057e29b42403b9259da7fbf0c097b32df4194af0109cdf0f999d7
-marking-TattooVoxHeartLeftArm = Vox Left Arm Tattoo (Heart)
-# HASH: 2cd29bc2fe588a72f506a270fc117a7c433ff2d7fc99ffdfa82966451a602c32
-marking-TattooVoxHeartRightArm-heart_r_arm = Vox Right Arm Tattoo (Heart)
-# HASH: 2cd29bc2fe588a72f506a270fc117a7c433ff2d7fc99ffdfa82966451a602c32
-marking-TattooVoxHeartRightArm = Vox Right Arm Tattoo (Heart)
-# HASH: 5b7f9f0e3459e7d7d0a453a4204f1bf9d2b4544a022f6124330bed2967c29785
-marking-TattooVoxHiveChest-hive_s = Vox Chest Tattoo (hive)
-# HASH: 5b7f9f0e3459e7d7d0a453a4204f1bf9d2b4544a022f6124330bed2967c29785
-marking-TattooVoxHiveChest = Vox Chest Tattoo (hive)
-# HASH: f11d030e39ac5cd08d09685de8116e833e1e8a9134114a754afc38bfe522affc
-marking-TattooVoxNightlingChest-nightling_s = Vox Chest Tattoo (nightling)
-# HASH: f11d030e39ac5cd08d09685de8116e833e1e8a9134114a754afc38bfe522affc
-marking-TattooVoxNightlingChest = Vox Chest Tattoo (nightling)
-# HASH: ac0b19813adb95896b854f83f945b1820f038b8e4bf03565516310b68751fa42
-marking-VoxScarEyeRight-vox_scar_eye_right = Right Eye Scar
-# HASH: bfae270ed71bf5a23717e9659340a28f17c02075ac3820b66a1a525bbf9b0952
-marking-VoxScarEyeRight = Eye Scar (Right)
-# HASH: bf9274e4035047de7bbd6b65b91f112e90a805b65e3201314b57d637477553df
-marking-VoxScarEyeLeft-vox_scar_eye_left = Left Eye Scar
-# HASH: 52e45572725277107c545cae7d8baafbaed21f372148bf48864c39427f4eb08c
-marking-VoxScarEyeLeft = Eye Scar (Left)
-# HASH: d10362d788dc74efa1e16794b8006d3a4aae781ebd2f4990bca4365eba788255
-marking-VoxScarTopSurgeryShort-vox_scar_top_surgery_short = Thoracotomy Scar
-# HASH: d10362d788dc74efa1e16794b8006d3a4aae781ebd2f4990bca4365eba788255
-marking-VoxScarTopSurgeryShort = Thoracotomy Scar
-# HASH: f7d40dbf2a3221afb0eb25e760bd3e5900cf1649b95266f1e02cd8eec561b50c
-marking-VoxScarTopSurgeryLong-vox_scar_top_surgery_long = Clamshell Scar
-# HASH: f7d40dbf2a3221afb0eb25e760bd3e5900cf1649b95266f1e02cd8eec561b50c
-marking-VoxScarTopSurgeryLong = Clamshell Scar
-# HASH: 4ec3e8d20b8c7135f6cb4827b5668f31910f90eb37ee8e4c84c57597f22727d2
-marking-VoxScarChest-vox_scar_chest = Chest Scar
-# HASH: 4ec3e8d20b8c7135f6cb4827b5668f31910f90eb37ee8e4c84c57597f22727d2
-marking-VoxScarChest = Chest Scar
-# HASH: 9de6a1aadda1c84b618f54492f9f3ab53ab899d83a62377d370537c152cf9519
-marking-VoxScarNeck-vox_scar_neck = Neck Scar
-# HASH: 9de6a1aadda1c84b618f54492f9f3ab53ab899d83a62377d370537c152cf9519
-marking-VoxScarNeck = Neck Scar
-# HASH: facc8f5d56673712f64996fc1858bc71a4b87d176112c98319e50fc4da8d7c73
-marking-VoxScarChestBullets-vox_scar_chest_bullets = Bullet Holes Scar
-# HASH: 6c7c23c1a12c4c6b75e3cdebe8511adc0d42c21d7c67375eb9d4d04686ec043c
-marking-VoxScarChestBullets = Chest Scar (Bullets)
-# HASH: facc8f5d56673712f64996fc1858bc71a4b87d176112c98319e50fc4da8d7c73
-marking-VoxScarStomachBullets-vox_scar_stomach_bullets = Bullet Holes Scar
-# HASH: 6ad206c0f00081fa1b7749054ceed3a1f89bcaf797628716075629a242ef0a0f
-marking-VoxScarStomachBullets = Stomach Scar (Bullets)
-# HASH: 5216fe08941b400aeeb2ec1153c2e9ba845bbddf44969aaab06fb3e08bc1c121
-marking-VoxScarFace1-vox_scar_face_1 = Face Scar
-# HASH: e2dfcc9e8d95b765973d8dbd04783262badb8c2cb6176a28d04ed59d26c482d9
-marking-VoxScarFace1 = Face Scar (Large)
-# HASH: 5216fe08941b400aeeb2ec1153c2e9ba845bbddf44969aaab06fb3e08bc1c121
-marking-VoxScarFace2-vox_scar_face_2 = Face Scar
-# HASH: 642bc2f1c32d773d3cde9e8350634baaa9a4a519de0e892d648b57998769cd37
-marking-VoxScarFace2 = Face Scar (Small)
-# HASH: cede0778c0eee68ebc5ecfa59fd48c5fcd7f7f18a00743820aefea81fb9ae017
-marking-VoxScarEyeRightSmall-vox_scar_eye_right_small = Right Eye Scar (Small)
-# HASH: e7331dd8a79e006767bd8ed6fbef0afbe51a242435e7c81c211229258ea09278
-marking-VoxScarEyeRightSmall = Small Eye Scar (Right)
-# HASH: 1156bd86d5774979a7ff01d7273b8f0465a36e6f503ae29907fad7a7988502dd
-marking-VoxScarEyeLeftSmall-vox_scar_eye_left_small = Left Eye Scar (Small)
-# HASH: 37f9da33b2e2bf2bf7d5fb18b2aef6d09924343ce8c738d9dd8db5099c6d69a2
-marking-VoxScarEyeLeftSmall = Small Eye Scar (Left)
+﻿marking-TattooVoxNightlingHead-tattoo_nightling_head = Вокс, Голова, Татуировка (Найтлинг)
+marking-TattooVoxNightlingHead = Вокс, Голова, Татуировка (Найтлинг)
+marking-TattooVoxArrowHead-tattoo_arrow_head = Вокс, Голова, Татуировка (Стрелка)
+marking-TattooVoxArrowHead = Вокс, Голова, Татуировка (Стрелка)
+marking-VoxTattooEyeliner-eyeliner = Подводка
+marking-VoxTattooEyeliner = Подводка
+marking-VoxVisage-visage = Маска (Полная)
+marking-VoxVisage = Маска (Полная)
+marking-VoxVisageL-visage_l = Маска (Левая)
+marking-VoxVisageL = Маска (Левая)
+marking-VoxVisageR-visage_r = Маска (Правая)
+marking-VoxVisageR = Маска (Левая)
+marking-VoxCheek-cheekblush = Щёки
+marking-VoxCheek = Щёки
+marking-VoxBeak-beak = Клюв (Острый)
+marking-VoxBeak = Клюв (Острый)
+marking-VoxBeakSquareCere-beak_squarecere = Клюв (Квадратная восковица)
+marking-VoxBeakSquareCere = Клюв (Квадратная восковица)
+marking-VoxBeakHooked-beak_hooked = Клюв (Крюк)
+marking-VoxBeakHooked = Клюв (Крюк)
+marking-VoxBeakShaved-beak_shaved = Клюв (Обрезанный)
+marking-VoxBeakShaved = Клюв (Обрезанный)
+marking-VoxBeakCoverTip-beakcover_tip = Полоска на клюве
+marking-VoxBeakCoverTip = Кончик клюва
+marking-VoxBeakCoverStripe-beakcover_stripe = Полоска на клюве
+marking-VoxBeakCoverStripe = Кончик клюва
+marking-TattooVoxHeartLeftArm-heart_l_arm = Вокс, Левая рука, Татуировка (Сердце)
+marking-TattooVoxHeartLeftArm = Вокс, Левая рука, Татуировка (Сердце)
+marking-TattooVoxHeartRightArm-heart_r_arm = Вокс, Правая рука, Татуировка (Сердце)
+marking-TattooVoxHeartRightArm = Вокс, Правая рука, Татуировка (Сердце)
+marking-TattooVoxHiveChest-hive_s = Вокс, Грудь, Татуировка (Улей)
+marking-TattooVoxHiveChest = Вокс, Грудь, Татуировка (Улей)
+marking-TattooVoxNightlingChest-nightling_s = Вокс, Грудь, Татуировка (Найтлинг)
+marking-TattooVoxNightlingChest = Вокс, Грудь, Татуировка (Найтлинг)
+marking-TattooVoxNightbelt-nightbelt = Вокс, Живот, Татуировка (Найтлинг)
+marking-TattooVoxNightbelt = Вокс, Живот, Татуировка (Найтлинг)
+marking-TattooVoxChestV-night_v = Вокс, Грудь, Татуировка (форма буквы V)
+marking-TattooVoxChestV = Вокс, Грудь, Татуировка (форма буквы V)
+marking-TattooVoxUnderbelly-underbelly = Грудь
+marking-TattooVoxUnderbelly = Грудь
+marking-VoxScarEyeRight-vox_scar_eye_right = Шрам на глазу (Правый)
+marking-VoxScarEyeRight = Шрам на глазу (Правый)
+marking-VoxScarEyeLeft-vox_scar_eye_left = Шрам на глазу (Левый)
+marking-VoxScarEyeLeft = Шрам на глазу (Левый)
+marking-VoxScarTopSurgeryShort-vox_scar_top_surgery_short = Шрам (Торакотомия)
+marking-VoxScarTopSurgeryShort = Шрам (Торакотомия)
+marking-VoxScarTopSurgeryLong-vox_scar_top_surgery_long = Шрам (Ракушка)
+marking-VoxScarTopSurgeryLong = Шрам (Ракушка)
+marking-VoxScarChest-vox_scar_chest = Шрам на груди
+marking-VoxScarChest = Шрам на груди
+marking-VoxScarNeck-vox_scar_neck = Шрам на шее
+marking-VoxScarNeck = Шрам на шее
+marking-VoxScarChestBullets-vox_scar_chest_bullets = Шрам, пулевые отверстия
+marking-VoxScarChestBullets = Шрам на груди (Пули)
+marking-VoxScarStomachBullets-vox_scar_stomach_bullets = Шрам, пулевые отверстия
+marking-VoxScarStomachBullets = Шрам на животе (Пули)
+marking-VoxScarFace1-vox_scar_face_1 = Шрам на лице
+marking-VoxScarFace1 = Шрам на лице (Большой)
+marking-VoxScarFace2-vox_scar_face_2 = Шрам на лице
+marking-VoxScarFace2 = Шрам на лице (Маленький)
+marking-VoxScarEyeRightSmall-vox_scar_eye_right_small = Шрам на глазу (Правый, Маленький)
+marking-VoxScarEyeRightSmall = Шрам на глазу (Правый, Маленький)
+marking-VoxScarEyeLeftSmall-vox_scar_eye_left_small = Шрам на глазу (Левый, Маленький)
+marking-VoxScarEyeLeftSmall = Шрам на глазу (Левый, Маленький)
+marking-VoxTailShort-vox_tail_small = Вокс, Хвост (Короткий)
+marking-VoxTailShort = Вокс, Хвост (Короткий)
+marking-VoxTail-vox_tail = Вокс, Хвост (Средний)
+marking-VoxTail = Вокс, Хвост (Средний)
+marking-VoxTailBig-vox_tail_big = Вокс, Хвост (Большой)
+marking-VoxTailBig = Вокс, Хвост (Большой)
+marking-VoxTailSpikes-vox_tail_spikes = Вокс, Хвост (Шипастый)
+marking-VoxTailSpikes = Вокс, Хвост (Шипастый)
+marking-VoxTailDocked-vox_tail_docked = Вокс, Хвост (Рудиментарный)
+marking-VoxTailDocked = Вокс, Хвост (Рудиментарный)
+marking-VoxTailSplit-vox_tail_split = Вокс, Хвост (Разделённый)
+marking-VoxTailSplit = Вокс, Хвост (Разделённый)
