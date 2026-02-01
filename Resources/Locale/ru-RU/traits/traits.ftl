@@ -1,14 +1,14 @@
 trait-blindness-name = Слепота
 trait-blindness-desc = Вы совершенно слепы и не можете видеть дальше нескольких метров перед собой.
+trait-narcolepsy-name = Нарколепсия
 trait-poor-vision-name = Близорукость
 trait-poor-vision-desc = Ваши глаза уже не те, что раньше, и вы с трудом видите предметы вдали без корректирующих очков.
-trait-narcolepsy-name = Нарколепсия
 trait-narcolepsy-desc = Вас одолевают приступы сонливости.
 trait-pacifist-name = Пацифист
 trait-pacifist-desc = Вы не можете нападать и причинять вред живым существам.
 permanent-blindness-trait-examined = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } глаза остекленелые и расфокусированные. Не похоже, что { SUBJECT($target) } может хорошо вас видеть, если может вообще.[/color]
 trait-lightweight-name = Быстрое опьянение
-trait-lightweight-desc = Алкоголь сильнее воздействует на вас.
+trait-lightweight-desc = Алкоголь оказывает на вас более сильное воздействие
 trait-monochromacy-name = Монохромазия
 trait-monochromacy-desc = Вы полный дальтоник, всё, что вы видите, сводится к оттенкам от чёрного до белого.
 trait-muted-name = Немота
@@ -44,6 +44,6 @@ trait-spanish-desc = Hola señor, как пройти в la biblioteca.
 trait-painnumbness-name = Невосприимчивость к боли
 trait-painnumbness-desc = Вы не чувствуете боли и не осознаёте, насколько вы ранены.
 trait-hemophilia-name = Гемофилия
-trait-hemophilia-desc = Ваш организм не справляется со свёртыванием крови.
+trait-hemophilia-desc = Ваше кровотечение долго не останавливается.
 trait-impaired-mobility-name = Нарушение подвижности
-trait-impaired-mobility-desc = Вам тяжело передвигаться без посторонней помощи.
+trait-impaired-mobility-desc = Вам трудно передвигаться без вспомогательных средств передвижения.

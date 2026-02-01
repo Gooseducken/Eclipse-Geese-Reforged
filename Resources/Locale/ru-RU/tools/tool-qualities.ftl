@@ -1,7 +1,7 @@
 tool-quality-anchoring-name = Закрепление
 tool-quality-anchoring-tool-name = Гаечный ключ
 tool-quality-prying-name = Монтирование
-tool-quality-prying-tool-name = Монтировка
+tool-quality-prying-tool-name = Лом
 tool-quality-screwing-name = Свинчивание
 tool-quality-screwing-tool-name = Отвёртка
 tool-quality-cutting-name = Резка
@@ -15,7 +15,7 @@ tool-quality-slicing-tool-name = Нож
 tool-quality-sawing-name = Отпиливание
 tool-quality-sawing-tool-name = Пила
 tool-quality-honking-name = Хонканье
-tool-quality-honking-tool-name = Клаксон
+tool-quality-honking-tool-name = Велосипедный клаксон
 tool-quality-woodcutting-name = Рубка дерева
 tool-quality-woodcutting-tool-name = Топор
 tool-quality-rolling-name = Раскатывание

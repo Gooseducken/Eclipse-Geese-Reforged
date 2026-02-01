@@ -10,7 +10,7 @@ store-category-disruption = Саботаж
 store-category-allies = Союзники
 store-category-wearables = Экипировка
 store-category-implants = Импланты
-store-category-job = Работа
+store-category-job = Должность
 store-category-pointless = Безделушки
 store-discounted-items = Скидки
 # Revenant

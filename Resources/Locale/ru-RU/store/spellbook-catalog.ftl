@@ -12,7 +12,7 @@ spellbook-force-wall-desc = Создайте три стены чистой эн
 spellbook-repulse-name = Импульс
 spellbook-repulse-desc = Прикажите всем уйти с вашего пути или оттолкните их от себя.
 spellbook-smoke-name = Дым
-spellbook-smoke-desc = Очевидно, создаёт облако дыма.
+spellbook-smoke-desc = Вызывает облако дыма, это довольно очевидно.
 spellbook-polymorph-spider-name = Полиморф-паук
 spellbook-polymorph-spider-desc = Превращает вас в паука!
 spellbook-polymorph-rod-name = Полиморф-жезл
@@ -30,7 +30,7 @@ spellbook-smite-desc = Не любите кого-то? РАЗОРВИТЕ ег�
 spellbook-cluwne-name = Проклятие клувня
 spellbook-cluwne-desc = Для случаев, когда вы кого-то по настоящему ненавидите и кары недостаточно. Необходимо иметь шляпу и робу волшебника.
 spellbook-slip-name = Скользкая дорожка
-spellbook-slip-desc = Изучите древние приёмы уборщиков и прокляните вашу цель, чтобы та была скользкой.
+spellbook-slip-desc = Изучите древние приёмы уборщиков и прокляните вашу цель, чтобы та была скользкой. Необходимо иметь шляпу и робу волшебника.
 spellbook-item-recall-name = Отозвать предмет
 spellbook-item-recall-description = Пометьте удерживаемый предмет и призывайте его обратно в любое время по щелчку пальцев.
 

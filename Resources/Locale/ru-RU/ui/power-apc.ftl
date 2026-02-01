@@ -1,5 +1,5 @@
 apc-menu-title = ЛКП
-apc-menu-breaker-label = Главный рубильник
+apc-menu-breaker-label = Питание
 apc-menu-breaker-button = Переключить
 apc-menu-power-label = Нагрузка
 apc-menu-external-label = Внешнее питание
