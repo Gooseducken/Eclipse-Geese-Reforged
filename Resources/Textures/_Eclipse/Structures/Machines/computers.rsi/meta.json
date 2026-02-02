@@ -1,0 +1,31 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "shipyard created by Krasler for Eclipse. generic_panel_open made by Errant, commit https://github.com/space-wizards/space-station-14/pull/32273. generic_keyboard, generic_keys taken from tgstation at commit https://github.com/tgstation/tgstation/commit/bd6873fd4dd6a61d7e46f1d75cd4d90f64c40894.",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "shipyard",
+            "directions": 4
+        },
+        {
+            "name": "computer",
+            "directions": 4
+        },
+        {
+            "name": "generic_keyboard",
+            "directions": 4
+        },
+        {
+            "name": "generic_keys",
+            "directions": 4
+        },
+        {
+            "name": "generic_panel_open",
+            "directions": 4
+        }
+    ]
+}

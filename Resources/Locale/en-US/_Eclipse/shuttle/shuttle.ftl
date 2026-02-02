@@ -1,3 +1,4 @@
 shuttle-category-research = Research
+shuttle-category-other = Other
 
-shuttle-frame-name = NT Frame
+shuttle-construct-name = NT Construct
