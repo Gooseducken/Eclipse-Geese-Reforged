@@ -540,7 +540,7 @@ namespace Content.IntegrationTests.Tests
                 .Select(x => x.ID)
                 .ToHashSet();
 
-            Assert.That(gameMaps.Remove(PoolManager.TestMap));
+            //Assert.That(gameMaps.Remove(PoolManager.TestMap)); // Eclipse: commented due to not including this map above
 
             Assert.That(gameMaps, Is.EquivalentTo(GameMaps.ToHashSet()), "Game map prototype missing from test cases.");
 
