@@ -104,7 +104,7 @@ namespace Content.IntegrationTests.Tests
             "Exo",
             "Snowball",
             */
-            "Frontier", // Eclipse : only test relevant map
+            "Frontier", // Eclipse : only test relevant maps
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
@@ -536,10 +536,11 @@ namespace Content.IntegrationTests.Tests
 
             var gameMaps = protoMan.EnumeratePrototypes<GameMapPrototype>()
                 .Where(x => !pair.IsTestPrototype(x))
+                .Where(x => x.MapPath.ToString().StartsWith("/Maps/_Eclipse"))  // Eclipse: only test relevant maps
                 .Select(x => x.ID)
                 .ToHashSet();
 
-            Assert.That(gameMaps.Remove(PoolManager.TestMap));
+            //Assert.That(gameMaps.Remove(PoolManager.TestMap)); // Eclipse: commented due to not including this map above
 
             Assert.That(gameMaps, Is.EquivalentTo(GameMaps.ToHashSet()), "Game map prototype missing from test cases.");
 

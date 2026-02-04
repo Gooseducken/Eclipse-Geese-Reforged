@@ -98,19 +98,19 @@ entity-effect-guidebook-status-effect-old =
         [update]{ $chance ->
                     [1] Causes
                      *[other] cause
-                 } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
+                 } {LOC($key)} for at least {NATURALFIXED($time, 3)} seconds without accumulation
         [add]   { $chance ->
                     [1] Causes
                     *[other] cause
-                } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} with accumulation
+                } {LOC($key)} for at least {NATURALFIXED($time, 3)} seconds with accumulation
         [set]  { $chance ->
                     [1] Causes
                     *[other] cause
-                } {LOC($key)} for {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
+                } {LOC($key)} for {NATURALFIXED($time, 3)} seconds without accumulation
         *[remove]{ $chance ->
                     [1] Removes
                     *[other] remove
-                } {NATURALFIXED($time, 3)} {MANY("second", $time)} of {LOC($key)}
+                } {NATURALFIXED($time, 3)} seconds of {LOC($key)}
     }
 
 entity-effect-guidebook-status-effect =
@@ -191,19 +191,19 @@ entity-effect-guidebook-knockdown =
         [update]{ $chance ->
                     [1] Causes
                     *[other] cause
-                    } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
+                    } {LOC($key)} for at least {NATURALFIXED($time, 3)} seconds without accumulation
         [add]   { $chance ->
                     [1] Causes
                     *[other] cause
-                } knockdown for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} with accumulation
+                } knockdown for at least {NATURALFIXED($time, 3)} seconds with accumulation
         *[set]  { $chance ->
                     [1] Causes
                     *[other] cause
-                } knockdown for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
+                } knockdown for at least {NATURALFIXED($time, 3)} seconds without accumulation
         [remove]{ $chance ->
                     [1] Removes
                     *[other] remove
-                } {NATURALFIXED($time, 3)} {MANY("second", $time)} of knockdown
+                } {NATURALFIXED($time, 3)} seconds of knockdown
     }
 
 entity-effect-guidebook-set-solution-temperature-effect =
@@ -344,7 +344,7 @@ entity-effect-guidebook-electrocute =
     { $chance ->
         [1] Electrocutes
         *[other] electrocute
-    } the metabolizer for {NATURALFIXED($time, 3)} {MANY("second", $time)}
+    } the metabolizer for {NATURALFIXED($time, 3)} seconds
 
 entity-effect-guidebook-emote =
     { $chance ->
@@ -410,13 +410,13 @@ entity-effect-guidebook-paralyze =
     { $chance ->
         [1] Paralyzes
         *[other] paralyze
-    } the metabolizer for at least {NATURALFIXED($time, 3)} {MANY("second", $time)}
+    } the metabolizer for at least {NATURALFIXED($time, 3)} seconds
 
 entity-effect-guidebook-movespeed-modifier =
     { $chance ->
         [1] Modifies
         *[other] modify
-    } movement speed by {NATURALFIXED($sprintspeed, 3)}x for at least {NATURALFIXED($time, 3)} {MANY("second", $time)}
+    } movement speed by {NATURALFIXED($sprintspeed, 3)}x for at least {NATURALFIXED($time, 3)} seconds
 
 entity-effect-guidebook-reset-narcolepsy =
     { $chance ->
@@ -452,13 +452,13 @@ entity-effect-guidebook-reduce-rotting =
     { $chance ->
         [1] Regenerates
         *[other] regenerate
-    } {NATURALFIXED($time, 3)} {MANY("second", $time)} of rotting
+    } {NATURALFIXED($time, 3)} seconds of rotting
 
 entity-effect-guidebook-area-reaction =
     { $chance ->
         [1] Causes
         *[other] cause
-    } a smoke or foam reaction for {NATURALFIXED($duration, 3)} {MANY("second", $duration)}
+    } a smoke or foam reaction for {NATURALFIXED($duration, 3)} seconds
 
 entity-effect-guidebook-add-to-solution-reaction =
     { $chance ->
