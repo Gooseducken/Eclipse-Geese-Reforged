@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseMachinePowered
+  id: ATM
+  name: ATM
+  description:
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: _Eclipse/Structures/Machines/atm.rsi
+    noRot: true
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: {visible: true}
+          False: {visible: false}
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Appearance
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
