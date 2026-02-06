@@ -1,0 +1,27 @@
+- type: accessLevel
+  id: ShuttleCrew
+  name: id-card-access-level-shuttle-crew
+
+- type: accessLevel
+  id: ShuttlePilot
+  name: id-card-access-level-shuttle-pilot
+
+- type: accessLevel
+  id: ShuttleCaptain
+  name: id-card-access-level-shuttle-captain
+
+- type: accessLevel
+  id: ShuttleEngineer
+  name: id-card-access-level-shuttle-engineer
+
+- type: accessLevel
+  id: ShuttleMedic
+  name: id-card-access-level-shuttle-medic
+
+- type: accessLevel
+  id: ShuttleSecurity
+  name: id-card-access-level-shuttle-security
+
+- type: accessLevel
+  id: ShuttleMercenary
+  name: id-card-access-level-shuttle-mercenary

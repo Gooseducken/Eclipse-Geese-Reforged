@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
@@ -17,6 +18,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -76,7 +78,17 @@ public sealed partial class ShipyardSystem
         {
             _popup.PopupEntity(Loc.GetString("shipyard-console-invalid-vessel"), ent, player);
             PlayDenySound(ent, ent.Comp);
+            QueueDel(grid);
             return;
+        }
+
+        var stationUid = _station.InitializeNewStation(shuttle.Station, [grid.Value.Owner]);
+
+        if (TryComp<PerStationAccessComponent>(targetId, out var accessComp))
+        {
+            accessComp.Tags.Remove(stationUid);
+            accessComp.Tags.Add(stationUid, [.. shuttle.BuyerAccess]);
+            Dirty(targetId, accessComp);
         }
 
         _adminLogger.Add(LogType.Shipyard, LogImpact.Low,

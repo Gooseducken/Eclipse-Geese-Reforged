@@ -1,0 +1,80 @@
+- type: entity
+  parent: IDCardStandard
+  id: BaseFrontierIDCard
+  abstract: true
+  components:
+  - type: PerStationAccess
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: ExplorerIDCard
+  name: explorer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-supply-top "#b18644"
+    - state: stripe_bottom
+      color: &color-supply-bottom "#5b4523"
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: ShaftMiner
+  - type: PresetIdCard
+    job: Explorer
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: FrontierJanitorIDCard
+  name: janitor ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-service-top "#639137"
+    - state: stripe_bottom
+      color: &color-service-bottom "#446326"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: Janitor
+  - type: PresetIdCard
+    job: FrontierJanitor
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: HoFIDCard
+  name: head of frontier ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: *color-service-top
+    - state: stripe_bottom
+      color: *color-service-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: HeadOfPersonnel
+  - type: Item
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: HeadOfFrontier
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: FrontierSecurityGuardIDCard
+  name: security guard ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-security-top "#cb0000"
+    - state: stripe_bottom
+      color: &color-security-bottom "#830000"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: FrontierSecurityGuard

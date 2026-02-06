@@ -1,0 +1,8 @@
+- type: entity
+  id: AirlockGlassShuttleCrewLocked
+  parent: AirlockGlassShuttle
+  suffix: Glass, Docking, Crew access
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCrew ]

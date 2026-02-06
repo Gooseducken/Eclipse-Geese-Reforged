@@ -18,6 +18,7 @@
   - HeadOfFrontier
   - FrontierEngineering
   - FrontierSecurity
+  - FrontierJanitor
   - Maintenance
   - External
   special:
@@ -31,7 +32,7 @@
   id: HeadOfFrontierGear
   equipment:
     shoes: ClothingShoesColorBrown
-    id: HoPPDA
+    id: HoFPDA
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboardThreePapers
@@ -51,3 +52,9 @@
     neck: ClothingNeckCloakHop
     outerClothing: ClothingOuterWinterHoP
 
+- type: entity
+  parent: HoPPDA
+  id: HoFPDA
+  components:
+  - type: Pda
+    id: HoFIDCard

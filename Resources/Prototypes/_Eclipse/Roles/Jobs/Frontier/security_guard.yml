@@ -11,8 +11,9 @@
     - !type:OverallPlaytimeRequirement
       time: 2h
   access:
-  - FrontierEngineering
   - FrontierSecurity
+  - FrontierEngineering
+  - FrontierJanitor
   - Maintenance
   - External
   special:
@@ -22,6 +23,7 @@
 - type: startingGear
   id: FrontierSecurityGuardGear
   equipment:
+    id: FrontierSecurityGuardPDA
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58
@@ -39,3 +41,10 @@
     mask: ClothingMaskGasSecurity
     neck: Dinkystar
     gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SecurityPDA
+  id: FrontierSecurityGuardPDA
+  components:
+  - type: Pda
+    id: FrontierSecurityGuardIDCard

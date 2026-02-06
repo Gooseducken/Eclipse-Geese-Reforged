@@ -14,7 +14,7 @@
   id: ExplorerGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
-    id: SalvagePDA
+    id: ExplorerPDA
     ears: ClothingHeadsetCargo
   #storage:
     #back:
@@ -31,3 +31,9 @@
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesColorBlack
 
+- type: entity
+  parent: SalvagePDA
+  id: ExplorerPDA
+  components:
+  - type: Pda
+    id: ExplorerIDCard

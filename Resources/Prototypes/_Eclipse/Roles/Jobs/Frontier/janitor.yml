@@ -7,8 +7,7 @@
   startingGear: FrontierJanitorGear
   supervisors: job-supervisors-hof
   access:
-  - Service
-  - Janitor
+  - FrontierJanitor
   - Maintenance
   - External
   #special:
@@ -20,7 +19,7 @@
   id: FrontierJanitorGear
   equipment:
     shoes: ClothingShoesGaloshes
-    id: JanitorPDA
+    id: FrontierJanitorPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
   #storage:
@@ -37,3 +36,10 @@
     neck: ClothingNeckScarfStripedPurple
     outerClothing: ClothingOuterWinterJani
     gloves: ClothingHandsGlovesJanitor
+
+- type: entity
+  parent: JanitorPDA
+  id: FrontierJanitorPDA
+  components:
+  - type: Pda
+    id: FrontierJanitorIDCard

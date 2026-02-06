@@ -1,0 +1,19 @@
+- type: accessLevel
+  id: FrontierCommand
+  name: id-card-access-level-frontier-command
+
+- type: accessLevel
+  id: HeadOfFrontier
+  name: id-card-access-level-head-of-frontier
+
+- type: accessLevel
+  id: FrontierEngineering
+  name: id-card-access-level-frontier-engineering
+
+- type: accessLevel
+  id: FrontierSecurity
+  name: id-card-access-level-frontier-security
+
+- type: accessLevel
+  id: FrontierJanitor
+  name: id-card-access-level-frontier-janitor

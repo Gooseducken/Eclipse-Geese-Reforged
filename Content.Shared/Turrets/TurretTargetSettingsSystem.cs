@@ -119,7 +119,7 @@ public sealed partial class TurretTargetSettingsSystem : EntitySystem
     [PublicAPI]
     public bool EntityIsTargetForTurret(Entity<TurretTargetSettingsComponent> ent, EntityUid target)
     {
-        var accessLevels = _accessReader.FindAccessTags(target);
+        var accessLevels = _accessReader.FindAccessTags(target, ent.Owner);
 
         if (accessLevels.Contains(_accessLevelBorg))
             return !HasAccessLevelExemption(ent, _accessLevelBorg);

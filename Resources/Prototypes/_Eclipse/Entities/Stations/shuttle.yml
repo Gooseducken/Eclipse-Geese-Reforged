@@ -1,0 +1,5 @@
+- type: entity
+  id: ShuttleStation
+  components:
+    - type: StationData
+    - type: Transform
