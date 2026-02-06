@@ -1,0 +1,14 @@
+- type: roleLoadout
+  id: JobHeadOfFrontier
+  groups:
+  - GroupTankHarness
+  - HoPHead
+  - HoPNeck
+  - HoPJumpsuit
+  - HoPBackpack
+  - HoPOuterClothing
+  - Glasses
+  - Survival
+  - Trinkets
+  #- HoPJobTrinkets
+  - GroupSpeciesBreathTool

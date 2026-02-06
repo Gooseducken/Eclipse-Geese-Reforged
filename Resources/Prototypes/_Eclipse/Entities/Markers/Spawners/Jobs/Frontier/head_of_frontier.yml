@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointHeadOfFrontier
+  parent: SpawnPointJobBase
+  name: head of frontier
+  components:
+  - type: SpawnPoint
+    job_id: HeadOfFrontier
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop

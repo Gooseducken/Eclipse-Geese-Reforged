@@ -1,0 +1,15 @@
+- type: departmentConfig
+  id: FrontierDepartmentConfig
+  enabledDepartments:
+  - Frontier
+
+- type: department
+  id: Frontier
+  name: department-Frontier
+  description: department-Frontier-description
+  color: "#9FED58"
+  roles:
+  - HeadOfFrontier
+  - FrontierSecurityGuard
+  - FrontierJanitor
+  - Explorer

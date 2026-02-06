@@ -32,6 +32,10 @@ public abstract class SharedIdCardSystem : EntitySystem
     private int _maxNameLength;
     private int _maxIdJobLength;
 
+    // Eclipse-Start : configurable enabled departments
+    private ProtoId<DepartmentConfigPrototype> _departmentConfig;
+    // Eclipse-End
+
     public override void Initialize()
     {
         base.Initialize();
@@ -44,6 +48,7 @@ public abstract class SharedIdCardSystem : EntitySystem
 
         Subs.CVar(_cfgManager, CCVars.MaxNameLength, value => _maxNameLength = value, true);
         Subs.CVar(_cfgManager, CCVars.MaxIdJobLength, value => _maxIdJobLength = value, true);
+        Subs.CVar(_cfgManager, EclipseCCVars.DepartmentConfig, value => _departmentConfig = value, true);
     }
 
     private void OnRename(ref EntityRenamedEvent ev)
@@ -217,10 +222,14 @@ public abstract class SharedIdCardSystem : EntitySystem
         if (!Resolve(uid, ref id))
             return false;
 
+        // Eclipse-Start : configurable enabled departments
+        var config = _prototypeManager.Index(_departmentConfig);
+        // Eclipse-End
+
         id.JobDepartments.Clear();
         foreach (var department in _prototypeManager.EnumeratePrototypes<DepartmentPrototype>())
         {
-            if (department.Roles.Contains(job.ID))
+            if (config.EnabledDepartments.Contains(department.ID) && department.Roles.Contains(job.ID)) // Eclipse : configurable enabled departments
                 id.JobDepartments.Add(department.ID);
         }
 
@@ -234,10 +243,17 @@ public abstract class SharedIdCardSystem : EntitySystem
         if (!Resolve(uid, ref id))
             return false;
 
+        // Eclipse-Start : configurable enabled departments
+        var config = _prototypeManager.Index(_departmentConfig);
+        // Eclipse-End
+
         id.JobDepartments.Clear();
         foreach (var department in departments)
         {
-            id.JobDepartments.Add(department);
+            // Eclipse-Start : configurable enabled departments
+            if (config.EnabledDepartments.Contains(department))
+                id.JobDepartments.Add(department);
+            // Eclipse-End
         }
 
         Dirty(uid, id);

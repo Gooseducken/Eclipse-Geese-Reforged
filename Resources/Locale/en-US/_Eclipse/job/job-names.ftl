@@ -1,4 +1,10 @@
-job-name-expeditioner = Expeditioner
+job-name-explorer = Explorer
+job-name-security-guard = Security Guard
+job-name-hof = Head of Frontier
+job-name-frontier-janitor = Janitor
 
 # Role timers
-JobExpeditioner = Expeditioner
+JobExplorer = Explorer
+JobFrontierJanitor = Explorer
+JobHeadOfFrontier = Explorer
+JobFrontierSecurityGuard = Explorer

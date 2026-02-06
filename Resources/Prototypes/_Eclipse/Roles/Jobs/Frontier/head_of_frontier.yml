@@ -1,0 +1,53 @@
+- type: job
+  id: HeadOfFrontier
+  name: job-name-hof
+  description: job-description-hof
+  playTimeTracker: JobHeadOfFrontier
+  icon: JobIconHeadOfPersonnel
+  startingGear: HeadOfFrontierGear
+  supervisors: job-supervisors-hof
+  canBeAntag: false
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: FrontierSecurity
+      time: 2.5h
+  access:
+  - FrontierCommand
+  - HeadOfFrontier
+  - FrontierEngineering
+  - FrontierSecurity
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: HeadOfFrontierGear
+  equipment:
+    shoes: ClothingShoesColorBrown
+    id: HoPPDA
+    gloves: ClothingHandsGlovesHop
+    ears: ClothingHeadsetAltCommand
+    belt: BoxFolderClipboardThreePapers
+    eyes: ClothingEyesHudCommand
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: HeadOfFrontierChameleonOutfit
+  job: HeadOfFrontier
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatHopcap
+    eyes: ClothingEyesHudCommand
+    mask: ClothingMaskNeckGaiterRed
+    neck: ClothingNeckCloakHop
+    outerClothing: ClothingOuterWinterHoP
+

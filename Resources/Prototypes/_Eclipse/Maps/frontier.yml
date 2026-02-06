@@ -14,4 +14,8 @@
             prefixCreator: 'TG'
         - type: StationJobs
           availableJobs:
-            Passenger: [ -1, -1 ] #infinite, not counted
+            HeadOfFrontier: [ 1, 1 ]
+            FrontierSecurityGuard: [ 1, 1 ]
+            FrontierJanitor: [ 1, 1 ]
+            Explorer: [ -1, -1 ] #infinite, not counted
+

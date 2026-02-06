@@ -1,5 +1,7 @@
+using Content.Shared.CCVar;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
+using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using System.Linq;
 
@@ -20,11 +22,17 @@ public sealed class JobTest
         var server = pair.Server;
 
         var prototypeManager = server.ResolveDependency<IPrototypeManager>();
+        var cfgManager = server.ResolveDependency<IConfigurationManager>(); // Eclipse : configurable enabled departments
 
         await server.WaitAssertion(() =>
         {
+            // Eclipse-Start : configurable enabled departments (check only relevant departments)
+            var config = prototypeManager.Index<DepartmentConfigPrototype>(cfgManager.GetCVar(EclipseCCVars.DepartmentConfig));
+            // Eclipse-End
+
             // only checking primary departments so don't bother with others
             var departments = prototypeManager.EnumeratePrototypes<DepartmentPrototype>()
+                .Where(x => config.EnabledDepartments.Contains(x.ID)) // Eclipse : configurable enabled departments
                 .Where(department => department.Primary)
                 .ToList();
             var jobs = prototypeManager.EnumeratePrototypes<JobPrototype>();

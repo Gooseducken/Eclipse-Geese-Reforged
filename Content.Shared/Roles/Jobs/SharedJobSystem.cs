@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Roles.Components;
+using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -17,14 +19,17 @@ public abstract class SharedJobSystem : EntitySystem
     [Dependency] private readonly SharedPlayerSystem _playerSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly SharedRoleSystem _roles = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!; // Eclipse : configurable enabled departments
 
     private readonly Dictionary<string, string> _inverseTrackerLookup = new();
+    private ProtoId<DepartmentConfigPrototype> _departmentConfig;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnProtoReload);
         SetupTrackerLookup();
+        Subs.CVar(_cfgManager, EclipseCCVars.DepartmentConfig, value => _departmentConfig = value, true);
     }
 
     private void OnProtoReload(PrototypesReloadedEventArgs obj)
@@ -60,8 +65,10 @@ public abstract class SharedJobSystem : EntitySystem
     /// </summary>
     public bool TryGetDepartment(string jobProto, [NotNullWhen(true)] out DepartmentPrototype? departmentPrototype)
     {
+        var config = _prototypes.Index(_departmentConfig); // Eclipse : configurable enabled departments
+
         // Not that many departments so we can just eat the cost instead of storing the inverse lookup.
-        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>().ToList();
+        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>().Where(x => config.EnabledDepartments.Contains(x.ID)).ToList(); // Eclipse : configurable enabled departments
         departmentProtos.Sort((x, y) => string.Compare(x.ID, y.ID, StringComparison.Ordinal));
 
         foreach (var department in departmentProtos)
@@ -84,9 +91,11 @@ public abstract class SharedJobSystem : EntitySystem
     /// </summary>
     public bool TryGetPrimaryDepartment(string jobProto, [NotNullWhen(true)] out DepartmentPrototype? departmentPrototype)
     {
+        var config = _prototypes.Index(_departmentConfig); // Eclipse : configurable enabled departments
+
         // not sorting it since there should only be 1 primary department for a job.
         // this is enforced by the job tests.
-        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>();
+        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>().Where(x => config.EnabledDepartments.Contains(x.ID)); // Eclipse : configurable enabled departments
 
         foreach (var department in departmentProtos)
         {
@@ -106,9 +115,11 @@ public abstract class SharedJobSystem : EntitySystem
     /// </summary>
     public bool TryGetAllDepartments(string jobProto, out List<DepartmentPrototype> departmentPrototypes)
     {
+        var config = _prototypes.Index(_departmentConfig); // Eclipse : configurable enabled departments
+
         // not sorting it since there should only be 1 primary department for a job.
         // this is enforced by the job tests.
-        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>();
+        var departmentProtos = _prototypes.EnumeratePrototypes<DepartmentPrototype>().Where(x => config.EnabledDepartments.Contains(x.ID)); // Eclipse : configurable enabled departments
         departmentPrototypes = new List<DepartmentPrototype>();
         var found = false;
 

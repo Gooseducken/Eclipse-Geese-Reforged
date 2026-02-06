@@ -1,3 +1,19 @@
+# Eclipse-Start : configurable enabled departments
+- type: departmentConfig
+  id: DefaultDepartmentConfig
+  enabledDepartments:
+  - Cargo
+  - Civilian
+  - CentralCommand
+  - Command
+  - Engineering
+  - Medical
+  - Security
+  - Science
+  - Silicon
+  - Specific
+# Eclipse-End
+
 - type: department
   id: Cargo
   name: department-Cargo

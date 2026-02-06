@@ -1,0 +1,39 @@
+- type: job
+  id: FrontierJanitor
+  name: job-name-frontier-janitor
+  description: job-description-frontier-janitor
+  playTimeTracker: JobFrontierJanitor
+  icon: JobIconJanitor
+  startingGear: FrontierJanitorGear
+  supervisors: job-supervisors-hof
+  access:
+  - Service
+  - Janitor
+  - Maintenance
+  - External
+  #special:
+  #- !type:GiveItemOnHolidaySpecial
+  #  holiday: GarbageDay
+  #  prototype: WeaponRevolverInspector
+
+- type: startingGear
+  id: FrontierJanitorGear
+  equipment:
+    shoes: ClothingShoesGaloshes
+    id: JanitorPDA
+    ears: ClothingHeadsetService
+    belt: ClothingBeltJanitorFilled
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: FrontierJanitorChameleonOutfit
+  job: FrontierJanitor
+  equipment:
+    head: ClothingHeadHatPurplesoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckScarfStripedPurple
+    outerClothing: ClothingOuterWinterJani
+    gloves: ClothingHandsGlovesJanitor

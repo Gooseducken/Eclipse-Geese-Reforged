@@ -1,0 +1,14 @@
+- type: roleLoadout
+  id: JobFrontierSecurityGuard
+  groups:
+  - SecurityHead
+  - SecurityJumpsuit
+  - SecurityBackpack
+  - SecurityOuterClothing
+  - SecurityShoes
+  - SecurityPDA
+  - SecurityBelt
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityJobTrinkets
+  - GroupSpeciesBreathToolSecurity
