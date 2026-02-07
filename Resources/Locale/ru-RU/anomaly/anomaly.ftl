@@ -45,7 +45,7 @@ anomaly-gorilla-charge-limit =
         [few] заряда
        *[other] зарядов
     }[/color].
-anomaly-gorilla-charge-infinite = Осталось [color=gold]бесконечное количество зарядов[/color]. [italic]Пока что...[/italic]
+anomaly-gorilla-charge-infinite = У него [color=gold]бесконечное количество зарядов[/color]. [italic]На данный момент...[/italic]
 anomaly-sync-connected = Аномалия успешно привязана
 anomaly-sync-disconnected = Соединение с аномалией было потеряно!
 anomaly-sync-no-anomaly = Отсутствует аномалия в пределах диапазона.
@@ -68,7 +68,9 @@ anomaly-generator-charges =
         [few] { $charges } заряда
        *[other] { $charges } зарядов
     }
-anomaly-generator-announcement = Аномалия была создана!
+anomaly-generator-announcement = Внимание! Была создана аномалия.
+anomaly-generator-announcement-science = Создана аномалия. Ответственный сотрудник: { $author }.
+anomaly-generator-announcement-author-unknown = не найден
 anomaly-command-pulse = Вызывает импульс аномалии
 anomaly-command-supercritical = Целевая аномалия переходит в суперкритическое состояние
 # Flavor text on the footer

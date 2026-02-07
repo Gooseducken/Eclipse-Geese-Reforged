@@ -4,7 +4,7 @@ ame-controller-component-fuel-slot-success-insert = Вы помещаете то
 
 ## UI
 
-ame-window-title = Блок управления антиматерией
+ame-window-title = Блок управления ДАМ
 ame-window-engine-status-label = Состояние двигателя:
 ame-window-engine-injection-status-not-injecting-label = Не впрыскивает
 ame-window-engine-injection-status-injecting-label = Впрыскивание...
@@ -19,3 +19,4 @@ ame-window-toggle-injection-button = Переключение впрыска
 ame-window-eject-button = Извлечь
 ame-window-increase-fuel-button = Увеличить
 ame-window-decrease-fuel-button = Уменьшить
+ame-window-power-attention = Внимание, не трогайте блок управления если не знаете что делаете!

@@ -1,4 +1,4 @@
-﻿admin-smite-chess-self = Вы чувствуете себя необычайно маленьким.
+admin-smite-chess-self = Вы чувствуете себя необычайно маленьким.
 admin-smite-chess-others = { CAPITALIZE($name) } уменьшается до шахматной доски!
 admin-smite-set-alight-self = Вы загораетесь пламенем!
 admin-smite-set-alight-others = { CAPITALIZE($name) } загорается пламенем!
@@ -87,9 +87,9 @@ admin-smite-dust-description = Превращает цель в небольшу
 admin-smite-buffering-description = Вызывает у цели случайный запуск буферизации, замораживая её на короткое время, пока она подгружается.
 admin-smite-become-instrument-description = Превращает цель в суперсинтезатор. И всё.
 admin-smite-remove-gravity-description = Наделяет цель антигравитацией.
-admin-smite-reptilian-species-swap-description = Меняет вид на Унатха. Пригодится для тех, кто ведёт себя как космический расист.
-admin-smite-vulpkanin-species-swap-description = Меняет вид на Вульпканина. Пригодится для тех, кто ведёт себя как космический расист.
+admin-smite-reptilian-species-swap-description = Меняет расу на Унатха. Пригодится для тех, кто ведёт себя как космический расист.
 admin-smite-locker-stuff-description = Помещает цель в (заваренный) шкафчик.
+admin-smite-vulpkanin-species-swap-description = Меняет вид на Вульпканина. Пригодится для тех, кто ведёт себя как космический расист.
 admin-smite-headstand-description = Переворачивает спрайт по вертикали.
 admin-smite-become-mouse-description = Цель станет мышью. Скуик.
 admin-smite-maid-description = Насильно превращает цель в кошко-служанку уборщицу. Это настоящая пытка для некоторых игроков, используйте её с умом.
@@ -105,14 +105,14 @@ admin-smite-disarm-prone-description = Шанс обезоружить цель 
 admin-smite-garbage-can-description = Превратите цель в мусорку, чтобы подчеркнуть, о чём она вам напоминает.
 admin-trick-unbolt-description = Разболтирует целевой шлюз.
 admin-smite-super-bonk-description = Заставляет цель удариться о каждый стол на станции и за её пределами.
-admin-smite-terminate-description = Создаёт экстерминатора с ролью призрака, с единственной задачей — убить выбранную цель.
+admin-smite-terminate-description = Создаёт экстерминатора с ролью призрака, с единственной задачей - убить выбранную цель.
 admin-smite-super-slip-description = Очень сильно поскальзывает цель.
 admin-smite-omni-accent-description = Заставляет цель говорить с почти каждым возможным акцентом.
 admin-smite-crawler-description = Заставляет цель упасть и не позволяет встать. Для дополнительного эффекта удалите и руки!
 admin-smite-homing-rod-description = Запускает самонаводящийся неподвижный жезл, двигающийся прямо к цели.
 admin-smite-homing-rod-slow-description = Запускает самонаводящийся неподвижный жезл, медленно двигающийся прямо к цели.
-admin-smite-super-bonk-lite-description = Заставляет цель удариться о каждый стол на станции и за её пределами. Прекращает действовать после смерти цели.
 admin-smite-silicon-laws-bound-description = Заставляет цель соблюдать законы синтетиков. Закон 2, выпрыгни с окна.
+admin-smite-super-bonk-lite-description = Заставляет цель удариться о каждый стол на станции и за её пределами. Прекращает действовать после смерти цели.
 
 ## Tricks descriptions
 
@@ -133,9 +133,9 @@ admin-trick-revoke-all-access-description = Забирает у цели вес�
 admin-trick-rejuvenate-description = Возрождает цель, исцеляет её от всего.
 admin-trick-adjust-stack-description = Устанавливает размер стопки на указанное значение.
 admin-trick-fill-stack-description = Устанавливает размер стопки на максимум.
-admin-trick-rename-description = Изменяет имя целевого объекта. Обратите внимание, что это не равно команде `rename` и не исправит его ID.
-admin-trick-redescribe-description = Изменяет описание целевого объекта.
-admin-trick-rename-and-redescribe-description = Изменяет имя и описание объекта одной кнопкой.
+admin-trick-rename-description = Переименовывает целевой объект. Обратите внимание, что это не равно команде `rename` и не исправит его ID.
+admin-trick-redescribe-description = Переописывает целевой объект.
+admin-trick-rename-and-redescribe-description = Переименовывает и переописывает объект одной кнопкой.
 admin-trick-bar-job-slots-description = Закрывает все слоты должностей на станции, так что никто не сможет присоединиться.
 admin-trick-locate-cargo-shuttle-description = Телепортирует вас прямо на грузовой шаттл станции, если он есть.
 admin-trick-infinite-battery-description = Перенастраивает СМЭСы и подстанции на сетке/станции/карте на быструю автозарядку.

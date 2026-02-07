@@ -1,7 +1,7 @@
 chatsan-smiles = улыбается
-chatsan-frowns = хмурится
+chatsan-frowns = грустит
 chatsan-smiles-widely = широко улыбается
-chatsan-frowns-deeply = сильно хмурится
+chatsan-frowns-deeply = сильно грустит
 chatsan-surprised = выглядит удивлённым
 chatsan-uncertain = выглядит растерянным
 chatsan-grins = ухмыляется
@@ -21,3 +21,5 @@ chatsan-tearfully-salutes = отдаёт честь со слезами на г�
 chatsan-tearfully-smiles = улыбается со слезами на глазах
 chatsan-winks = подмигивает
 chatsan-shrugs = пожимает плечами
+chatsan-claps = хлопает
+chatsan-snaps = щёлкает

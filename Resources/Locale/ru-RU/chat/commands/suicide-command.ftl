@@ -9,3 +9,4 @@ suicide-command-default-text-self = Вы пытаетесь прикусить �
 suicide-command-already-dead = Вы не можете совершить самоубийство. Вы мертвы.
 suicide-command-no-mind = У вас нет разума!
 suicide-command-denied = Вы не можете совершить самоубийство в данный момент.
+suicide-command-admin-alert = Игрок { $player } прописал команду suicide!
