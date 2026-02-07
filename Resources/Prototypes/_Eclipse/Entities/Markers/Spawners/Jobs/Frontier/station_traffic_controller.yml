@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointStationTrafficController
+  parent: SpawnPointJobBase
+  name: station traffic controller
+  components:
+  - type: SpawnPoint
+    job_id: StationTrafficController
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop

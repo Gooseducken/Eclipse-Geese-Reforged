@@ -1,29 +1,28 @@
 - type: job
-  id: Explorer
-  name: job-name-explorer
-  description: job-description-explorer
-  playTimeTracker: JobExplorer
+  id: Attorney
+  name: job-name-attorney
+  description: job-description-attorney
+  playTimeTracker: JobAttorney
   icon: JobIconVisitor
-  startingGear: ExplorerGear
+  startingGear: AttorneyGear
   supervisors: job-supervisors-sr
-  displayWeight: -2
   access:
   - Maintenance
   - External
 
 - type: startingGear
-  id: ExplorerGear
+  id: AttorneyGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
-    id: ExplorerPDA
+    id: AttorneyPDA
     ears: ClothingHeadsetCargo
   #storage:
     #back:
     #- Stuff
 
 - type: chameleonOutfit
-  id: ExplorerChameleonOutfit
-  job: Explorer
+  id: AttorneyChameleonOutfit
+  job: Attorney
   equipment:
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -33,8 +32,8 @@
     gloves: ClothingHandsGlovesColorBlack
 
 - type: entity
-  parent: SalvagePDA
-  id: ExplorerPDA
+  parent: LawyerPDA
+  id: AttorneyPDA
   components:
   - type: Pda
-    id: ExplorerIDCard
+    id: AttorneyIDCard

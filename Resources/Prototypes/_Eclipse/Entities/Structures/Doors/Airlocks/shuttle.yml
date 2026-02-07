@@ -1,8 +1,327 @@
+# Airlocks
+
 - type: entity
-  id: AirlockGlassShuttleCrewLocked
-  parent: AirlockGlassShuttle
-  suffix: Glass, Docking, Crew access
+  parent: Airlock
+  id: AirlockFrontierCommandLocked
+  suffix: Frontier Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierCommand ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockStationRepresentativeLocked
+  suffix: Station Representative, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsStationRepresentative ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierEngineeringLocked
+  suffix: Frontier Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierEngineering ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierSecurityLocked
+  suffix: Frontier Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierSecurity ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierJanitorLocked
+  suffix: Frontier Janitor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierJanitor ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierPostOfficeLocked
+  suffix: Frontier Post Office Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierPostOffice ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockMercenaryLocked
+  suffix: Mercenary Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMercenary ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSectorSecurityLocked
+  suffix: Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSectorSecurity ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSOfficerLocked
+  suffix: Sector Security Officer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSOfficer ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSArmoryLocked
+  suffix: Sector Security Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSArmory ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSDetectiveLocked
+  suffix: Sector Security Detective, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSDetective ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleCrewLocked
+  suffix: Shuttle Crew, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsShuttleCrew ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttlePilotLocked
+  suffix: Shuttle Pilot, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttlePilot ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleCaptainLocked
+  suffix: Shuttle Captain, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCaptain ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleEngineerLocked
+  suffix: Shuttle Engineer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleEngineer ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleMedicLocked
+  suffix: Shuttle Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMedic ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleSecurityLocked
+  suffix: Shuttle Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleSecurity ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockShuttleMercenaryLocked
+  suffix: Shuttle Mercenary, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMercenary ]
+
+# Glass Airlocks
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierCommandGlassLocked
+  suffix: Frontier Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierCommand ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockStationRepresentativeGlassLocked
+  suffix: Station Representative, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsStationRepresentative ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierEngineeringGlassLocked
+  suffix: Frontier Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierEngineering ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierSecurityGlassLocked
+  suffix: Frontier Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierSecurity ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierJanitorGlassLocked
+  suffix: Frontier Janitor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierJanitor ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockFrontierPostOfficeGlassLocked
+  suffix: Frontier Post Office Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierPostOffice ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockMercenaryGlassLocked
+  suffix: Mercenary Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMercenary ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSectorSecurityGlassLocked
+  suffix: Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSectorSecurity ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSOfficerGlassLocked
+  suffix: Sector Security Officer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSOfficer ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSArmoryGlassLocked
+  suffix: Sector Security Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSArmory ]
+
+- type: entity
+  parent: Airlock
+  id: AirlockSSSDetectiveGlassLocked
+  suffix: Sector Security Detective, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSDetective ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleCrewGlassLocked
+  suffix: Shuttle Crew, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCrew ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttlePilotGlassLocked
+  suffix: Shuttle Pilot, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttlePilot ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleCaptainGlassLocked
+  suffix: Shuttle Captain, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCaptain ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleEngineerGlassLocked
+  suffix: Shuttle Engineer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleEngineer ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleMedicGlassLocked
+  suffix: Shuttle Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMedic ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleSecurityGlassLocked
+  suffix: Shuttle Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleSecurity ]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockShuttleMercenaryGlassLocked
+  suffix: Shuttle Mercenary, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMercenary ]

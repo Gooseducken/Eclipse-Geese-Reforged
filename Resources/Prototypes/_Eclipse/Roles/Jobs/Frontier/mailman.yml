@@ -1,29 +1,29 @@
 - type: job
-  id: Explorer
-  name: job-name-explorer
-  description: job-description-explorer
-  playTimeTracker: JobExplorer
+  id: Mailman
+  name: job-name-mailman
+  description: job-description-mailman
+  playTimeTracker: JobMailman
   icon: JobIconVisitor
-  startingGear: ExplorerGear
+  startingGear: MailmanGear
   supervisors: job-supervisors-sr
-  displayWeight: -2
   access:
+  - FrontierPostOffice
   - Maintenance
   - External
 
 - type: startingGear
-  id: ExplorerGear
+  id: MailmanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
-    id: ExplorerPDA
+    id: MailmanPDA
     ears: ClothingHeadsetCargo
   #storage:
     #back:
     #- Stuff
 
 - type: chameleonOutfit
-  id: ExplorerChameleonOutfit
-  job: Explorer
+  id: MailmanChameleonOutfit
+  job: Mailman
   equipment:
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -34,7 +34,7 @@
 
 - type: entity
   parent: SalvagePDA
-  id: ExplorerPDA
+  id: MailmanPDA
   components:
   - type: Pda
-    id: ExplorerIDCard
+    id: MailmanIDCard

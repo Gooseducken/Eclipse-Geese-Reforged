@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointMailman
+  parent: SpawnPointJobBase
+  name: mailman
+  components:
+  - type: SpawnPoint
+    job_id: Mailman
+  - type: Sprite
+    layers:
+      - state: green
+      - state: salvagespecialist

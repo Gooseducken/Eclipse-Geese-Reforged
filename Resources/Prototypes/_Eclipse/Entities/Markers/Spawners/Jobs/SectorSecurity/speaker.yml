@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointSSSSpeaker
+  parent: SpawnPointJobBase
+  name: speaker
+  components:
+  - type: SpawnPoint
+    job_id: SSSSpeaker
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

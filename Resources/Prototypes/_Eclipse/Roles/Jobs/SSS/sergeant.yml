@@ -1,20 +1,23 @@
 - type: job
-  id: FrontierSecurityGuard
-  name: job-name-security-guard
-  description: job-description-security-guard
-  playTimeTracker: JobFrontierSecurityGuard
+  id: Sergeant
+  name: job-name-sergeant
+  description: job-description-sergeant
+  playTimeTracker: JobSergeant
   icon: JobIconSecurityOfficer
-  startingGear: FrontierSecurityGuardGear
-  supervisors: job-supervisors-hos
+  startingGear: SergeantGear
+  supervisors: job-supervisors-hoss
   canBeAntag: false
-  displayWeight: 3
+  displayWeight: 7
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 2h
+      time: 10h
+    - !type:RoleTimeRequirement
+      role: JobCorporal
+      time: 5h
   access:
-  - FrontierSecurity
-  - FrontierEngineering
-  - FrontierJanitor
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
   - Maintenance
   - External
   special:
@@ -22,9 +25,9 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: FrontierSecurityGuardGear
+  id: SergeantGear
   equipment:
-    id: FrontierSecurityGuardPDA
+    id: SergeantPDA
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58
@@ -34,8 +37,8 @@
     - MagazinePistol
 
 - type: chameleonOutfit
-  id: FrontierSecurityGuardChameleonOutfit
-  job: FrontierSecurityGuard
+  id: SergeantChameleonOutfit
+  job: Sergeant
   hasMindShield: true
   equipment:
     head: ClothingHeadHatBeretSecurity
@@ -45,7 +48,7 @@
 
 - type: entity
   parent: SecurityPDA
-  id: FrontierSecurityGuardPDA
+  id: SergeantPDA
   components:
   - type: Pda
-    id: FrontierSecurityGuardIDCard
+    id: SergeantIDCard

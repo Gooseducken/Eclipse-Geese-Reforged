@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointSSSWarden
+  parent: SpawnPointJobBase
+  name: warden
+  components:
+  - type: SpawnPoint
+    job_id: SSSWarden
+  - type: Sprite
+    layers:
+      - state: green
+      - state: warden

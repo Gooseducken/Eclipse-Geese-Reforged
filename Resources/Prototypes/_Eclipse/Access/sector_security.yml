@@ -1,0 +1,15 @@
+- type: accessLevel
+  id: SectorSecurity
+  name: id-card-access-level-sector-security
+
+- type: accessLevel
+  id: SSSOfficer
+  name: id-card-access-level-sss-officer
+
+- type: accessLevel
+  id: SSSArmory
+  name: id-card-access-level-sss-armory
+
+- type: accessLevel
+  id: SSSDetective
+  name: id-card-access-level-sss-detective

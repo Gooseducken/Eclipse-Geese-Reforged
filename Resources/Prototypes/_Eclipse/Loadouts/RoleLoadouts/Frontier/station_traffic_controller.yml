@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobHeadOfFrontier
+  id: JobStationTrafficController
   groups:
   - GroupTankHarness
   - HoPHead

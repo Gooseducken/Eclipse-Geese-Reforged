@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointStationRepresentative
+  parent: SpawnPointJobBase
+  name: station representative
+  components:
+  - type: SpawnPoint
+    job_id: StationRepresentative
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop

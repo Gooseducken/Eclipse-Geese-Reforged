@@ -5,7 +5,7 @@
   playTimeTracker: JobFrontierJanitor
   icon: JobIconJanitor
   startingGear: FrontierJanitorGear
-  supervisors: job-supervisors-hof
+  supervisors: job-supervisors-sr
   access:
   - FrontierJanitor
   - Maintenance

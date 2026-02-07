@@ -1,0 +1,54 @@
+- type: job
+  id: HeadOfSectorSecurity
+  name: job-name-hoss
+  description: job-description-hoss
+  playTimeTracker: JobHeadOfSectorSecurity
+  icon: JobIconHeadOfSecurity
+  startingGear: HeadOfSectorSecurityGear
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  displayWeight: 10
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 25h
+    - !type:RoleTimeRequirement
+      role: JobLieutenant
+      time: 5h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - SSSDetective
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: HeadOfSectorSecurityGear
+  equipment:
+    id: HeadOfSectorSecurityPDA
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: HeadOfSectorSecurityChameleonOutfit
+  job: HeadOfSectorSecurity
+  hasMindShield: true
+  equipment:
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckCloakHos
+
+- type: entity
+  parent: HoSPDA
+  id: HeadOfSectorSecurityPDA
+  components:
+  - type: Pda
+    id: HeadOfSectorSecurityIDCard

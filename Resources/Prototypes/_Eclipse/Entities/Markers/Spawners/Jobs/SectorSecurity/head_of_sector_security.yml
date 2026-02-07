@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointHeadOfSectorSecurity
+  parent: SpawnPointJobBase
+  name: head of sector security
+  components:
+  - type: SpawnPoint
+    job_id: HeadOfSectorSecurity
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hos

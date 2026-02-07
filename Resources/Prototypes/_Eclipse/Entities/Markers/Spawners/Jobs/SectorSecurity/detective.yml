@@ -1,11 +1,11 @@
 - type: entity
-  id: SpawnPointHeadOfFrontier
+  id: SpawnPointSSSDetective
   parent: SpawnPointJobBase
-  name: head of frontier
+  name: detective
   components:
   - type: SpawnPoint
-    job_id: HeadOfFrontier
+    job_id: SSSDetective
   - type: Sprite
     layers:
       - state: green
-      - state: hop
+      - state: detective

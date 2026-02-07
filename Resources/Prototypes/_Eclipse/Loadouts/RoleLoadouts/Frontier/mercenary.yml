@@ -1,0 +1,12 @@
+- type: roleLoadout
+  id: JobMercenary
+  groups:
+  - GroupTankHarness
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistOuterClothing
+  - SalvageSpecialistShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  #- SalvageSpecialistJobTrinkets
+  - GroupSpeciesBreathTool

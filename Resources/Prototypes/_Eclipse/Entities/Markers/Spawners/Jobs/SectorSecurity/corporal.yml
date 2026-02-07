@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointCorporal
+  parent: SpawnPointJobBase
+  name: corporal
+  components:
+  - type: SpawnPoint
+    job_id: Corporal
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer

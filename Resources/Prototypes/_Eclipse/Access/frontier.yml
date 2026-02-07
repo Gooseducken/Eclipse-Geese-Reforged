@@ -3,8 +3,8 @@
   name: id-card-access-level-frontier-command
 
 - type: accessLevel
-  id: HeadOfFrontier
-  name: id-card-access-level-head-of-frontier
+  id: StationRepresentative
+  name: id-card-access-level-station-representative
 
 - type: accessLevel
   id: FrontierEngineering
@@ -17,3 +17,11 @@
 - type: accessLevel
   id: FrontierJanitor
   name: id-card-access-level-frontier-janitor
+
+- type: accessLevel
+  id: FrontierPostOffice
+  name: id-card-access-level-frontier-post-office
+
+- type: accessLevel
+  id: Mercenary
+  name: id-card-access-level-mercenary

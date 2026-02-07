@@ -1,29 +1,34 @@
 - type: job
-  id: Explorer
-  name: job-name-explorer
-  description: job-description-explorer
-  playTimeTracker: JobExplorer
+  id: Mercenary
+  name: job-name-mercenary
+  description: job-description-mercenary
+  playTimeTracker: JobMercenary
   icon: JobIconVisitor
-  startingGear: ExplorerGear
-  supervisors: job-supervisors-sr
-  displayWeight: -2
+  startingGear: MercenaryGear
+  supervisors: job-supervisors-hire
+  canBeAntag: false
+  displayWeight: -1
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
   access:
+  - Mercenary
   - Maintenance
   - External
 
 - type: startingGear
-  id: ExplorerGear
+  id: MercenaryGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
-    id: ExplorerPDA
+    id: MercenaryPDA
     ears: ClothingHeadsetCargo
   #storage:
     #back:
     #- Stuff
 
 - type: chameleonOutfit
-  id: ExplorerChameleonOutfit
-  job: Explorer
+  id: MercenaryChameleonOutfit
+  job: Mercenary
   equipment:
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -34,7 +39,7 @@
 
 - type: entity
   parent: SalvagePDA
-  id: ExplorerPDA
+  id: MercenaryPDA
   components:
   - type: Pda
-    id: ExplorerIDCard
+    id: MercenaryIDCard

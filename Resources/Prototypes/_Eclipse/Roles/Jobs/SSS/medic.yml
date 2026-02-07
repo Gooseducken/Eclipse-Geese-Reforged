@@ -1,0 +1,48 @@
+# sector security medic
+- type: job
+  id: SSSMedic
+  name: job-name-sssmedic
+  description: job-description-sssmedic
+  playTimeTracker: JobSSSMedic
+  icon: JobIconMedicalDoctor
+  startingGear: SSSMedicGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 2
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  access:
+  - SectorSecurity
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: DoctorDay
+    prototype: WehMedipen
+
+- type: startingGear
+  id: SSSMedicGear
+  equipment:
+    id: SSSMedicPDA
+    ears: ClothingHeadsetSecurity
+
+- type: chameleonOutfit
+  id: SSSMedicChameleonOutfit
+  job: SSSMedic
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex
+
+- type: entity
+  parent: MedicalPDA
+  id: SSSMedicPDA
+  components:
+  - type: Pda
+    id: SSSMedicIDCard

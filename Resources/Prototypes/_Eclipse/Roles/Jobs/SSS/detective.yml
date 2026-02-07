@@ -1,0 +1,56 @@
+- type: job
+  id: SSSDetective
+  name: job-name-sssdetective
+  description: job-description-sssdetective
+  playTimeTracker: JobSSSDetective
+  icon: JobIconDetective
+  startingGear: SSSDetectiveGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 5
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 15h
+    - !type:RoleTimeRequirement
+      role: JobSergeant
+      time: 5h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - SSSDetective
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SSSDetectiveGear
+  equipment:
+    id: SSSDetectivePDA
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltHolsterFilled
+  storage:
+    back:
+    - Flash
+    - ForensicPad
+    - ForensicScanner
+
+- type: chameleonOutfit
+  id: SSSDetectiveChameleonOutfit
+  job: SSSDetective
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatFedoraBrown
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckTieDet
+    gloves: ClothingHandsGlovesForensic
+
+- type: entity
+  parent: DetectivePDA
+  id: SSSDetectivePDA
+  components:
+  - type: Pda
+    id: SSSDetectiveIDCard

@@ -1,0 +1,15 @@
+- type: roleLoadout
+  id: JobSSSMedic
+  groups:
+  - GroupTankHarness
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorJumpsuit
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+#  - MedicalDoctorJobTrinkets
+  - GroupSpeciesBreathToolMedical

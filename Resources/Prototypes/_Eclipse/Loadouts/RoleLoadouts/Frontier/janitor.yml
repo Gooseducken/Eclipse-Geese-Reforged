@@ -2,11 +2,13 @@
   id: JobFrontierJanitor
   groups:
   - GroupTankHarness
-  - SalvageSpecialistBackpack
-  - SalvageSpecialistOuterClothing
-  - SalvageSpecialistShoes
+  - JanitorHead
+  - JanitorJumpsuit
+  - JanitorGloves
+  - CommonBackpack
+  - JanitorOuterClothing
   - Glasses
   - Survival
   - Trinkets
-  #- SalvageSpecialistJobTrinkets
+  - JanitorJobTrinkets
   - GroupSpeciesBreathTool

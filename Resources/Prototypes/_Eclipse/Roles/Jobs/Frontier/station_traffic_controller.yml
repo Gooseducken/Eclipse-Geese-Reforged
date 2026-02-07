@@ -1,24 +1,21 @@
 - type: job
-  id: HeadOfFrontier
-  name: job-name-hof
-  description: job-description-hof
-  playTimeTracker: JobHeadOfFrontier
+  id: StationTrafficController
+  name: job-name-stc
+  description: job-description-stc
+  playTimeTracker: JobStationTrafficController
   icon: JobIconHeadOfPersonnel
-  startingGear: HeadOfFrontierGear
-  supervisors: job-supervisors-hof
+  startingGear: StationTrafficControllerGear
+  supervisors: job-supervisors-sr
   canBeAntag: false
+  displayWeight: 5
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 5h
-    - !type:DepartmentTimeRequirement
-      department: FrontierSecurity
+    - !type:RoleTimeRequirement
+      role: JobFrontierSecurityGuard
       time: 2.5h
   access:
   - FrontierCommand
-  - HeadOfFrontier
-  - FrontierEngineering
-  - FrontierSecurity
-  - FrontierJanitor
   - Maintenance
   - External
   special:
@@ -29,10 +26,10 @@
       - type: CommandStaff
 
 - type: startingGear
-  id: HeadOfFrontierGear
+  id: StationTrafficControllerGear
   equipment:
     shoes: ClothingShoesColorBrown
-    id: HoFPDA
+    id: STCPDA
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboardThreePapers
@@ -42,8 +39,8 @@
     - Flash
 
 - type: chameleonOutfit
-  id: HeadOfFrontierChameleonOutfit
-  job: HeadOfFrontier
+  id: StationTrafficControllerChameleonOutfit
+  job: StationTrafficController
   hasMindShield: true
   equipment:
     head: ClothingHeadHatHopcap
@@ -54,7 +51,7 @@
 
 - type: entity
   parent: HoPPDA
-  id: HoFPDA
+  id: STCPDA
   components:
   - type: Pda
-    id: HoFIDCard
+    id: STCIDCard
