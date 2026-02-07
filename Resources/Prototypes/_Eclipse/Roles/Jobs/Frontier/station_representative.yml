@@ -19,7 +19,7 @@
       time: 5h
   access:
   - FrontierCommand
-  - HeadOfFrontier
+  - StationRepresentative
   - FrontierPostOffice
   - FrontierEngineering
   - FrontierSecurity
