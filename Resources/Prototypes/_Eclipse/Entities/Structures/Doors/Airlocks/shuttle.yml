@@ -1,7 +1,7 @@
 # Airlocks
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommand
   id: AirlockFrontierCommandLocked
   suffix: Frontier Command, Locked
   components:
@@ -10,7 +10,7 @@
       board: [ DoorElectronicsFrontierCommand ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommand
   id: AirlockStationRepresentativeLocked
   suffix: Station Representative, Locked
   components:
@@ -19,7 +19,7 @@
       board: [ DoorElectronicsStationRepresentative ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockEngineering
   id: AirlockFrontierEngineeringLocked
   suffix: Frontier Engineering, Locked
   components:
@@ -28,7 +28,7 @@
       board: [ DoorElectronicsFrontierEngineering ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockFrontierSecurityLocked
   suffix: Frontier Security, Locked
   components:
@@ -37,7 +37,7 @@
       board: [ DoorElectronicsFrontierSecurity ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockServiceLocked
   id: AirlockFrontierJanitorLocked
   suffix: Frontier Janitor, Locked
   components:
@@ -46,7 +46,7 @@
       board: [ DoorElectronicsFrontierJanitor ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockServiceLocked
   id: AirlockFrontierPostOfficeLocked
   suffix: Frontier Post Office Locked
   components:
@@ -64,7 +64,7 @@
       board: [ DoorElectronicsMercenary ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockSectorSecurityLocked
   suffix: Sector Security, Locked
   components:
@@ -73,7 +73,7 @@
       board: [ DoorElectronicsSectorSecurity ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockSSSOfficerLocked
   suffix: Sector Security Officer, Locked
   components:
@@ -82,7 +82,7 @@
       board: [ DoorElectronicsSSSOfficer ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockSSSArmoryLocked
   suffix: Sector Security Armory, Locked
   components:
@@ -91,7 +91,7 @@
       board: [ DoorElectronicsSSSArmory ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockSSSDetectiveLocked
   suffix: Sector Security Detective, Locked
   components:
@@ -109,7 +109,7 @@
       board: [ DoorElectronicsShuttleCrew ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommand
   id: AirlockShuttlePilotLocked
   suffix: Shuttle Pilot, Locked
   components:
@@ -118,7 +118,7 @@
       board: [ DoorElectronicsShuttlePilot ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommand
   id: AirlockShuttleCaptainLocked
   suffix: Shuttle Captain, Locked
   components:
@@ -127,7 +127,7 @@
       board: [ DoorElectronicsShuttleCaptain ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockEngineering
   id: AirlockShuttleEngineerLocked
   suffix: Shuttle Engineer, Locked
   components:
@@ -136,7 +136,7 @@
       board: [ DoorElectronicsShuttleEngineer ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockMedical
   id: AirlockShuttleMedicLocked
   suffix: Shuttle Medic, Locked
   components:
@@ -145,7 +145,7 @@
       board: [ DoorElectronicsShuttleMedic ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurity
   id: AirlockShuttleSecurityLocked
   suffix: Shuttle Security, Locked
   components:
@@ -165,7 +165,7 @@
 # Glass Airlocks
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommandGlass
   id: AirlockFrontierCommandGlassLocked
   suffix: Frontier Command, Locked
   components:
@@ -174,7 +174,7 @@
       board: [ DoorElectronicsFrontierCommand ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockCommandGlass
   id: AirlockStationRepresentativeGlassLocked
   suffix: Station Representative, Locked
   components:
@@ -183,7 +183,7 @@
       board: [ DoorElectronicsStationRepresentative ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockEngineeringGlass
   id: AirlockFrontierEngineeringGlassLocked
   suffix: Frontier Engineering, Locked
   components:
@@ -192,7 +192,7 @@
       board: [ DoorElectronicsFrontierEngineering ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurityGlass
   id: AirlockFrontierSecurityGlassLocked
   suffix: Frontier Security, Locked
   components:
@@ -201,7 +201,7 @@
       board: [ DoorElectronicsFrontierSecurity ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockServiceGlassLocked
   id: AirlockFrontierJanitorGlassLocked
   suffix: Frontier Janitor, Locked
   components:
@@ -210,7 +210,7 @@
       board: [ DoorElectronicsFrontierJanitor ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockServiceGlassLocked
   id: AirlockFrontierPostOfficeGlassLocked
   suffix: Frontier Post Office Locked
   components:
@@ -219,7 +219,7 @@
       board: [ DoorElectronicsFrontierPostOffice ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockGlass
   id: AirlockMercenaryGlassLocked
   suffix: Mercenary Locked
   components:
@@ -228,7 +228,7 @@
       board: [ DoorElectronicsMercenary ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurityGlass
   id: AirlockSectorSecurityGlassLocked
   suffix: Sector Security, Locked
   components:
@@ -237,7 +237,7 @@
       board: [ DoorElectronicsSectorSecurity ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurityGlass
   id: AirlockSSSOfficerGlassLocked
   suffix: Sector Security Officer, Locked
   components:
@@ -246,7 +246,7 @@
       board: [ DoorElectronicsSSSOfficer ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurityGlass
   id: AirlockSSSArmoryGlassLocked
   suffix: Sector Security Armory, Locked
   components:
@@ -255,7 +255,7 @@
       board: [ DoorElectronicsSSSArmory ]
 
 - type: entity
-  parent: Airlock
+  parent: AirlockSecurityGlass
   id: AirlockSSSDetectiveGlassLocked
   suffix: Sector Security Detective, Locked
   components:
@@ -273,7 +273,7 @@
       board: [ DoorElectronicsShuttleCrew ]
 
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockCommandGlass
   id: AirlockShuttlePilotGlassLocked
   suffix: Shuttle Pilot, Locked
   components:
@@ -282,7 +282,7 @@
       board: [ DoorElectronicsShuttlePilot ]
 
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockCommandGlass
   id: AirlockShuttleCaptainGlassLocked
   suffix: Shuttle Captain, Locked
   components:
@@ -291,7 +291,7 @@
       board: [ DoorElectronicsShuttleCaptain ]
 
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockEngineeringGlass
   id: AirlockShuttleEngineerGlassLocked
   suffix: Shuttle Engineer, Locked
   components:
@@ -300,7 +300,7 @@
       board: [ DoorElectronicsShuttleEngineer ]
 
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockMedicalGlass
   id: AirlockShuttleMedicGlassLocked
   suffix: Shuttle Medic, Locked
   components:
@@ -309,7 +309,7 @@
       board: [ DoorElectronicsShuttleMedic ]
 
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockSecurityGlass
   id: AirlockShuttleSecurityGlassLocked
   suffix: Shuttle Security, Locked
   components:
