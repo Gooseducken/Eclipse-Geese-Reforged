@@ -46,6 +46,7 @@ latejoin-arrivals-direction-time = Шаттл, который доставит �
 latejoin-arrivals-dumped-from-shuttle = Таинственная сила не позволяет вам улететь на шаттле прибытия.
 latejoin-arrivals-teleport-to-spawn = Таинственная сила телепортирует вас с шаттла прибытия. Удачной смены!
 preset-not-enough-ready-players = Не удалось запустить пресет { $presetName }. Требуется { $minimumPlayers } игроков, но готовы только { $readyPlayersCount }.
+preset-not-enough-current-players = Не удалось запустить пресет { $presetName }. Требуется { $minimumPlayers } игроков, но на сервере только { $currentPlayers }.
 preset-no-one-ready = Не удалось запустить режим { $presetName }. Нет готовых игроков.
 game-run-level-PreRoundLobby = Предраундовое лобби
 game-run-level-InRound = В раунде

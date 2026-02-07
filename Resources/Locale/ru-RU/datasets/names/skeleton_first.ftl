@@ -25,3 +25,4 @@ names-skeleton-first-dataset-24 = Кокикс
 names-skeleton-first-dataset-25 = Тарсус
 names-skeleton-first-dataset-26 = Лакрмаль
 names-skeleton-first-dataset-27 = Бон
+names-skeleton-first-dataset-28 = Костя
