@@ -5,7 +5,7 @@
   minPlayers: 0
   stations:
     PointOfInterest:
-      stationProto: StandardNanotrasenStation
+      stationProto: PoIStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Trade Mall {1}'
