@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/02/2026 16:45:38
-  entityCount: 5595
+  time: 02/07/2026 14:52:06
+  entityCount: 5521
 maps:
 - 1
 grids:
@@ -1033,14 +1033,16 @@ entities:
           -7,0:
             0: 65531
           -7,1:
-            0: 56789
+            0: 55765
+            2: 1024
           -7,2:
             0: 65520
           -7,3:
             0: 7
             1: 22272
           -7,-1:
-            0: 45311
+            0: 37119
+            2: 8192
           -7,4:
             1: 10001
           -6,0:
@@ -1334,6 +1336,11 @@ entities:
         - volume: 2500
           immutable: True
           moles: {}
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+            Oxygen: 20.078888
+            Nitrogen: 75.53487
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -2382,368 +2389,8 @@ entities:
       parent: 5462
     - type: Physics
       canCollide: False
-- proto: AirlockAtmosphericsGlassLocked
-  entities:
-  - uid: 3268
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -46.5,-3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3269
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2EC3-6E64
-      receiveFrequency: 1280
-  - uid: 3270
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -46.5,-2.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3271
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1205-DDF7
-      receiveFrequency: 1280
-  - uid: 3912
-    components:
-    - type: Transform
-      pos: -43.5,2.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3913
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4509-99BF
-      receiveFrequency: 1280
-  - uid: 3914
-    components:
-    - type: Transform
-      pos: -44.5,2.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3915
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 76B1-896F
-      receiveFrequency: 1280
-- proto: AirlockAtmosphericsLocked
-  entities:
-  - uid: 3348
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -40.5,-4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3349
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3984-2FCF
-      receiveFrequency: 1280
-  - uid: 3350
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -40.5,-3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3351
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2C6B-6E86
-      receiveFrequency: 1280
-  - uid: 3352
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -43.5,-6.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3353
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 351C-2A41
-      receiveFrequency: 1280
-- proto: AirlockBarGlassLocked
-  entities:
-  - uid: 3122
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,5.5
-      parent: 2
-  - uid: 3129
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,-1.5
-      parent: 2
-  - uid: 3273
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,2.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
-  - uid: 3274
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,5.5
-      parent: 2
-  - uid: 3277
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,1.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
-  - uid: 3289
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,-1.5
-      parent: 2
-- proto: AirlockBarLocked
-  entities:
-  - uid: 1428
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -8.5,0.5
-      parent: 2
-  - uid: 3102
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -8.5,1.5
-      parent: 2
-  - uid: 3105
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -9.5,2.5
-      parent: 2
-- proto: AirlockBrigGlassLocked
-  entities:
-  - uid: 2939
-    components:
-    - type: Transform
-      pos: -3.5,-5.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2940
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 12D8-9BB9
-      receiveFrequency: 1280
-  - uid: 2941
-    components:
-    - type: Transform
-      pos: -2.5,-10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2942
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1153-57A9
-      receiveFrequency: 1280
-  - uid: 2943
-    components:
-    - type: Transform
-      pos: -2.5,-7.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2944
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 172E-6D90
-      receiveFrequency: 1280
-  - uid: 2945
-    components:
-    - type: Transform
-      pos: -2.5,-5.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2946
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 29D8-0323
-      receiveFrequency: 1280
-  - uid: 2957
-    components:
-    - type: Transform
-      pos: -3.5,-10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 2958
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 6310-0605
-      receiveFrequency: 1280
-  - uid: 4264
-    components:
-    - type: Transform
-      pos: -3.5,-7.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4265
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3485-2470
-      receiveFrequency: 1280
 - proto: AirlockBrigLocked
   entities:
-  - uid: 4282
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,-8.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4283
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 0FC6-6611
-      receiveFrequency: 1280
-  - uid: 4284
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-8.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4285
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7D41-DD4D
-      receiveFrequency: 1280
   - uid: 4537
     components:
     - type: Transform
@@ -2763,456 +2410,8 @@ entities:
     - type: DeviceNetwork
       address: 68A0-CB6A
       receiveFrequency: 1280
-- proto: AirlockCaptainLocked
-  entities:
-  - uid: 3398
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,17.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3399
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 64DE-1D47
-      receiveFrequency: 1280
-    - type: Construction
-      node: medSecurity
-  - uid: 3400
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,15.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3401
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4522-420D
-      receiveFrequency: 1280
-    - type: Construction
-      node: medSecurity
-  - uid: 3402
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,17.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3403
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 63E9-E446
-      receiveFrequency: 1280
-    - type: Construction
-      node: medSecurity
-- proto: AirlockCommandGlassLocked
-  entities:
-  - uid: 3366
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -9.5,12.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3367
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 0157-16E8
-      receiveFrequency: 1280
-  - uid: 3384
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -8.5,12.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3385
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7867-C956
-      receiveFrequency: 1280
-  - uid: 3386
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,12.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3387
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 72FE-5D1E
-      receiveFrequency: 1280
-  - uid: 3388
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -9.5,15.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3389
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7245-692F
-      receiveFrequency: 1280
-  - uid: 3390
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,15.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3391
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 437B-3EBC
-      receiveFrequency: 1280
-  - uid: 3392
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -8.5,15.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3393
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 131C-8766
-      receiveFrequency: 1280
-  - uid: 3394
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,20.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3395
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3FFB-AA4B
-      receiveFrequency: 1280
-  - uid: 3396
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,20.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: Construction
-      node: medSecurity
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3397
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5F04-25C8
-      receiveFrequency: 1280
-- proto: AirlockCommandLocked
-  entities:
-  - uid: 3368
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -11.5,15.5
-      parent: 2
-    - type: WiresPanelSecurity
-      wiresAccessible: False
-      examine: wires-panel-component-on-examine-security-level2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3369
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 35B4-0D67
-      receiveFrequency: 1280
-    - type: Construction
-      node: medSecurity
-- proto: AirlockEngineeringGlassLocked
-  entities:
-  - uid: 3224
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -44.5,4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3225
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 33C3-A956
-      receiveFrequency: 1280
-  - uid: 3226
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -43.5,4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3227
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7708-75A8
-      receiveFrequency: 1280
 - proto: AirlockEngineeringLocked
   entities:
-  - uid: 3210
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -36.5,10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3211
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2BB1-EEDB
-      receiveFrequency: 1280
-  - uid: 3218
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -36.5,9.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3219
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2696-10D5
-      receiveFrequency: 1280
-  - uid: 3220
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -40.5,10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3221
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3A07-92D4
-      receiveFrequency: 1280
-  - uid: 3222
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -40.5,9.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3223
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2DEE-0C50
-      receiveFrequency: 1280
-  - uid: 3259
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -45.5,10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3260
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 51C1-E7C2
-      receiveFrequency: 1280
   - uid: 3261
     components:
     - type: Transform
@@ -3229,110 +2428,310 @@ entities:
     - type: DeviceNetwork
       address: 7281-0D58
       receiveFrequency: 1280
-  - uid: 3381
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -48.5,-1.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3382
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 14F4-C0A2
-      receiveFrequency: 1280
-- proto: AirlockExternal
-  entities:
-  - uid: 4744
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -33.5,39.5
-      parent: 2
-  - uid: 4745
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -33.5,40.5
-      parent: 2
-  - uid: 4746
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -33.5,41.5
-      parent: 2
-  - uid: 4747
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -32.5,42.5
-      parent: 2
-  - uid: 4748
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -31.5,42.5
-      parent: 2
-  - uid: 4749
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -30.5,42.5
-      parent: 2
-  - uid: 4750
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -29.5,41.5
-      parent: 2
-  - uid: 4751
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -29.5,40.5
-      parent: 2
-  - uid: 4752
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -29.5,39.5
-      parent: 2
 - proto: AirlockExternalEngineeringLocked
   entities:
-  - uid: 3503
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -45.5,3.5
-      parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        4511:
-        - - DoorStatus
-          - DoorBolt
-  - uid: 4511
+  - uid: 3226
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -47.5,3.5
       parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        3503:
-        - - DoorStatus
-          - DoorBolt
+  - uid: 3227
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -45.5,3.5
+      parent: 2
+- proto: AirlockExternalGlass
+  entities:
+  - uid: 3211
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,39.5
+      parent: 2
+  - uid: 3218
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,40.5
+      parent: 2
+  - uid: 3219
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,41.5
+      parent: 2
+  - uid: 3220
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -30.5,42.5
+      parent: 2
+  - uid: 3221
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -32.5,42.5
+      parent: 2
+  - uid: 3222
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -31.5,42.5
+      parent: 2
+  - uid: 3223
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,41.5
+      parent: 2
+  - uid: 3224
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,40.5
+      parent: 2
+  - uid: 3225
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,39.5
+      parent: 2
+  - uid: 3259
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,-25.5
+      parent: 2
+  - uid: 3260
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,-24.5
+      parent: 2
+  - uid: 3268
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -33.5,-23.5
+      parent: 2
+  - uid: 3269
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -32.5,-26.5
+      parent: 2
+  - uid: 3270
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -31.5,-26.5
+      parent: 2
+  - uid: 3271
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -30.5,-26.5
+      parent: 2
+  - uid: 3348
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,-24.5
+      parent: 2
+  - uid: 3349
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,-25.5
+      parent: 2
+  - uid: 3350
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,-23.5
+      parent: 2
+  - uid: 3351
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,-23.5
+      parent: 2
+  - uid: 3352
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,-24.5
+      parent: 2
+  - uid: 3353
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,-25.5
+      parent: 2
+  - uid: 3366
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,-25.5
+      parent: 2
+  - uid: 3367
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,-24.5
+      parent: 2
+  - uid: 3368
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,-23.5
+      parent: 2
+  - uid: 3369
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 25.5,-26.5
+      parent: 2
+  - uid: 3381
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 24.5,-26.5
+      parent: 2
+  - uid: 3382
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.5,-26.5
+      parent: 2
+  - uid: 3384
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,-2.5
+      parent: 2
+  - uid: 3385
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,-4.5
+      parent: 2
+  - uid: 3386
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,-3.5
+      parent: 2
+  - uid: 3387
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 51.5,-5.5
+      parent: 2
+  - uid: 3388
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 50.5,-5.5
+      parent: 2
+  - uid: 3389
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 49.5,-5.5
+      parent: 2
+  - uid: 3390
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,11.5
+      parent: 2
+  - uid: 3391
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,10.5
+      parent: 2
+  - uid: 3392
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 52.5,9.5
+      parent: 2
+  - uid: 3393
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 51.5,12.5
+      parent: 2
+  - uid: 3394
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 50.5,12.5
+      parent: 2
+  - uid: 3395
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 49.5,12.5
+      parent: 2
+  - uid: 3396
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,30.5
+      parent: 2
+  - uid: 3397
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,31.5
+      parent: 2
+  - uid: 3398
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,32.5
+      parent: 2
+  - uid: 3399
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 24.5,33.5
+      parent: 2
+  - uid: 3400
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 25.5,33.5
+      parent: 2
+  - uid: 3401
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.5,33.5
+      parent: 2
+  - uid: 3402
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,32.5
+      parent: 2
+  - uid: 3403
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,31.5
+      parent: 2
+  - uid: 3503
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,30.5
+      parent: 2
 - proto: AirlockExternalGlassShuttleLocked
   entities:
   - uid: 2658
@@ -3614,875 +3013,238 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -28.5,39.5
       parent: 2
-- proto: AirlockExternalLocked
+- proto: AirlockFrontierCommandGlassLocked
   entities:
-  - uid: 3934
+  - uid: 3140
     components:
     - type: Transform
-      pos: -29.5,-23.5
+      rot: 1.5707963267948966 rad
+      pos: -6.5,20.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3935
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5995-8996
-      receiveFrequency: 1280
-  - uid: 3936
+  - uid: 3141
     components:
     - type: Transform
-      pos: -29.5,-25.5
+      rot: 1.5707963267948966 rad
+      pos: -5.5,20.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3937
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1DBB-9571
-      receiveFrequency: 1280
-  - uid: 3938
+  - uid: 3160
     components:
     - type: Transform
-      pos: -29.5,-24.5
+      rot: 1.5707963267948966 rad
+      pos: -7.5,15.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3939
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 303F-4B58
-      receiveFrequency: 1280
-  - uid: 3940
+  - uid: 3161
     components:
     - type: Transform
-      pos: -30.5,-26.5
+      rot: 1.5707963267948966 rad
+      pos: -9.5,15.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3941
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 6771-A84E
-      receiveFrequency: 1280
-  - uid: 3942
+  - uid: 3162
     components:
     - type: Transform
-      pos: -31.5,-26.5
+      rot: 1.5707963267948966 rad
+      pos: -8.5,15.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3943
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 633B-5D9D
-      receiveFrequency: 1280
-  - uid: 3944
+  - uid: 3166
     components:
     - type: Transform
-      pos: -32.5,-26.5
+      rot: 1.5707963267948966 rad
+      pos: -9.5,12.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3945
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 18EB-FE6C
-      receiveFrequency: 1280
-  - uid: 3946
+  - uid: 3167
     components:
     - type: Transform
-      pos: -33.5,-25.5
+      rot: 1.5707963267948966 rad
+      pos: -7.5,12.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3947
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3C81-3D33
-      receiveFrequency: 1280
-  - uid: 3948
+  - uid: 3195
     components:
     - type: Transform
-      pos: -33.5,-24.5
+      rot: 1.5707963267948966 rad
+      pos: -8.5,12.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3949
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 08FA-4FD7
-      receiveFrequency: 1280
-  - uid: 3950
-    components:
-    - type: Transform
-      pos: -33.5,-23.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3951
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 747D-C26A
-      receiveFrequency: 1280
-  - uid: 3952
-    components:
-    - type: Transform
-      pos: 23.5,-23.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3953
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 558E-2590
-      receiveFrequency: 1280
-  - uid: 3954
-    components:
-    - type: Transform
-      pos: 23.5,-24.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3955
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 21A3-1A18
-      receiveFrequency: 1280
-  - uid: 3956
-    components:
-    - type: Transform
-      pos: 23.5,-25.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3957
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3CD4-0D0B
-      receiveFrequency: 1280
-  - uid: 3958
-    components:
-    - type: Transform
-      pos: 24.5,-26.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3959
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1F15-1A9C
-      receiveFrequency: 1280
-  - uid: 3960
-    components:
-    - type: Transform
-      pos: 25.5,-26.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3961
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 424F-550B
-      receiveFrequency: 1280
-  - uid: 3962
-    components:
-    - type: Transform
-      pos: 26.5,-26.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3963
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2D9D-EC02
-      receiveFrequency: 1280
-  - uid: 3964
-    components:
-    - type: Transform
-      pos: 27.5,-25.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3965
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 2AEE-AA13
-      receiveFrequency: 1280
-  - uid: 3966
-    components:
-    - type: Transform
-      pos: 27.5,-24.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3967
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 0031-C186
-      receiveFrequency: 1280
-  - uid: 3968
-    components:
-    - type: Transform
-      pos: 27.5,-23.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3969
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4820-8016
-      receiveFrequency: 1280
-  - uid: 3970
-    components:
-    - type: Transform
-      pos: 49.5,-5.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3971
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 43F5-5D76
-      receiveFrequency: 1280
-  - uid: 3972
-    components:
-    - type: Transform
-      pos: 51.5,-5.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3973
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4A06-3267
-      receiveFrequency: 1280
-  - uid: 3974
-    components:
-    - type: Transform
-      pos: 50.5,-5.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3975
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 404C-75ED
-      receiveFrequency: 1280
-  - uid: 3976
-    components:
-    - type: Transform
-      pos: 52.5,-4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3977
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 11A6-D33B
-      receiveFrequency: 1280
-  - uid: 3978
-    components:
-    - type: Transform
-      pos: 52.5,-3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3979
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7B21-EB2C
-      receiveFrequency: 1280
-  - uid: 3980
-    components:
-    - type: Transform
-      pos: 52.5,-2.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3981
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 431C-0E77
-      receiveFrequency: 1280
-  - uid: 3982
-    components:
-    - type: Transform
-      pos: 52.5,9.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3983
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 265A-8E67
-      receiveFrequency: 1280
-  - uid: 3984
-    components:
-    - type: Transform
-      pos: 52.5,10.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3985
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 6AE7-5C6D
-      receiveFrequency: 1280
-  - uid: 3986
-    components:
-    - type: Transform
-      pos: 52.5,11.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3987
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4972-ADD2
-      receiveFrequency: 1280
-  - uid: 3988
-    components:
-    - type: Transform
-      pos: 51.5,12.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3989
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 7814-299E
-      receiveFrequency: 1280
-  - uid: 3990
-    components:
-    - type: Transform
-      pos: 50.5,12.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3991
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1CFB-2C73
-      receiveFrequency: 1280
-  - uid: 3992
-    components:
-    - type: Transform
-      pos: 49.5,12.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3993
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 38C9-8614
-      receiveFrequency: 1280
-  - uid: 3994
-    components:
-    - type: Transform
-      pos: 27.5,30.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3995
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5077-5FA4
-      receiveFrequency: 1280
-  - uid: 3996
-    components:
-    - type: Transform
-      pos: 27.5,31.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3997
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4404-DF3E
-      receiveFrequency: 1280
-  - uid: 3998
-    components:
-    - type: Transform
-      pos: 27.5,32.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3999
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3144-887B
-      receiveFrequency: 1280
-  - uid: 4000
-    components:
-    - type: Transform
-      pos: 26.5,33.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4001
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5B13-D5C1
-      receiveFrequency: 1280
-  - uid: 4002
-    components:
-    - type: Transform
-      pos: 25.5,33.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4003
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 17DE-7C91
-      receiveFrequency: 1280
-  - uid: 4004
-    components:
-    - type: Transform
-      pos: 24.5,33.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4005
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 44B5-1C69
-      receiveFrequency: 1280
-  - uid: 4006
-    components:
-    - type: Transform
-      pos: 23.5,32.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4007
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 77A4-4DA6
-      receiveFrequency: 1280
-  - uid: 4008
-    components:
-    - type: Transform
-      pos: 23.5,31.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4009
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 14F1-D433
-      receiveFrequency: 1280
-  - uid: 4010
-    components:
-    - type: Transform
-      pos: 23.5,30.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4011
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 04DA-E1FE
-      receiveFrequency: 1280
-- proto: AirlockJanitorLocked
+- proto: AirlockFrontierEngineeringGlassLocked
   entities:
-  - uid: 3839
+  - uid: 1428
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -46.5,-3.5
+      parent: 2
+  - uid: 2647
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -43.5,4.5
+      parent: 2
+  - uid: 2939
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -44.5,4.5
+      parent: 2
+  - uid: 2940
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -44.5,2.5
+      parent: 2
+  - uid: 2941
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -43.5,2.5
+      parent: 2
+  - uid: 3210
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -46.5,-2.5
+      parent: 2
+- proto: AirlockFrontierEngineeringLocked
+  entities:
+  - uid: 2650
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -48.5,-1.5
+      parent: 2
+  - uid: 2652
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -40.5,-4.5
+      parent: 2
+  - uid: 3159
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,15.5
+      parent: 2
+  - uid: 3196
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -43.5,-6.5
+      parent: 2
+  - uid: 3197
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -40.5,-3.5
+      parent: 2
+  - uid: 3198
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -36.5,9.5
+      parent: 2
+  - uid: 3199
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -36.5,10.5
+      parent: 2
+  - uid: 3200
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -40.5,10.5
+      parent: 2
+  - uid: 3201
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -40.5,9.5
+      parent: 2
+  - uid: 3202
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -45.5,10.5
+      parent: 2
+- proto: AirlockFrontierJanitorLocked
+  entities:
+  - uid: 3913
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,1.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3840
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 378A-213D
-      receiveFrequency: 1280
-  - uid: 3841
+  - uid: 3940
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,2.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3842
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 774E-2DAF
-      receiveFrequency: 1280
+- proto: AirlockFrontierPostOfficeLocked
+  entities:
+  - uid: 3914
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 17.5,5.5
+      parent: 2
+  - uid: 3939
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 17.5,4.5
+      parent: 2
+- proto: AirlockFrontierSecurityGlassLocked
+  entities:
+  - uid: 2945
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,-8.5
+      parent: 2
+  - uid: 2957
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-10.5
+      parent: 2
+  - uid: 2958
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,-8.5
+      parent: 2
+  - uid: 3105
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-10.5
+      parent: 2
+- proto: AirlockFrontierSecurityLocked
+  entities:
+  - uid: 2946
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-5.5
+      parent: 2
+  - uid: 3102
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-5.5
+      parent: 2
+  - uid: 3122
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-7.5
+      parent: 2
+  - uid: 3129
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,-7.5
+      parent: 2
 - proto: AirlockMaintLocked
   entities:
-  - uid: 3195
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -18.5,3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3196
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 12B5-6D90
-      receiveFrequency: 1280
-  - uid: 3197
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -16.5,4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3198
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 06DC-24F0
-      receiveFrequency: 1280
-  - uid: 3199
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -16.5,2.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3200
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 0C10-6FCF
-      receiveFrequency: 1280
-  - uid: 3201
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -14.5,3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3202
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1F02-7E10
-      receiveFrequency: 1280
   - uid: 3665
     components:
     - type: Transform
@@ -4579,148 +3341,170 @@ entities:
     - type: DeviceNetwork
       address: 2345-70D8
       receiveFrequency: 1280
-- proto: AirlockMedicalGlassLocked
+  - uid: 3915
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -18.5,3.5
+      parent: 2
+  - uid: 3934
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -16.5,4.5
+      parent: 2
+  - uid: 3935
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -14.5,3.5
+      parent: 2
+  - uid: 3936
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -16.5,2.5
+      parent: 2
+- proto: AirlockMedical
   entities:
-  - uid: 3159
+  - uid: 3938
     components:
     - type: Transform
-      pos: -29.5,3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3160
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5FE4-3ECF
-      receiveFrequency: 1280
-  - uid: 3161
-    components:
-    - type: Transform
-      pos: -29.5,4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3162
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 1498-B361
-      receiveFrequency: 1280
-  - uid: 3163
-    components:
-    - type: Transform
-      pos: -29.5,5.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3164
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 26B9-95C1
-      receiveFrequency: 1280
-- proto: AirlockMedicalLocked
-  entities:
-  - uid: 3166
-    components:
-    - type: Transform
-      pos: -21.5,3.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3167
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 4CDF-D956
-      receiveFrequency: 1280
-- proto: AirlockMedicalMorgueLocked
-  entities:
-  - uid: 3140
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: -25.5,4.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3141
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 5793-09E1
-      receiveFrequency: 1280
-- proto: AirlockServiceLocked
+- proto: AirlockMedicalGlass
   entities:
+  - uid: 3841
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,3.5
+      parent: 2
+    - type: Door
+      secondsUntilStateChange: -226.20012
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+  - uid: 3842
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,5.5
+      parent: 2
+    - type: Door
+      secondsUntilStateChange: -227.73346
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+  - uid: 3912
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -29.5,4.5
+      parent: 2
+    - type: Door
+      secondsUntilStateChange: -226.93346
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+  - uid: 3937
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -21.5,3.5
+      parent: 2
+- proto: AirlockStandardGlass
+  entities:
+  - uid: 2942
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,0.5
+      parent: 2
+  - uid: 2943
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,1.5
+      parent: 2
+  - uid: 2944
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,2.5
+      parent: 2
   - uid: 3685
     components:
     - type: Transform
-      pos: 17.5,5.5
+      rot: 1.5707963267948966 rad
+      pos: -1.5,-1.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3686
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 3D2F-1F0E
-      receiveFrequency: 1280
+  - uid: 3686
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,5.5
+      parent: 2
+    - type: Door
+      secondsUntilStateChange: -157.26686
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 3687
     components:
     - type: Transform
-      pos: 17.5,4.5
+      rot: 1.5707963267948966 rad
+      pos: 0.5,2.5
       parent: 2
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3688
-    - type: Airlock
-      powered: True
-    - type: DoorBolt
-      powered: True
-    - type: DeviceNetwork
-      address: 04B0-E9DB
-      receiveFrequency: 1280
+  - uid: 3688
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,-1.5
+      parent: 2
+  - uid: 3839
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 0.5,1.5
+      parent: 2
+  - uid: 3840
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,5.5
+      parent: 2
+    - type: Door
+      secondsUntilStateChange: -157.73352
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+- proto: AirlockStationRepresentativeLocked
+  entities:
+  - uid: 3136
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,15.5
+      parent: 2
+  - uid: 3137
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,17.5
+      parent: 2
+  - uid: 3138
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,17.5
+      parent: 2
 - proto: AirSensor
   entities:
   - uid: 3112
@@ -8662,6 +7446,18 @@ entities:
       supplyRampPosition: 0.1538086
     - type: Fixtures
       fixtures: {}
+- proto: ATM
+  entities:
+  - uid: 3289
+    components:
+    - type: Transform
+      pos: 6.5,7.5
+      parent: 2
+  - uid: 3501
+    components:
+    - type: Transform
+      pos: 6.5,-0.5
+      parent: 2
 - proto: AtmosDeviceFanDirectional
   entities:
   - uid: 1118
@@ -17665,6 +16461,9 @@ entities:
     - type: Transform
       pos: -3.5,5.5
       parent: 2
+    - type: Door
+      secondsUntilStateChange: -1247.6324
+      state: Closing
   - uid: 2668
     components:
     - type: Transform
@@ -19782,88 +18581,8 @@ entities:
       parent: 3675
     - type: Physics
       canCollide: False
-- proto: DoorElectronicsAtmospherics
-  entities:
-  - uid: 3269
-    components:
-    - type: Transform
-      parent: 3268
-    - type: Physics
-      canCollide: False
-  - uid: 3271
-    components:
-    - type: Transform
-      parent: 3270
-    - type: Physics
-      canCollide: False
-  - uid: 3349
-    components:
-    - type: Transform
-      parent: 3348
-    - type: Physics
-      canCollide: False
-  - uid: 3351
-    components:
-    - type: Transform
-      parent: 3350
-    - type: Physics
-      canCollide: False
-  - uid: 3353
-    components:
-    - type: Transform
-      parent: 3352
-    - type: Physics
-      canCollide: False
-  - uid: 3913
-    components:
-    - type: Transform
-      parent: 3912
-    - type: Physics
-      canCollide: False
-  - uid: 3915
-    components:
-    - type: Transform
-      parent: 3914
-    - type: Physics
-      canCollide: False
 - proto: DoorElectronicsBrig
   entities:
-  - uid: 2940
-    components:
-    - type: Transform
-      parent: 2939
-    - type: Physics
-      canCollide: False
-  - uid: 2942
-    components:
-    - type: Transform
-      parent: 2941
-    - type: Physics
-      canCollide: False
-  - uid: 2944
-    components:
-    - type: Transform
-      parent: 2943
-    - type: Physics
-      canCollide: False
-  - uid: 2946
-    components:
-    - type: Transform
-      parent: 2945
-    - type: Physics
-      canCollide: False
-  - uid: 2958
-    components:
-    - type: Transform
-      parent: 2957
-    - type: Physics
-      canCollide: False
-  - uid: 4265
-    components:
-    - type: Transform
-      parent: 4264
-    - type: Physics
-      canCollide: False
   - uid: 4275
     components:
     - type: Transform
@@ -19882,18 +18601,6 @@ entities:
       parent: 4278
     - type: Physics
       canCollide: False
-  - uid: 4283
-    components:
-    - type: Transform
-      parent: 4282
-    - type: Physics
-      canCollide: False
-  - uid: 4285
-    components:
-    - type: Transform
-      parent: 4284
-    - type: Physics
-      canCollide: False
   - uid: 4538
     components:
     - type: Transform
@@ -19903,43 +18610,8 @@ entities:
       - - Brig
     - type: Physics
       canCollide: False
-- proto: DoorElectronicsCaptain
-  entities:
-  - uid: 3399
-    components:
-    - type: Transform
-      parent: 3398
-    - type: Physics
-      canCollide: False
-  - uid: 3401
-    components:
-    - type: Transform
-      parent: 3400
-    - type: Physics
-      canCollide: False
-  - uid: 3403
-    components:
-    - type: Transform
-      parent: 3402
-    - type: AccessReader
-      accessListsOriginal:
-      - - Captain
-    - type: Physics
-      canCollide: False
 - proto: DoorElectronicsCommand
   entities:
-  - uid: 3367
-    components:
-    - type: Transform
-      parent: 3366
-    - type: Physics
-      canCollide: False
-  - uid: 3369
-    components:
-    - type: Transform
-      parent: 3368
-    - type: Physics
-      canCollide: False
   - uid: 3371
     components:
     - type: Transform
@@ -19958,89 +18630,8 @@ entities:
       parent: 3375
     - type: Physics
       canCollide: False
-  - uid: 3385
-    components:
-    - type: Transform
-      parent: 3384
-    - type: Physics
-      canCollide: False
-  - uid: 3387
-    components:
-    - type: Transform
-      parent: 3386
-    - type: Physics
-      canCollide: False
-  - uid: 3389
-    components:
-    - type: Transform
-      parent: 3388
-    - type: Physics
-      canCollide: False
-  - uid: 3391
-    components:
-    - type: Transform
-      parent: 3390
-    - type: Physics
-      canCollide: False
-  - uid: 3393
-    components:
-    - type: Transform
-      parent: 3392
-    - type: Physics
-      canCollide: False
-  - uid: 3395
-    components:
-    - type: Transform
-      parent: 3394
-    - type: Physics
-      canCollide: False
-  - uid: 3397
-    components:
-    - type: Transform
-      parent: 3396
-    - type: Physics
-      canCollide: False
 - proto: DoorElectronicsEngineering
   entities:
-  - uid: 3211
-    components:
-    - type: Transform
-      parent: 3210
-    - type: Physics
-      canCollide: False
-  - uid: 3219
-    components:
-    - type: Transform
-      parent: 3218
-    - type: AccessReader
-      accessListsOriginal:
-      - - Engineering
-    - type: Physics
-      canCollide: False
-  - uid: 3221
-    components:
-    - type: Transform
-      parent: 3220
-    - type: Physics
-      canCollide: False
-  - uid: 3223
-    components:
-    - type: Transform
-      parent: 3222
-    - type: Physics
-      canCollide: False
-  - uid: 3225
-    components:
-    - type: Transform
-      parent: 3224
-    - type: Physics
-      canCollide: False
-  - uid: 3227
-    components:
-    - type: Transform
-      parent: 3226
-    - type: Physics
-      canCollide: False
   - uid: 3250
     components:
     - type: Transform
@@ -20071,258 +18662,10 @@ entities:
       parent: 3257
     - type: Physics
       canCollide: False
-  - uid: 3260
-    components:
-    - type: Transform
-      parent: 3259
-    - type: Physics
-      canCollide: False
   - uid: 3262
     components:
     - type: Transform
       parent: 3261
-    - type: Physics
-      canCollide: False
-  - uid: 3382
-    components:
-    - type: Transform
-      parent: 3381
-    - type: Physics
-      canCollide: False
-- proto: DoorElectronicsExternal
-  entities:
-  - uid: 3935
-    components:
-    - type: Transform
-      parent: 3934
-    - type: Physics
-      canCollide: False
-  - uid: 3937
-    components:
-    - type: Transform
-      parent: 3936
-    - type: Physics
-      canCollide: False
-  - uid: 3939
-    components:
-    - type: Transform
-      parent: 3938
-    - type: Physics
-      canCollide: False
-  - uid: 3941
-    components:
-    - type: Transform
-      parent: 3940
-    - type: Physics
-      canCollide: False
-  - uid: 3943
-    components:
-    - type: Transform
-      parent: 3942
-    - type: Physics
-      canCollide: False
-  - uid: 3945
-    components:
-    - type: Transform
-      parent: 3944
-    - type: Physics
-      canCollide: False
-  - uid: 3947
-    components:
-    - type: Transform
-      parent: 3946
-    - type: Physics
-      canCollide: False
-  - uid: 3949
-    components:
-    - type: Transform
-      parent: 3948
-    - type: Physics
-      canCollide: False
-  - uid: 3951
-    components:
-    - type: Transform
-      parent: 3950
-    - type: Physics
-      canCollide: False
-  - uid: 3953
-    components:
-    - type: Transform
-      parent: 3952
-    - type: Physics
-      canCollide: False
-  - uid: 3955
-    components:
-    - type: Transform
-      parent: 3954
-    - type: Physics
-      canCollide: False
-  - uid: 3957
-    components:
-    - type: Transform
-      parent: 3956
-    - type: Physics
-      canCollide: False
-  - uid: 3959
-    components:
-    - type: Transform
-      parent: 3958
-    - type: Physics
-      canCollide: False
-  - uid: 3961
-    components:
-    - type: Transform
-      parent: 3960
-    - type: Physics
-      canCollide: False
-  - uid: 3963
-    components:
-    - type: Transform
-      parent: 3962
-    - type: Physics
-      canCollide: False
-  - uid: 3965
-    components:
-    - type: Transform
-      parent: 3964
-    - type: Physics
-      canCollide: False
-  - uid: 3967
-    components:
-    - type: Transform
-      parent: 3966
-    - type: Physics
-      canCollide: False
-  - uid: 3969
-    components:
-    - type: Transform
-      parent: 3968
-    - type: Physics
-      canCollide: False
-  - uid: 3971
-    components:
-    - type: Transform
-      parent: 3970
-    - type: Physics
-      canCollide: False
-  - uid: 3973
-    components:
-    - type: Transform
-      parent: 3972
-    - type: Physics
-      canCollide: False
-  - uid: 3975
-    components:
-    - type: Transform
-      parent: 3974
-    - type: Physics
-      canCollide: False
-  - uid: 3977
-    components:
-    - type: Transform
-      parent: 3976
-    - type: Physics
-      canCollide: False
-  - uid: 3979
-    components:
-    - type: Transform
-      parent: 3978
-    - type: Physics
-      canCollide: False
-  - uid: 3981
-    components:
-    - type: Transform
-      parent: 3980
-    - type: Physics
-      canCollide: False
-  - uid: 3983
-    components:
-    - type: Transform
-      parent: 3982
-    - type: Physics
-      canCollide: False
-  - uid: 3985
-    components:
-    - type: Transform
-      parent: 3984
-    - type: Physics
-      canCollide: False
-  - uid: 3987
-    components:
-    - type: Transform
-      parent: 3986
-    - type: Physics
-      canCollide: False
-  - uid: 3989
-    components:
-    - type: Transform
-      parent: 3988
-    - type: Physics
-      canCollide: False
-  - uid: 3991
-    components:
-    - type: Transform
-      parent: 3990
-    - type: Physics
-      canCollide: False
-  - uid: 3993
-    components:
-    - type: Transform
-      parent: 3992
-    - type: Physics
-      canCollide: False
-  - uid: 3995
-    components:
-    - type: Transform
-      parent: 3994
-    - type: Physics
-      canCollide: False
-  - uid: 3997
-    components:
-    - type: Transform
-      parent: 3996
-    - type: Physics
-      canCollide: False
-  - uid: 3999
-    components:
-    - type: Transform
-      parent: 3998
-    - type: Physics
-      canCollide: False
-  - uid: 4001
-    components:
-    - type: Transform
-      parent: 4000
-    - type: Physics
-      canCollide: False
-  - uid: 4003
-    components:
-    - type: Transform
-      parent: 4002
-    - type: Physics
-      canCollide: False
-  - uid: 4005
-    components:
-    - type: Transform
-      parent: 4004
-    - type: Physics
-      canCollide: False
-  - uid: 4007
-    components:
-    - type: Transform
-      parent: 4006
-    - type: Physics
-      canCollide: False
-  - uid: 4009
-    components:
-    - type: Transform
-      parent: 4008
-    - type: Physics
-      canCollide: False
-  - uid: 4011
-    components:
-    - type: Transform
-      parent: 4010
     - type: Physics
       canCollide: False
 - proto: DoorElectronicsHeadOfPersonnel
@@ -20333,46 +18676,8 @@ entities:
       parent: 3404
     - type: Physics
       canCollide: False
-- proto: DoorElectronicsJanitor
-  entities:
-  - uid: 3840
-    components:
-    - type: Transform
-      parent: 3839
-    - type: Physics
-      canCollide: False
-  - uid: 3842
-    components:
-    - type: Transform
-      parent: 3841
-    - type: Physics
-      canCollide: False
 - proto: DoorElectronicsMaintenance
   entities:
-  - uid: 3196
-    components:
-    - type: Transform
-      parent: 3195
-    - type: Physics
-      canCollide: False
-  - uid: 3198
-    components:
-    - type: Transform
-      parent: 3197
-    - type: Physics
-      canCollide: False
-  - uid: 3200
-    components:
-    - type: Transform
-      parent: 3199
-    - type: Physics
-      canCollide: False
-  - uid: 3202
-    components:
-    - type: Transform
-      parent: 3201
-    - type: Physics
-      canCollide: False
   - uid: 3666
     components:
     - type: Transform
@@ -20403,58 +18708,12 @@ entities:
       parent: 3883
     - type: Physics
       canCollide: False
-- proto: DoorElectronicsMedical
-  entities:
-  - uid: 3160
-    components:
-    - type: Transform
-      parent: 3159
-    - type: Physics
-      canCollide: False
-  - uid: 3162
-    components:
-    - type: Transform
-      parent: 3161
-    - type: Physics
-      canCollide: False
-  - uid: 3164
-    components:
-    - type: Transform
-      parent: 3163
-    - type: Physics
-      canCollide: False
-  - uid: 3167
-    components:
-    - type: Transform
-      parent: 3166
-    - type: Physics
-      canCollide: False
-- proto: DoorElectronicsMorgue
-  entities:
-  - uid: 3141
-    components:
-    - type: Transform
-      parent: 3140
-    - type: Physics
-      canCollide: False
 - proto: DoorElectronicsService
   entities:
   - uid: 3678
     components:
     - type: Transform
       parent: 3677
-    - type: Physics
-      canCollide: False
-  - uid: 3686
-    components:
-    - type: Transform
-      parent: 3685
-    - type: Physics
-      canCollide: False
-  - uid: 3688
-    components:
-    - type: Transform
-      parent: 3687
     - type: Physics
       canCollide: False
 - proto: DrinkBottleVodka
@@ -20661,6 +18920,16 @@ entities:
       parent: 3588
     - type: Physics
       canCollide: False
+- proto: ExtinguisherCabinet
+  entities:
+  - uid: 4479
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,18.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: ExtinguisherCabinetFilled
   entities:
   - uid: 50
@@ -20687,35 +18956,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 2647
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -10.5,14.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
   - uid: 2648
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,-9.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 2650
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,11.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 2652
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,-1.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -20735,6 +18980,28 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+  - uid: 3163
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.5,-11.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 3164
+    components:
+    - type: Transform
+      pos: 37.5,12.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 3274
+    components:
+    - type: Transform
+      pos: 4.5,11.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
   - uid: 3496
     components:
     - type: Transform
@@ -20751,19 +19018,10 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 3501
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -38.5,-5.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
   - uid: 3504
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -29.5,12.5
+      pos: 35.5,-1.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -20772,46 +19030,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 19.5,3.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 4479
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 27.5,17.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 4480
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 35.5,12.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 4481
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 35.5,-1.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 4482
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 27.5,-15.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 4483
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,-5.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -21416,7 +19634,7 @@ entities:
       pos: -29.5,9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -2003.1603
+      secondsUntilStateChange: -13222.047
       state: Closing
     - type: ContainerContainer
       containers:
@@ -21651,7 +19869,7 @@ entities:
       address: 6156-0A3B
       receiveFrequency: 1621
     - type: Door
-      secondsUntilStateChange: -4404.558
+      secondsUntilStateChange: -15623.444
       state: Opening
     - type: Firelock
       powered: True
@@ -26577,7 +24795,7 @@ entities:
       pos: -28.5,10.5
       parent: 2
     - type: AtmosPipeColor
-      color: '#03FCD3FF'
+      color: '#FF1212FF'
   - uid: 3076
     components:
     - type: Transform
@@ -47108,6 +45326,16 @@ entities:
     - type: Transform
       pos: -26.5,-0.5
       parent: 2
+    - type: Lock
+      locked: False
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
 - proto: LockerPrisoner
   entities:
   - uid: 3794
@@ -47323,45 +45551,26 @@ entities:
       canCollide: False
 - proto: Morgue
   entities:
-  - uid: 3136
+  - uid: 3941
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      pos: -23.5,7.5
+      parent: 2
+  - uid: 3942
+    components:
+    - type: Transform
+      pos: -24.5,7.5
+      parent: 2
+  - uid: 3943
+    components:
+    - type: Transform
       pos: -25.5,7.5
       parent: 2
     - type: EntityStorage
       air:
         volume: 200
         immutable: False
-        temperature: 293.147
-        moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
-  - uid: 3137
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -24.5,7.5
-      parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.147
-        moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
-  - uid: 3138
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -23.5,7.5
-      parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.147
+        temperature: 293.14673
         moles:
           Oxygen: 1.7459903
           Nitrogen: 6.568249
@@ -47979,13 +46188,6 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: PottedPlant0
-  entities:
-  - uid: 5577
-    components:
-    - type: Transform
-      pos: -8.5,-15.5
-      parent: 2
 - proto: PottedPlant1
   entities:
   - uid: 5622
@@ -47993,47 +46195,8 @@ entities:
     - type: Transform
       pos: -30.5,29.5
       parent: 2
-- proto: PottedPlant10
-  entities:
-  - uid: 5544
-    components:
-    - type: Transform
-      pos: -6.5,16.5
-      parent: 2
-  - uid: 5588
-    components:
-    - type: Transform
-      pos: 43.5,-2.5
-      parent: 2
-  - uid: 5592
-    components:
-    - type: Transform
-      pos: 24.5,24.5
-      parent: 2
-- proto: PottedPlant11
-  entities:
-  - uid: 5580
-    components:
-    - type: Transform
-      pos: 4.5,-7.5
-      parent: 2
-  - uid: 5591
-    components:
-    - type: Transform
-      pos: 24.5,18.5
-      parent: 2
 - proto: PottedPlant12
   entities:
-  - uid: 5549
-    components:
-    - type: Transform
-      pos: -4.5,11.5
-      parent: 2
-  - uid: 5565
-    components:
-    - type: Transform
-      pos: 7.5,-1.5
-      parent: 2
   - uid: 5623
     components:
     - type: Transform
@@ -48041,45 +46204,13 @@ entities:
       parent: 2
 - proto: PottedPlant14
   entities:
-  - uid: 5564
-    components:
-    - type: Transform
-      pos: 13.5,-1.5
-      parent: 2
   - uid: 5566
     components:
     - type: Transform
       pos: -25.5,1.5
       parent: 2
-  - uid: 5568
-    components:
-    - type: Transform
-      pos: -44.5,-7.5
-      parent: 2
-- proto: PottedPlant16
-  entities:
-  - uid: 5536
-    components:
-    - type: Transform
-      pos: 3.5,21.5
-      parent: 2
-  - uid: 5575
-    components:
-    - type: Transform
-      pos: -30.5,-11.5
-      parent: 2
-  - uid: 5590
-    components:
-    - type: Transform
-      pos: 37.5,11.5
-      parent: 2
 - proto: PottedPlant17
   entities:
-  - uid: 5561
-    components:
-    - type: Transform
-      pos: 13.5,8.5
-      parent: 2
   - uid: 5569
     components:
     - type: Transform
@@ -48104,50 +46235,10 @@ entities:
       parent: 2
 - proto: PottedPlant19
   entities:
-  - uid: 5543
-    components:
-    - type: Transform
-      pos: -10.5,16.5
-      parent: 2
-  - uid: 5545
-    components:
-    - type: Transform
-      pos: 1.5,25.5
-      parent: 2
-  - uid: 5548
-    components:
-    - type: Transform
-      pos: 3.5,12.5
-      parent: 2
-  - uid: 5563
-    components:
-    - type: Transform
-      pos: 13.5,2.5
-      parent: 2
-  - uid: 5571
-    components:
-    - type: Transform
-      pos: -39.5,-0.5
-      parent: 2
-  - uid: 5572
-    components:
-    - type: Transform
-      pos: -29.5,-5.5
-      parent: 2
-  - uid: 5582
-    components:
-    - type: Transform
-      pos: -5.5,-9.5
-      parent: 2
   - uid: 5584
     components:
     - type: Transform
       pos: 26.5,-11.5
-      parent: 2
-  - uid: 5593
-    components:
-    - type: Transform
-      pos: 15.5,12.5
       parent: 2
 - proto: PottedPlant20
   entities:
@@ -48156,25 +46247,8 @@ entities:
     - type: Transform
       pos: -41.5,1.5
       parent: 2
-  - uid: 5589
-    components:
-    - type: Transform
-      pos: 43.5,11.5
-      parent: 2
-- proto: PottedPlant21
-  entities:
-  - uid: 5587
-    components:
-    - type: Transform
-      pos: 37.5,-2.5
-      parent: 2
 - proto: PottedPlant22
   entities:
-  - uid: 5562
-    components:
-    - type: Transform
-      pos: 13.5,4.5
-      parent: 2
   - uid: 5585
     components:
     - type: Transform
@@ -48182,70 +46256,212 @@ entities:
       parent: 2
 - proto: PottedPlant23
   entities:
-  - uid: 5547
-    components:
-    - type: Transform
-      pos: -2.5,14.5
-      parent: 2
   - uid: 5570
     components:
     - type: Transform
       pos: -38.5,11.5
       parent: 2
-- proto: PottedPlant24
+- proto: PottedPlantRandom
   entities:
-  - uid: 5581
+  - uid: 3944
     components:
     - type: Transform
-      pos: -0.5,-7.5
+      pos: -8.5,-15.5
       parent: 2
-- proto: PottedPlant3
-  entities:
-  - uid: 5583
+  - uid: 3945
     components:
     - type: Transform
-      pos: 15.5,-5.5
+      pos: -6.5,25.5
       parent: 2
-- proto: PottedPlant4
-  entities:
-  - uid: 5546
+  - uid: 3946
     components:
     - type: Transform
-      pos: -2.5,16.5
+      pos: 37.5,-2.5
       parent: 2
-  - uid: 5559
+  - uid: 3947
     components:
     - type: Transform
-      pos: 7.5,4.5
+      pos: 24.5,24.5
       parent: 2
-  - uid: 5560
+  - uid: 3948
     components:
     - type: Transform
-      pos: 7.507631,8.50406
+      pos: 4.5,-7.5
       parent: 2
-- proto: PottedPlant5
-  entities:
-  - uid: 5573
+  - uid: 3949
     components:
     - type: Transform
-      pos: -21.5,-5.5
+      pos: 24.5,18.5
       parent: 2
-- proto: PottedPlant6
-  entities:
-  - uid: 5558
+  - uid: 3950
     components:
     - type: Transform
-      pos: 7.5,2.5
+      pos: -10.5,16.5
       parent: 2
-  - uid: 5578
+  - uid: 3951
+    components:
+    - type: Transform
+      pos: 7.5,-1.5
+      parent: 2
+  - uid: 3952
+    components:
+    - type: Transform
+      pos: 13.5,-1.5
+      parent: 2
+  - uid: 3953
+    components:
+    - type: Transform
+      pos: -44.5,-7.5
+      parent: 2
+  - uid: 3954
+    components:
+    - type: Transform
+      pos: 4.5,19.5
+      parent: 2
+  - uid: 3955
+    components:
+    - type: Transform
+      pos: -30.5,-11.5
+      parent: 2
+  - uid: 3956
+    components:
+    - type: Transform
+      pos: 37.5,11.5
+      parent: 2
+  - uid: 3957
+    components:
+    - type: Transform
+      pos: 13.5,2.5
+      parent: 2
+  - uid: 3958
+    components:
+    - type: Transform
+      pos: 3.5,21.5
+      parent: 2
+  - uid: 3959
+    components:
+    - type: Transform
+      pos: 1.5,25.5
+      parent: 2
+  - uid: 3960
+    components:
+    - type: Transform
+      pos: 3.5,12.5
+      parent: 2
+  - uid: 3961
+    components:
+    - type: Transform
+      pos: 13.5,8.5
+      parent: 2
+  - uid: 3962
+    components:
+    - type: Transform
+      pos: -39.5,-0.5
+      parent: 2
+  - uid: 3963
+    components:
+    - type: Transform
+      pos: -29.5,-5.5
+      parent: 2
+  - uid: 3964
+    components:
+    - type: Transform
+      pos: -5.5,-9.5
+      parent: 2
+  - uid: 3965
+    components:
+    - type: Transform
+      pos: 15.5,12.5
+      parent: 2
+  - uid: 3966
+    components:
+    - type: Transform
+      pos: 43.5,11.5
+      parent: 2
+  - uid: 3967
+    components:
+    - type: Transform
+      pos: 43.5,-2.5
+      parent: 2
+  - uid: 3968
+    components:
+    - type: Transform
+      pos: 13.5,4.5
+      parent: 2
+  - uid: 3969
+    components:
+    - type: Transform
+      pos: -2.5,14.5
+      parent: 2
+  - uid: 3970
     components:
     - type: Transform
       pos: 2.5,-15.5
       parent: 2
-  - uid: 5579
+  - uid: 3971
+    components:
+    - type: Transform
+      pos: 15.5,-5.5
+      parent: 2
+  - uid: 3972
+    components:
+    - type: Transform
+      pos: -2.5,16.5
+      parent: 2
+  - uid: 3973
+    components:
+    - type: Transform
+      pos: 7.5,2.5
+      parent: 2
+  - uid: 3974
+    components:
+    - type: Transform
+      pos: 7.5,8.5
+      parent: 2
+  - uid: 3975
+    components:
+    - type: Transform
+      pos: -21.5,-5.5
+      parent: 2
+  - uid: 3976
+    components:
+    - type: Transform
+      pos: 7.5,4.5
+      parent: 2
+  - uid: 3977
+    components:
+    - type: Transform
+      pos: -2.5,-15.5
+      parent: 2
+  - uid: 3978
+    components:
+    - type: Transform
+      pos: -0.5,-7.5
+      parent: 2
+  - uid: 3983
     components:
     - type: Transform
       pos: 3.5,-11.5
+      parent: 2
+  - uid: 3984
+    components:
+    - type: Transform
+      pos: -7.5,-12.5
+      parent: 2
+  - uid: 3985
+    components:
+    - type: Transform
+      pos: -6.5,16.5
+      parent: 2
+  - uid: 3986
+    components:
+    - type: Transform
+      pos: 23.5,-5.5
+      parent: 2
+  - uid: 3987
+    components:
+    - type: Transform
+      pos: 6.5,11.5
       parent: 2
 - proto: PowerCellMedium
   entities:
@@ -49075,6 +47291,24 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -32.5,-22.5
+      parent: 2
+  - uid: 3980
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -23.5,-6.5
+      parent: 2
+  - uid: 3981
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-6.5
+      parent: 2
+  - uid: 3982
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,-6.5
       parent: 2
   - uid: 4676
     components:
@@ -50687,12 +48921,50 @@ entities:
       parent: 3586
     - type: Physics
       canCollide: False
-- proto: SpawnPointAnyJob
+- proto: SpawnPointAttorney
   entities:
-  - uid: 3829
+  - uid: 3979
     components:
     - type: Transform
-      pos: 3.5,3.5
+      pos: -2.5,-3.5
+      parent: 2
+- proto: SpawnPointExplorer
+  entities:
+  - uid: 4884
+    components:
+    - type: Transform
+      pos: -24.5,-0.5
+      parent: 2
+  - uid: 4885
+    components:
+    - type: Transform
+      pos: -22.5,-0.5
+      parent: 2
+- proto: SpawnPointFrontierJanitor
+  entities:
+  - uid: 3273
+    components:
+    - type: Transform
+      pos: 19.5,1.5
+      parent: 2
+- proto: SpawnPointFrontierSecurityGuard
+  entities:
+  - uid: 4481
+    components:
+    - type: Transform
+      pos: -10.5,-8.5
+      parent: 2
+  - uid: 4483
+    components:
+    - type: Transform
+      pos: -8.5,-8.5
+      parent: 2
+- proto: SpawnPointMailman
+  entities:
+  - uid: 4480
+    components:
+    - type: Transform
+      pos: 19.5,6.5
       parent: 2
 - proto: SpawnPointObserver
   entities:
@@ -50700,6 +48972,20 @@ entities:
     components:
     - type: Transform
       pos: 4.5,3.5
+      parent: 2
+- proto: SpawnPointStationRepresentative
+  entities:
+  - uid: 3277
+    components:
+    - type: Transform
+      pos: 0.5,18.5
+      parent: 2
+- proto: SpawnPointStationTrafficController
+  entities:
+  - uid: 3829
+    components:
+    - type: Transform
+      pos: -6.5,22.5
       parent: 2
 - proto: SprayBottle
   entities:
