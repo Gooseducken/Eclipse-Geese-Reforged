@@ -88,6 +88,14 @@
   - type: AccessReader
     access: [["SSSDetective"]]
 
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsHeadOfSectorSecurity
+  suffix: Head of Sector Security, Locked
+  components:
+  - type: AccessReader
+    access: [["HeadOfSectorSecurity"]]
+
 # Shuttle
 - type: entity
   parent: DoorElectronics

@@ -100,6 +100,15 @@
       board: [ DoorElectronicsSSSDetective ]
 
 - type: entity
+  parent: AirlockSecurity
+  id: AirlockHeadOfSectorSecurityLocked
+  suffix: Head of Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSectorSecurity ]
+
+- type: entity
   parent: Airlock
   id: AirlockShuttleCrewLocked
   suffix: Shuttle Crew, Locked
@@ -262,6 +271,15 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSSSDetective ]
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockHeadOfSectorSecurityGlassLocked
+  suffix: Head of Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSectorSecurity ]
 
 - type: entity
   parent: AirlockGlass

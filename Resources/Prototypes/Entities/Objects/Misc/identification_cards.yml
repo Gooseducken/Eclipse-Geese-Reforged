@@ -1315,6 +1315,7 @@
   - type: Access
     groups:
     - AllAccess
+    - EclipseAllAccess # Eclipse
     - Silicon
     tags:
     - CentralCommand

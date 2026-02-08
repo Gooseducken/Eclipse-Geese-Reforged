@@ -13,3 +13,7 @@
 - type: accessLevel
   id: SSSDetective
   name: id-card-access-level-sss-detective
+
+- type: accessLevel
+  id: HeadOfSectorSecurity
+  name: id-card-access-level-head-of-sector-security

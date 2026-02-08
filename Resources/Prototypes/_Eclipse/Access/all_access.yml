@@ -1,0 +1,25 @@
+- type: accessGroup
+  id: EclipseAllAccess
+  tags:
+  # Frontier
+  - FrontierCommand
+  - StationRepresentative
+  - FrontierEngineering
+  - FrontierSecurity
+  - FrontierJanitor
+  - FrontierPostOffice
+  - Mercenary
+  # Sector Security
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - SSSDetective
+  - HeadOfSectorSecurity
+  # Shuttle
+  - ShuttleCrew
+  - ShuttlePilot
+  - ShuttleCaptain
+  - ShuttleEngineer
+  - ShuttleMedic
+  - ShuttleSecurity
+  - ShuttleMercenary
