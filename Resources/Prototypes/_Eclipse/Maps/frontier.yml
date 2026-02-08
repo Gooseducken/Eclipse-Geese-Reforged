@@ -3,6 +3,8 @@
   mapName: 'Frontier Station'
   mapPath: /Maps/_Eclipse/NewFrontier.yml
   minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
   stations:
     Frontier:
       stationProto: StandardNanotrasenStation

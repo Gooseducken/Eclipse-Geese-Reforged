@@ -8,3 +8,4 @@
   supportedMaps: FrontierMapPool
   rules:
   - BasicRoundstartVariation
+  - DefaultSpawnPoIRule
