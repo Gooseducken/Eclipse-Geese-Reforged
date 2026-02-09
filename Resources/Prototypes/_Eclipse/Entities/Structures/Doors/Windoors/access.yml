@@ -1,0 +1,179 @@
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureFrontierCommandLocked
+  suffix: Frontier Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierCommand ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureStationRepresentativeLocked
+  suffix: Station Representative, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsStationRepresentative ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureFrontierEngineeringLocked
+  suffix: Frontier Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierEngineering ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureFrontierSecurityLocked
+  suffix: Frontier Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierSecurity ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureFrontierJanitorLocked
+  suffix: Frontier Janitor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierJanitor ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureFrontierPostOfficeLocked
+  suffix: Frontier Post Office Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierPostOffice ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureMercenaryLocked
+  suffix: Mercenary Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMercenary ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureSectorSecurityLocked
+  suffix: Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSectorSecurity ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureSSSOfficerLocked
+  suffix: Sector Security Officer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSOfficer ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureSSSArmoryLocked
+  suffix: Sector Security Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSArmory ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureSSSDetectiveLocked
+  suffix: Sector Security Detective, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSDetective ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureSSSWardenLocked
+  suffix: Sector Security Warden, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSWarden ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureHeadOfSectorSecurityLocked
+  suffix: Head of Sector Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSectorSecurity ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleCrewLocked
+  suffix: Shuttle Crew, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCrew ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttlePilotLocked
+  suffix: Shuttle Pilot, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttlePilot ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleCaptainLocked
+  suffix: Shuttle Captain, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleCaptain ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleEngineerLocked
+  suffix: Shuttle Engineer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleEngineer ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleMedicLocked
+  suffix: Shuttle Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMedic ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleSecurityLocked
+  suffix: Shuttle Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleSecurity ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureShuttleMercenaryLocked
+  suffix: Shuttle Mercenary, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsShuttleMercenary ]
