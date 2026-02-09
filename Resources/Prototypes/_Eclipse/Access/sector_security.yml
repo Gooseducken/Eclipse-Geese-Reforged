@@ -15,5 +15,9 @@
   name: id-card-access-level-sss-detective
 
 - type: accessLevel
+  id: SSSWarden
+  name: id-card-access-level-sss-warden
+
+- type: accessLevel
   id: HeadOfSectorSecurity
   name: id-card-access-level-head-of-sector-security

@@ -17,6 +17,7 @@
   access:
   - SectorSecurity
   - SSSOfficer
+  - SSSWarden
   - SSSArmory
   - Maintenance
   - External

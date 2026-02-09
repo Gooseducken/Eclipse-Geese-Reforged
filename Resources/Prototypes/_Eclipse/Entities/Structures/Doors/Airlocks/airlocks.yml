@@ -1,0 +1,19 @@
+- type: entity
+  parent: Airlock
+  id: AirlockSSS
+  suffix: Sector Security
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Standard/nfsd.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockSSSGlass
+  suffix: Sector Security
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Glass/nfsd.rsi
+  - type: Wires
+    layoutId: AirlockSecurity

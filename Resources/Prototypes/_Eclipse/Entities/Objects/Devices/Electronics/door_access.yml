@@ -90,6 +90,14 @@
 
 - type: entity
   parent: DoorElectronics
+  id: DoorElectronicsSSSWarden
+  suffix: Sector Security Warden, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSWarden"]]
+
+- type: entity
+  parent: DoorElectronics
   id: DoorElectronicsHeadOfSectorSecurity
   suffix: Head of Sector Security, Locked
   components:
