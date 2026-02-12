@@ -1,0 +1,23 @@
+# Aghost
+- type: startingGear
+  id: MobAghostGearExtended
+  equipment:
+    back: ClothingBackpackSatchelAdmin
+    id: AdminPDA
+  storage:
+    back:
+    - Crowbar
+    - Screwdriver
+    - Wrench
+    - Wirecutter
+    - Welder
+    - Multitool
+    - GasAnalyzer
+    - trayScanner
+    - FireExtinguisher
+    - GeigerCounter
+    - CableApcStack
+    - CableMVStack
+    - CableHVStack
+    - AccessConfiguratorUniversal
+

@@ -106,7 +106,7 @@
   - type: Inventory
     templateId: aghost
   - type: Loadout
-    prototypes: [ MobAghostGear ]
+    prototypes: [ MobAghostGearExtended ] # Eclipse : MobAghostGear -> MobAghostGearExtended
   - type: BypassInteractionChecks
   - type: ExplosionResistance
     damageCoefficient: 0
