@@ -90,7 +90,7 @@ public sealed partial class GasAnalyzerComponent : Component
             // e.g. "Plasma: 2000 mol"
             return Loc.GetString(
                 "gas-entry-info",
-                 ("gasName", Name),
+                 ("gasName", Loc.GetString(Name)), // Eclipse : Fix localization warning
                  ("gasAmount", Amount));
         }
     }
