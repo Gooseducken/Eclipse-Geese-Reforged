@@ -1,5 +1,13 @@
 - type: entity
   parent: AirlockExternal
+  id: AirlockExternalFrontierEngineering
+  suffix: External, Frontier Engineering
+  components:
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockExternal
   id: AirlockExternalSectorSecurity
   suffix: External, Sector Security
   components:

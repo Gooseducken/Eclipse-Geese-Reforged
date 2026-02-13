@@ -3752,8 +3752,14 @@ entities:
     - type: Transform
       pos: -28.5,-18.5
       parent: 2
-- proto: AirlockExternalAtmosphericsLocked
+- proto: AirlockExternalFrontierEngineeringLocked
   entities:
+  - uid: 1204
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -17.5,4.5
+      parent: 2
   - uid: 1675
     components:
     - type: Transform
@@ -3780,16 +3786,6 @@ entities:
         1675:
         - - DoorStatus
           - DoorBolt
-- proto: AirlockExternalEngineeringLocked
-  entities:
-  - uid: 1204
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.5,4.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
 - proto: AirlockExternalGlass
   entities:
   - uid: 1205
@@ -4398,13 +4394,6 @@ entities:
     - type: Transform
       pos: -55.5,-13.5
       parent: 2
-- proto: AirlockFrontierEngineeringLocked
-  entities:
-  - uid: 2152
-    components:
-    - type: Transform
-      pos: -21.5,-11.5
-      parent: 2
 - proto: AirlockFrontierJanitorLocked
   entities:
   - uid: 2147
@@ -4748,7 +4737,7 @@ entities:
     - type: Transform
       pos: -56.5,-10.5
       parent: 2
-- proto: AirlockShuttleEngineerLocked
+- proto: AirlockFrontierEngineeringLocked
   entities:
   - uid: 1340
     components:
@@ -4784,6 +4773,11 @@ entities:
     components:
     - type: Transform
       pos: -38.5,-9.5
+      parent: 2
+  - uid: 2152
+    components:
+    - type: Transform
+      pos: -21.5,-11.5
       parent: 2
   - uid: 2682
     components:

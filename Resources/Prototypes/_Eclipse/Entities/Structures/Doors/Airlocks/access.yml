@@ -365,6 +365,15 @@
 # External Airlocks
 
 - type: entity
+  parent: AirlockExternalFrontierEngineering
+  id: AirlockExternalFrontierEngineeringLocked
+  suffix: External, Frontier Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierEngineering ]
+
+- type: entity
   parent: AirlockExternalSectorSecurity
   id: AirlockExternalSectorSecurityLocked
   suffix: External, Sector Security, Locked
