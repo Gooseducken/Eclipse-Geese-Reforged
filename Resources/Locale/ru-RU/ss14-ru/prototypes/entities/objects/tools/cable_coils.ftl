@@ -28,3 +28,6 @@ ent-CableApcStack10 = { ent-CableApcStack }
 ent-CableApcStack1 = { ent-CableApcStack }
     .suffix = 1
     .desc = { ent-CableApcStack.desc }
+ent-CableApcStack5 = { ent-CableApcStack }
+    .suffix = 5
+    .desc = { ent-CableApcStack.desc }
