@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using YamlDotNet.RepresentationModel;
 using Content.Server.Administration.Systems;
 using Content.Server.GameTicking;
+using Content.Server.PoI; // Eclipse
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Spawners.Components;
@@ -43,6 +44,13 @@ namespace Content.IntegrationTests.Tests
             "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath
         };
+
+        // Eclipse-Start
+        private static readonly string[] PoIs =
+        {
+            "PoITradeMall"
+        };
+        // Eclipse-End
 
         /// <summary>
         /// A dictionary linking maps to collections of entity prototype ids that should be exempt from "DoNotMap" restrictions.
@@ -106,8 +114,6 @@ namespace Content.IntegrationTests.Tests
             */
             // Eclipse-Start : only test relevant maps
             "Frontier",
-            // PoI
-            "PoITradeMall"
             // Eclipse-End
         };
 
@@ -505,7 +511,40 @@ namespace Content.IntegrationTests.Tests
             await pair.CleanReturnAsync();
         }
 
+        // Eclipse-Start
+        [Test, TestCaseSource(nameof(PoIs))]
+        public async Task PoIsLoadableTest(string poiProto)
+        {
+            await using var pair = await PoolManager.GetServerClient();
+            var server = pair.Server;
 
+            var entManager = server.ResolveDependency<IEntityManager>();
+            var mapLoader = entManager.System<MapLoaderSystem>();
+            var mapSystem = entManager.System<SharedMapSystem>();
+            var protoManager = server.ResolveDependency<IPrototypeManager>();
+            var cfg = server.ResolveDependency<IConfigurationManager>();
+            Assert.That(cfg.GetCVar(CCVars.GridFill), Is.False);
+            var path = protoManager.Index<PoIPrototype>(poiProto).MapPath;
+
+            await server.WaitPost(() =>
+            {
+                mapSystem.CreateMap(out var mapId);
+                try
+                {
+                    Assert.That(mapLoader.TryLoadGrid(mapId, path, out var grid));
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Failed to load PoI {poiProto}, was it saved as a map instead of a grid?", ex);
+                }
+
+                mapSystem.DeleteMap(mapId);
+            });
+            await server.WaitRunTicks(1);
+
+            await pair.CleanReturnAsync();
+        }
+        // Eclipse-End
 
         private static int GetCountLateSpawn<T>(List<EntityUid> gridUids, IEntityManager entManager)
             where T : ISpawnPoint, IComponent
@@ -565,6 +604,10 @@ namespace Content.IntegrationTests.Tests
 
             var gameMaps = protoManager.EnumeratePrototypes<GameMapPrototype>().Select(o => o.MapPath).ToHashSet();
 
+            // Eclipse-Start : Don't test PoIs here again
+            var pois = protoManager.EnumeratePrototypes<PoIPrototype>().Select(o => o.MapPath).ToHashSet();
+            // Eclipse-End
+
             var mapFolder = new ResPath("/Maps");
             var maps = resourceManager
                 .ContentFindFiles(mapFolder)
@@ -576,6 +619,11 @@ namespace Content.IntegrationTests.Tests
             {
                 if (gameMaps.Contains(map))
                     continue;
+
+                // Eclipse-Start : Don't test PoIs here again
+                if (pois.Contains(map))
+                    continue;
+                // Eclipse-End
 
                 var rootedPath = map.ToRootedPath();
                 if (SkipTestMaps && rootedPath.ToString().StartsWith(TestMapsPath, StringComparison.Ordinal))

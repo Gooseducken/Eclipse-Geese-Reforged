@@ -1,8 +1,7 @@
-- type: gameMap
+- type: poi
   id: PoITradeMall
   mapName: 'Trade Mall'
   mapPath: /Maps/_Eclipse/PoI/trade_mall.yml
-  minPlayers: 0
   stations:
     PointOfInterest:
       stationProto: PoIStation

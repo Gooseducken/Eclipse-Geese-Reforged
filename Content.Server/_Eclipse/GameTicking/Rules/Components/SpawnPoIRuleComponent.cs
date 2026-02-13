@@ -1,3 +1,4 @@
+using Content.Server.PoI;
 using Content.Shared.Maps;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -18,7 +19,7 @@ public sealed partial class SpawnPoIRuleComponent : Component
 public sealed partial class PoISpawnData
 {
     [DataField(required: true)]
-    public ProtoId<GameMapPrototype> MapId;
+    public ProtoId<PoIPrototype> MapId;
 
     [DataField(required: true)]
     public float MinOriginDistance;
