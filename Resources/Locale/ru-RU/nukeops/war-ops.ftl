@@ -5,3 +5,4 @@ war-ops-infiltrator-unavailable =
        *[other] минут
     }.
 war-ops-shuttle-call-unavailable = Эвакуационный шаттл в настоящее время недоступен. Пожалуйста, подождите
+war-ops-infiltrator-unavailable-nowar = Вы должны сначала объявить войну станции!

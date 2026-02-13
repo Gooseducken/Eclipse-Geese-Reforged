@@ -1,7 +1,9 @@
-ent-CrateSyndicateSurplusBundle = ящик припасов Синдиката
-    .desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 50 телекристаллов. Оно может быть как бесполезным хламом, так и реально крутым.
-ent-CrateCybersunJuggernautBundle = набор джаггернаута Cybersun
-    .desc = Содержит всё, кроме большой пушки для резни.
-    .suffix = Заполненный
-ent-CrateSyndicateSuperSurplusBundle = ящик суперприпасов Синдиката
-    .desc = Содержит случайное снаряжение Синдиката, общей стоимостью в 125 телекристаллов.
+ent-CrateSyndicateSurplusBundle = ящик Синдиката
+    .desc = Стальной ящик тёмного цвета с красными полосами и выдавленной на передней панели логотипом Синдиката.
+    .suffix = Припасы
+ent-CrateCybersunJuggernautBundle = { ent-CrateSyndicate }
+    .desc = { ent-CrateSyndicate.desc }
+    .suffix = Набор джаггернаута Cybersun
+ent-CrateSyndicateSuperSurplusBundle = { ent-CrateSyndicate }
+    .desc = { ent-CrateSyndicate.desc }
+    .suffix = Суперприпасы

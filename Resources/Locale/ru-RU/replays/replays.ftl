@@ -9,7 +9,7 @@ replay-loading-starting = Запуск сущностей
 replay-loading-failed =
     Не удалось загрузить повтор. Ошибка:
     { $reason }
-replay-loading-retry = Попробовать загрузить с большей допустимостью исключений — МОЖЕТ ВЫЗВАТЬ БАГИ!
+replay-loading-retry = Попробовать загрузить с большей допустимостью исключений - МОЖЕТ ВЫЗВАТЬ БАГИ!
 replay-loading-cancel = Отмена
 # Main Menu
 replay-menu-subtext = Повторы
@@ -26,11 +26,11 @@ replay-info-info =
     { "[" }color=gray]Время:[/color]   { $time }
     { "[" }color=gray]ID раунда:[/color]   { $roundId }
     { "[" }color=gray]Продолжительность:[/color]   { $duration }
-    { "[" }color=gray]ForkId:[/color]   { $forkId }
+    { "[" }color=gray]ID ветки:[/color]   { $forkId }
     { "[" }color=gray]Версия:[/color]   { $version }
-    { "[" }color=gray]Движок:[/color]   { $engVersion }
-    { "[" }color=gray]Type Hash:[/color]   { $hash }
-    { "[" }color=gray]Comp Hash:[/color]   { $compHash }
+    { "[" }color=gray]Версия движка:[/color]   { $engVersion }
+    { "[" }color=gray]Тип хэша:[/color]   { $hash }
+    { "[" }color=gray]Скомп хэш:[/color]   { $compHash }
 # Replay selection window
 replay-menu-select-title = Выбрать повтор
 # Replay related verbs

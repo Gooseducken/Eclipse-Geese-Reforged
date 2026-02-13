@@ -16,3 +16,6 @@ ent-LockerChemistryFilled = { ent-LockerChemistry }
 ent-LockerParamedicFilled = { ent-LockerParamedic }
     .suffix = Заполненный
     .desc = { ent-LockerParamedic.desc }
+ent-LockerCoronerFilled = { ent-LockerCoroner }
+    .suffix = Заполненный
+    .desc = { ent-LockerCoroner.desc }

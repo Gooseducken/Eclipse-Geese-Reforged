@@ -29,25 +29,25 @@ emergency-shuttle-console-auth-left =
     { $remaining } { $remaining ->
         [one] авторизация осталась
         [few] авторизации остались
-       *[other] авторизаций осталось
+       *[other] авторизации остались
     } для досрочного запуска шаттла.
 emergency-shuttle-console-auth-revoked =
     Авторизации на досрочный запуск шаттла отозваны, { $remaining } { $remaining ->
         [one] авторизация необходима
         [few] авторизации необходимы
-       *[other] авторизаций необходимо
+       *[other] авторизации необходимы
     }.
 emergency-shuttle-console-denied = Доступ запрещён
 # UI
 emergency-shuttle-console-window-title = Консоль эвакуационного шаттла
 emergency-shuttle-ui-engines = ДВИГАТЕЛИ:
 emergency-shuttle-ui-idle = Простой
-emergency-shuttle-ui-repeal-all = Отменить все
+emergency-shuttle-ui-repeal-all = Повторить всё
 emergency-shuttle-ui-early-authorize = Разрешение на досрочный запуск
-emergency-shuttle-ui-authorize = АВТОРИЗАЦИЯ
-emergency-shuttle-ui-repeal = ОТМЕНА
+emergency-shuttle-ui-authorize = АВТОРИЗОВАТЬСЯ
+emergency-shuttle-ui-repeal = ПОВТОРИТЬ
 emergency-shuttle-ui-authorizations = Авторизации
 emergency-shuttle-ui-remaining = Осталось: { $remaining }
 # Map Misc.
-map-name-centcomm = Центральное командование
+map-name-centcomm = Центральное Командование
 map-name-terminal = Терминал прибытия

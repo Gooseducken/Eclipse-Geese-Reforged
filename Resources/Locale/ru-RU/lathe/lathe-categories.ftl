@@ -1,4 +1,4 @@
-﻿# Generic
+# Generic
 lathe-category-circuitry = Электроника
 lathe-category-clothing = Одежда
 lathe-category-lights = Лампы
@@ -46,3 +46,4 @@ lathe-category-command = Командование
 lathe-category-hats = Шляпы
 lathe-category-jumpsuits = Комбинезоны
 lathe-category-neck = Шея
+lathe-category-implants = Импланты

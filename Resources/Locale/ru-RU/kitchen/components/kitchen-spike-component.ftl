@@ -1,5 +1,5 @@
 comp-kitchen-spike-begin-hook-self = Вы начинаете насаживать себя на { $hook }!
-comp-kitchen-spike-begin-hook-self-other = { CAPITALIZE($victim) } начинает насаживать { REFLEXIVE($victim) } себя на { $hook }!
+comp-kitchen-spike-begin-hook-self-other = { CAPITALIZE($victim) } начинает насаживать { REFLEXIVE($victim) } на { $hook }!
 comp-kitchen-spike-begin-hook-other-self = Вы начинаете насаживать { CAPITALIZE($victim) } на { $hook }!
 comp-kitchen-spike-begin-hook-other = { CAPITALIZE($user) } начинает насаживать { CAPITALIZE($victim) } на { $hook }!
 comp-kitchen-spike-hook-self = Вы бросаетесь на { $hook }!
@@ -37,11 +37,7 @@ comp-kitchen-spike-butcher =
        *[neuter] разделало
     } { $victim }!
 comp-kitchen-spike-unhook-verb = Снять с крюка
-comp-kitchen-spike-hooked = [color=red]На крюке { CAPITALIZE($victim) }![/color]
-comp-kitchen-spike-meat-name = { $name } ({ $victim })
-comp-kitchen-spike-victim-examine = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-BASIC($target, "выглядят", "выглядит") } довольно { GENDER($target) ->
-        [male] худым
-        [female] худой
-        [epicene] худыми
-       *[neuter] худым
-    }.[/color]
+comp-kitchen-spike-hooked = [color=red]{ CAPITALIZE($victim) } на этом крюке![/color]
+comp-kitchen-spike-victim-examine = [color=orange]{ CAPITALIZE(SUBJECT($target)) } выглядит довольно худым.[/color]
+comp-kitchen-spike-begin-hook-self = Вы начинаете насаживать себя на { $this }!
+comp-kitchen-spike-meat-name = мясо { $victim }

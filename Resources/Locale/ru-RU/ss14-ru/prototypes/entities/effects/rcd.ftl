@@ -20,3 +20,5 @@ ent-EffectRCDDeconstruct6 = { ent-EffectRCDBase }
     .desc = { ent-EffectRCDBase.desc }
 ent-EffectRCDDeconstruct8 = { ent-EffectRCDBase }
     .desc = { ent-EffectRCDBase.desc }
+ent-EffectRCDConstruction = { "" }
+    .desc = { "" }

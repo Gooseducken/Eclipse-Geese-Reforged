@@ -2,8 +2,8 @@
     .desc = Бумага, которой упаковывают вещи для транспортировки.
 ent-ParcelWrapAdmeme = блюспейс обёрточная бумага
     .desc = Бумага, которой упаковывают вещи для транспортировки. Кажется, она способна вмещать необычно большое количество вещей.
-    .suffix = Admeme
 ent-BaseWrappedParcel = завёрнутая посылка
+    .suffix = Адмемы
     .desc = Что-то завёрнутое в бумагу. Интересно, что же внутри...
 ent-WrappedParcel = { ent-BaseWrappedParcel }
     .desc = { ent-BaseWrappedParcel.desc }
