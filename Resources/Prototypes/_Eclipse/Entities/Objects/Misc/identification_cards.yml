@@ -1,0 +1,338 @@
+- type: entity
+  parent: IDCardStandard
+  id: BaseFrontierIDCard
+  abstract: true
+  components:
+  - type: PerStationAccess
+
+# Frontier
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: ExplorerIDCard
+  name: explorer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-supply-top "#b18644"
+    - state: stripe_bottom
+      color: &color-supply-bottom "#5b4523"
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: ShaftMiner
+  - type: PresetIdCard
+    job: Explorer
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: FrontierJanitorIDCard
+  name: janitor ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-service-top "#639137"
+    - state: stripe_bottom
+      color: &color-service-bottom "#446326"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: Janitor
+  - type: PresetIdCard
+    job: FrontierJanitor
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SRIDCard
+  name: station representative ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: *color-service-top
+    - state: stripe_bottom
+      color: *color-service-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: HeadOfPersonnel
+  - type: Item
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: StationRepresentative
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: FrontierSecurityGuardIDCard
+  name: security guard ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-security-top "#cb0000"
+    - state: stripe_bottom
+      color: &color-security-bottom "#830000"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: FrontierSecurityGuard
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: STCIDCard
+  name: station traffic controller ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: *color-service-top
+    - state: stripe_bottom
+      color: *color-service-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: HeadOfPersonnel
+  - type: Item
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: StationTrafficController
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: MailmanIDCard
+  name: mailman ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-supply-top
+    - state: stripe_bottom
+      color: *color-supply-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: ShaftMiner
+  - type: PresetIdCard
+    job: Mailman
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: AttorneyIDCard
+  name: attorney ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-supply-top
+    - state: stripe_bottom
+      color: *color-supply-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: ShaftMiner
+  - type: PresetIdCard
+    job: Attorney
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: MercenaryIDCard
+  name: mercenary ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-supply-top
+    - state: stripe_bottom
+      color: *color-supply-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: ShaftMiner
+  - type: PresetIdCard
+    job: Mercenary
+
+# SSS
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: CorporalIDCard
+  name: corporal ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: Corporal
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SSSDetectiveIDCard
+  name: detective ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: SSSDetective
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: HeadOfSectorSecurityIDCard
+  name: head of sector security ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: HeadOfSectorSecurity
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SSSLawyerIDCard
+  name: lawyer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: SSSLawyer
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: LieutenantIDCard
+  name: lieutenant ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: Lieutenant
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SSSMedicIDCard
+  name: medic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: SSSMedic
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SergeantIDCard
+  name: sergeant ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: Sergeant
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SSSSpeakerIDCard
+  name: speaker ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: SSSSpeaker
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: SSSWardenIDCard
+  name: warden ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: SSSWarden
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: JudgeIDCard
+  name: judge ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: Judge

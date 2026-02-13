@@ -22,6 +22,7 @@ public sealed class StationPowerTests
 
     private static readonly string[] GameMaps =
     [
+        /*
         "Bagel",
         "Box",
         "Elkridge",
@@ -34,6 +35,10 @@ public sealed class StationPowerTests
         "Snowball",
         "Reach",
         "Exo",
+        */
+        // Eclipse-Start : only test relevant maps
+        "Frontier",
+        // Eclipse-End
     ];
 
     [Explicit]

@@ -1,0 +1,40 @@
+- type: job
+  id: Mailman
+  name: job-name-mailman
+  description: job-description-mailman
+  playTimeTracker: JobMailman
+  icon: JobIconVisitor
+  startingGear: MailmanGear
+  supervisors: job-supervisors-sr
+  access:
+  - FrontierPostOffice
+  - Maintenance
+  - External
+
+- type: startingGear
+  id: MailmanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: MailmanPDA
+    ears: ClothingHeadsetCargo
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: MailmanChameleonOutfit
+  job: Mailman
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: ClothingOuterWinterMiner
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SalvagePDA
+  id: MailmanPDA
+  components:
+  - type: Pda
+    id: MailmanIDCard

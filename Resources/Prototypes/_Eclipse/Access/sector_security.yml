@@ -1,0 +1,31 @@
+- type: accessLevel
+  id: SectorSecurity
+  name: id-card-access-level-sector-security
+
+- type: accessLevel
+  id: SSSOfficer
+  name: id-card-access-level-sss-officer
+
+- type: accessLevel
+  id: SSSArmory
+  name: id-card-access-level-sss-armory
+
+- type: accessLevel
+  id: SSSDetective
+  name: id-card-access-level-sss-detective
+
+- type: accessLevel
+  id: SSSWarden
+  name: id-card-access-level-sss-warden
+
+- type: accessLevel
+  id: HeadOfSectorSecurity
+  name: id-card-access-level-head-of-sector-security
+
+- type: accessLevel
+  id: SSSLawyer
+  name: id-card-access-level-sss-lawyer
+
+- type: accessLevel
+  id: Judge
+  name: id-card-access-level-judge

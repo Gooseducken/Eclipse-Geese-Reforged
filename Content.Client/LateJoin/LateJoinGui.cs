@@ -166,7 +166,10 @@ namespace Content.Client.LateJoin
                 };
 
                 var firstCategory = true;
-                var departments = _prototypeManager.EnumeratePrototypes<DepartmentPrototype>().ToArray();
+                // Eclipse : configurable enabled departments
+                var config = _prototypeManager.Index<DepartmentConfigPrototype>(_configManager.GetCVar(EclipseCCVars.DepartmentConfig));
+                // Eclipse-End
+                var departments = _prototypeManager.EnumeratePrototypes<DepartmentPrototype>().Where(x => config.EnabledDepartments.Contains(x.ID)).ToArray(); // Eclipse : configurable enabled departments
                 Array.Sort(departments, DepartmentUIComparer.Instance);
 
                 _jobButtons[id] = new Dictionary<string, List<JobButton>>();

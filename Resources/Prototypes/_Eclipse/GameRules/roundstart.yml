@@ -1,0 +1,16 @@
+- type: entity
+  id: SpawnPoIRule
+  parent: BaseGameRule
+  components:
+  - type: SpawnPoIRule
+
+- type: entity
+  id: DefaultSpawnPoIRule
+  parent: SpawnPoIRule
+  components:
+  - type: SpawnPoIRule
+    randomSpawnGroups:
+      trade:
+        - mapId: PoITradeMall
+          minOriginDistance: 500
+          maxOriginDistance: 1000

@@ -1,0 +1,7 @@
+- type: entity
+  id: ShuttleStation
+  parent:
+    - BaseStation
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform

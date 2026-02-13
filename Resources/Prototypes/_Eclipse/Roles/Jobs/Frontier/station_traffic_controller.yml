@@ -1,0 +1,57 @@
+- type: job
+  id: StationTrafficController
+  name: job-name-stc
+  description: job-description-stc
+  playTimeTracker: JobStationTrafficController
+  icon: JobIconHeadOfPersonnel
+  startingGear: StationTrafficControllerGear
+  supervisors: job-supervisors-sr
+  canBeAntag: false
+  displayWeight: 5
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobFrontierSecurityGuard
+      time: 2.5h
+  access:
+  - FrontierCommand
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: StationTrafficControllerGear
+  equipment:
+    shoes: ClothingShoesColorBrown
+    id: STCPDA
+    gloves: ClothingHandsGlovesHop
+    ears: ClothingHeadsetAltCommand
+    belt: BoxFolderClipboardThreePapers
+    eyes: ClothingEyesHudCommand
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: StationTrafficControllerChameleonOutfit
+  job: StationTrafficController
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatHopcap
+    eyes: ClothingEyesHudCommand
+    mask: ClothingMaskNeckGaiterRed
+    neck: ClothingNeckCloakHop
+    outerClothing: ClothingOuterWinterHoP
+
+- type: entity
+  parent: HoPPDA
+  id: STCPDA
+  components:
+  - type: Pda
+    id: STCIDCard

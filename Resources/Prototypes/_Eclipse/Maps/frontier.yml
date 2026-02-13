@@ -3,6 +3,8 @@
   mapName: 'Frontier Station'
   mapPath: /Maps/_Eclipse/NewFrontier.yml
   minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
   stations:
     Frontier:
       stationProto: StandardNanotrasenStation
@@ -14,4 +16,11 @@
             prefixCreator: 'TG'
         - type: StationJobs
           availableJobs:
-            Passenger: [ -1, -1 ] #infinite, not counted
+            StationRepresentative: [ 1, 1 ]
+            StationTrafficController: [ 1, 1 ]
+            FrontierSecurityGuard: [ 1, 1 ]
+            Mailman: [ 1, 1 ]
+            FrontierJanitor: [ 1, 1 ]
+            Attorney: [ 1, 1 ]
+            Explorer: [ -1, -1 ] #infinite, not counted
+

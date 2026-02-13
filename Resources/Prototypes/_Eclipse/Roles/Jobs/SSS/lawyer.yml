@@ -1,0 +1,52 @@
+- type: job
+  id: SSSLawyer
+  name: job-name-ssslawyer
+  description: job-description-ssslawyer
+  playTimeTracker: JobSSSLawyer
+  icon: JobIconLawyer
+  startingGear: SSSLawyerGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  access:
+  - SectorSecurity
+  - Court
+  - SSSLawyer
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SSSLawyerGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    id: SSSLawyerPDA
+    ears: ClothingHeadsetSecurity
+  inhand:
+    - BriefcaseBrownFilled
+  storage:
+    back:
+    - RubberStampLawyer
+    - BookSpaceLaw
+
+- type: chameleonOutfit
+  id: SSSLawyerChameleonOutfit
+  job: SSSLawyer
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: LawyerPDA
+  id: SSSLawyerPDA
+  components:
+  - type: Pda
+    id: SSSLawyerIDCard

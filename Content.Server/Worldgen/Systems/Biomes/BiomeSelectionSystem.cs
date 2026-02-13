@@ -25,10 +25,12 @@ public sealed class BiomeSelectionSystem : BaseWorldSystem
     private void OnWorldChunkAdded(EntityUid uid, BiomeSelectionComponent component, ref WorldChunkAddedEvent args)
     {
         var coords = args.Coords;
+        var chunkCenterDistance = WorldGen.ChunkToWorldCoordsCentered(coords).LengthSquared(); // Eclipse : biomes based on distance from world center
+
         foreach (var biomeId in component.Biomes)
         {
             var biome = _proto.Index<BiomePrototype>(biomeId);
-            if (!CheckBiomeValidity(args.Chunk, biome, coords))
+            if (!CheckBiomeValidity(args.Chunk, biome, coords, chunkCenterDistance)) // Eclipse : biomes based on distance from world center
                 continue;
 
             biome.Apply(args.Chunk, _ser, EntityManager);
@@ -50,8 +52,25 @@ public sealed class BiomeSelectionSystem : BaseWorldSystem
         component.Biomes = sorted; // my hopes and dreams rely on this being pre-sorted by priority.
     }
 
-    private bool CheckBiomeValidity(EntityUid chunk, BiomePrototype biome, Vector2i coords)
+    private bool CheckBiomeValidity(EntityUid chunk, BiomePrototype biome, Vector2i coords, float chunkCenterDistance) // Eclipse : biomes based on distance from world center
     {
+        // Eclipse-Start : biomes based on distance from world center
+        if (biome.DistanceRanges.Count > 0)
+        {
+            var anyDistanceRangeValid = false;
+            foreach (var range in biome.DistanceRangesSquared)
+            {
+                if (range.X < chunkCenterDistance && chunkCenterDistance < range.Y)
+                {
+                    anyDistanceRangeValid = true;
+                    break;
+                }
+            }
+            if (!anyDistanceRangeValid)
+                return false;
+        }
+        // Eclipse-End
+
         foreach (var (noise, ranges) in biome.NoiseRanges)
         {
             var value = _noiseIdx.Evaluate(chunk, noise, coords);

@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointExplorer
+  parent: SpawnPointJobBase
+  name: explorer
+  components:
+  - type: SpawnPoint
+    job_id: Explorer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: salvagespecialist

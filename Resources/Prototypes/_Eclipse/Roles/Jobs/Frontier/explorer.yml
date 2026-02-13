@@ -1,0 +1,40 @@
+- type: job
+  id: Explorer
+  name: job-name-explorer
+  description: job-description-explorer
+  playTimeTracker: JobExplorer
+  icon: JobIconVisitor
+  startingGear: ExplorerGear
+  supervisors: job-supervisors-sr
+  displayWeight: -2
+  access:
+  - Maintenance
+  - External
+
+- type: startingGear
+  id: ExplorerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: ExplorerPDA
+    ears: ClothingHeadsetCargo
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ExplorerChameleonOutfit
+  job: Explorer
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: ClothingOuterWinterMiner
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SalvagePDA
+  id: ExplorerPDA
+  components:
+  - type: Pda
+    id: ExplorerIDCard

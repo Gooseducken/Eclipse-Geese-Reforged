@@ -1,0 +1,37 @@
+- type: departmentConfig
+  id: FrontierDepartmentConfig
+  enabledDepartments:
+  - Frontier
+  - SSS
+
+- type: department
+  id: Frontier
+  name: department-Frontier
+  description: department-Frontier-description
+  color: "#9FED58"
+  roles:
+  - StationRepresentative
+  - StationTrafficController
+  - FrontierSecurityGuard
+  - FrontierJanitor
+  - Mailman
+  - Attorney
+  - Mercenary
+  - Explorer
+
+- type: department
+  id: SSS
+  name: department-SSS
+  description: department-SSS-description
+  color: "#150b75"
+  roles:
+  - HeadOfSectorSecurity
+  - SSSWarden
+  - Lieutenant
+  - Sergeant
+  - Corporal
+  - SSSDetective
+  - SSSMedic
+  - SSSLawyer
+  - SSSSpeaker
+  - Judge

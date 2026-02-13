@@ -1,0 +1,57 @@
+# Frontier
+
+- type: playTimeTracker
+  id: JobExplorer
+
+- type: playTimeTracker
+  id: JobFrontierJanitor
+
+- type: playTimeTracker
+  id: JobStationRepresentative
+
+- type: playTimeTracker
+  id: JobFrontierSecurityGuard
+
+- type: playTimeTracker
+  id: JobStationTrafficController
+
+- type: playTimeTracker
+  id: JobMailman
+
+- type: playTimeTracker
+  id: JobAttorney
+
+- type: playTimeTracker
+  id: JobMercenary
+
+# SSS
+
+- type: playTimeTracker
+  id: JobCorporal
+
+- type: playTimeTracker
+  id: JobSSSDetective
+
+- type: playTimeTracker
+  id: JobHeadOfSectorSecurity
+
+- type: playTimeTracker
+  id: JobSSSLawyer
+
+- type: playTimeTracker
+  id: JobLieutenant
+
+- type: playTimeTracker
+  id: JobSSSMedic
+
+- type: playTimeTracker
+  id: JobSergeant
+
+- type: playTimeTracker
+  id: JobSSSSpeaker
+
+- type: playTimeTracker
+  id: JobSSSWarden
+
+- type: playTimeTracker
+  id: JobJudge

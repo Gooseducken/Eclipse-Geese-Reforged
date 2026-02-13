@@ -1,0 +1,99 @@
+# Basic
+- type: entity
+  id: NFLockerBaseSecure
+  parent: LockerBaseSecure
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Storage/closet.rsi
+
+- type: entity
+  id: LockerNfsdEvidence
+  parent: NFLockerBaseSecure
+  name: NFSD evidence locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd
+    stateDoorOpen: nfsd_open
+    stateDoorClosed: nfsd_door
+  - type: AccessReader
+    access: [["SSSOfficer"]]
+
+# NFSD Copper
+- type: entity
+  id: LockerNfsdCopper
+  parent: NFLockerBaseSecure
+  name: NFSD locker
+  suffix: Copper
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd_copper
+    stateDoorOpen: nfsd_copper_open
+    stateDoorClosed: nfsd_copper_door
+
+# NFSD Silver
+- type: entity
+  id: LockerNfsdSilver
+  parent: NFLockerBaseSecure
+  name: NFSD locker
+  suffix: Silver
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd_silver
+    stateDoorOpen: nfsd_silver_open
+    stateDoorClosed: nfsd_silver_door
+
+# NFSD Gold
+- type: entity
+  id: LockerNfsdGold
+  parent: NFLockerBaseSecure
+  name: NFSD locker
+  suffix: Gold
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd_gold
+    stateDoorOpen: nfsd_gold_open
+    stateDoorClosed: nfsd_gold_door
+
+# NFSD Brigmedic
+- type: entity
+  id: LockerNfsdBrigmedic
+  parent: NFLockerBaseSecure
+  name: NFSD locker
+  suffix: Brigmedic
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd_brigmed
+    stateDoorOpen: nfsd_brigmed_open
+    stateDoorClosed: nfsd_brigmed_door
+  - type: AccessReader
+    access: [["SSSOfficer"]]
+
+# NFSD Silver - Officer
+- type: entity
+  id: LockerNfsdOfficer
+  parent: LockerNfsdSilver
+  name: NFSD locker
+  suffix: Officer
+  components:
+  - type: AccessReader
+    access: [["SSSOfficer"]]
+
+# NFSD Sheriff
+- type: entity
+  id: LockerNfsdSheriff
+  parent: NFLockerBaseSecure
+  name: NFSD locker
+  suffix: Sheriff
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: nfsd_sheriff
+    stateDoorOpen: nfsd_sheriff_open
+    stateDoorClosed: nfsd_sheriff_door
+  - type: AccessReader
+    access: [["HeadOfSectorSecurity"]]

@@ -1,0 +1,116 @@
+# Directional Station Guide Signs
+- type: entity
+  parent: BaseSignDirectional
+  id: BaseSignDirectionalNF
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: _NF/Structures/Wallmounts/signs.rsi
+
+- type: entity
+  parent: BaseSignDirectionalNF
+  id: SignDirectionalNfsd
+  name: NFSD outpost sign
+  description: A direction sign, pointing out which way an NFSD outpost is.
+  components:
+  - type: Sprite
+    state: direction_nfsd
+
+# Directional Station Guide Signs
+- type: entity
+  parent: BaseSign
+  id: NFBaseSign
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: _NF/Structures/Wallmounts/signs.rsi
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsd
+  name: NFSD sign
+  description: A sign that marks the area beyond as an NFSD area.
+  components:
+  - type: Sprite
+    state: nfsd
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdArmoury
+  name: armory sign
+  description: A sign that marks the area beyond as an NFSD armory.
+  components:
+  - type: Sprite
+    state: armoury
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdBrief
+  name: briefing sign
+  description: A sign that marks the area beyond as an NFSD briefing room.
+  components:
+  - type: Sprite
+    state: brief
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdBrig
+  name: brig sign
+  description: A sign that marks the area beyond as an NFSD brig.
+  components:
+  - type: Sprite
+    state: brig
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdBrigmed
+  name: medbay sign
+  description: A sign that marks the area beyond as an NFSD medbay.
+  components:
+  - type: Sprite
+    state: brigmed
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdDetective
+  name: detective sign
+  description: A sign that marks the area beyond as an NFSD detective's office.
+  components:
+  - type: Sprite
+    state: detective
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdLaw
+  name: lawyer sign
+  description: A sign that marks the area beyond as an NFSD lawyer's office.
+  components:
+  - type: Sprite
+    state: law
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdRange
+  name: shooting range sign
+  description: A sign that marks the area beyond as an NFSD shooting range.
+  components:
+  - type: Sprite
+    state: range
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdEvidence
+  name: evidence sign
+  description: A sign that marks the area beyond as an NFSD evidence room.
+  components:
+  - type: Sprite
+    state: evidence
+
+- type: entity
+  parent: NFBaseSign
+  id: SignNfsdInterrogation
+  name: interrogation sign
+  description: A sign that marks the area beyond as an NFSD interrogation room.
+  components:
+  - type: Sprite
+    state: interrogation

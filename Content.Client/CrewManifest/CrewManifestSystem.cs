@@ -1,5 +1,7 @@
+using Content.Shared.CCVar;
 using Content.Shared.CrewManifest;
 using Content.Shared.Roles;
+using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.CrewManifest;
@@ -7,6 +9,7 @@ namespace Content.Client.CrewManifest;
 public sealed class CrewManifestSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
 
     private Dictionary<string, Dictionary<string, int>> _jobDepartmentLookup = new();
     private HashSet<string> _departments = new();
@@ -32,7 +35,7 @@ public sealed class CrewManifestSystem : EntitySystem
 
     private void OnPrototypesReload(PrototypesReloadedEventArgs args)
     {
-        if (args.WasModified<DepartmentPrototype>())
+        if (args.WasModified<DepartmentPrototype>() || args.WasModified<DepartmentConfigPrototype>()) // Eclipse : configurable enabled departments
             BuildDepartmentLookup();
     }
 
@@ -40,8 +43,18 @@ public sealed class CrewManifestSystem : EntitySystem
     {
         _jobDepartmentLookup.Clear();
         _departments.Clear();
+
+        // Eclipse-Start : configurable enabled departments
+        var config = _prototypeManager.Index<DepartmentConfigPrototype>(_cfgManager.GetCVar(EclipseCCVars.DepartmentConfig));
+        // Eclipse-End
+
         foreach (var department in _prototypeManager.EnumeratePrototypes<DepartmentPrototype>())
         {
+            // Eclipse-Start : configurable enabled departments
+            if (!config.EnabledDepartments.Contains(department))
+                continue;
+            // Eclipse-End
+
             _departments.Add(department.ID);
 
             for (var i = 1; i <= department.Roles.Count; i++)

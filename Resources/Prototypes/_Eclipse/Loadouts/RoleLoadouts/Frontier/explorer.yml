@@ -1,0 +1,12 @@
+- type: roleLoadout
+  id: JobExplorer
+  groups:
+  - GroupTankHarness
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistOuterClothing
+  - SalvageSpecialistShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  #- SalvageSpecialistJobTrinkets
+  - GroupSpeciesBreathTool

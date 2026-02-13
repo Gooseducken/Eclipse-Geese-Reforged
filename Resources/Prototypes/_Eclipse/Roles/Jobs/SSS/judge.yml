@@ -1,0 +1,56 @@
+- type: job
+  id: Judge
+  name: job-name-judge
+  description: job-description-judge
+  playTimeTracker: JobJudge
+  icon: JobIconLawyer
+  startingGear: JudgeGear
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  displayWeight: 3
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 25h
+    - !type:RoleTimeRequirement
+      role: JobLieutenant
+      time: 5h
+  access:
+  - SectorSecurity
+  - Court
+  - Judge
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: JudgeGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    id: JudgePDA
+    ears: ClothingHeadsetSecurity
+  inhand:
+    - BriefcaseBrownFilled
+  storage:
+    back:
+    - RubberStampLawyer
+    - BookSpaceLaw
+
+- type: chameleonOutfit
+  id: JudgeChameleonOutfit
+  job: Judge
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: LawyerPDA
+  id: JudgePDA
+  components:
+  - type: Pda
+    id: JudgeIDCard

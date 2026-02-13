@@ -1,0 +1,52 @@
+- type: job
+  id: Corporal
+  name: job-name-corporal
+  description: job-description-corporal
+  playTimeTracker: JobCorporal
+  icon: JobIconSecurityOfficer
+  startingGear: CorporalGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 6
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - Court
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: CorporalGear
+  equipment:
+    id: CorporalPDA
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: CorporalChameleonOutfit
+  job: Corporal
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SecurityPDA
+  id: CorporalPDA
+  components:
+  - type: Pda
+    id: CorporalIDCard

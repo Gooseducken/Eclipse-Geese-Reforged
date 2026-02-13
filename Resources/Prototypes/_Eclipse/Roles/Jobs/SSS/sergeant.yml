@@ -1,0 +1,56 @@
+- type: job
+  id: Sergeant
+  name: job-name-sergeant
+  description: job-description-sergeant
+  playTimeTracker: JobSergeant
+  icon: JobIconSecurityOfficer
+  startingGear: SergeantGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 7
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 10h
+    - !type:RoleTimeRequirement
+      role: JobCorporal
+      time: 5h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - Court
+  - SSSLawyer
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SergeantGear
+  equipment:
+    id: SergeantPDA
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: SergeantChameleonOutfit
+  job: Sergeant
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SecurityPDA
+  id: SergeantPDA
+  components:
+  - type: Pda
+    id: SergeantIDCard

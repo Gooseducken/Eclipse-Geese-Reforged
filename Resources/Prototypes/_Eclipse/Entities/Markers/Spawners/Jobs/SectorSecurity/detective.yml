@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointSSSDetective
+  parent: SpawnPointJobBase
+  name: detective
+  components:
+  - type: SpawnPoint
+    job_id: SSSDetective
+  - type: Sprite
+    layers:
+      - state: green
+      - state: detective

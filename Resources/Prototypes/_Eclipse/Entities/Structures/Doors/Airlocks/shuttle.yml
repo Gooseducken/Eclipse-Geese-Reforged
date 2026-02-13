@@ -1,0 +1,15 @@
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockShuttleSectorSecurity
+  suffix: Docking, Sector Security
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Standard/docknfsd.rsi
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockGlassShuttleSectorSecurity
+  suffix: Docking, Glass, Sector Security
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Glass/docknfsd.rsi

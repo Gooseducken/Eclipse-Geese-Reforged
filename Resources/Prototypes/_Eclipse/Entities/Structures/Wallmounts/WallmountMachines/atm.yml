@@ -1,0 +1,24 @@
+- type: entity
+  parent: BaseWallmountMachine
+  id: WallATM
+  name: ATM
+  suffix: Wallmount
+  description:
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Structures/Wallmounts/atm.rsi
+    noRot: true
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: {visible: true}
+          False: {visible: false}
+  - type: Appearance
+  - type: ApcPowerReceiver
+    powerLoad: 200

@@ -1,0 +1,21 @@
+- type: entity
+  id: BedsheetSSS
+  parent: BedsheetBase
+  name: SSS bedsheet
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/bedsheets.rsi
+    state: sheetnfsd
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Bedsheets/nfsd.rsi
+
+- type: entity
+  id: BedsheetHeadOfSectorSecurity
+  parent: BedsheetBase
+  name: sheriff bedsheet
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/bedsheets.rsi
+    state: sheetnfsdsheriff
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Bedsheets/nfsd_sheriff.rsi

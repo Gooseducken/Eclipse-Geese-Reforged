@@ -1,0 +1,194 @@
+# Frontier
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsFrontierCommand
+  suffix: Frontier Command, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierCommand"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsStationRepresentative
+  suffix: Station Representative, Locked
+  components:
+  - type: AccessReader
+    access: [["StationRepresentative"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsFrontierEngineering
+  suffix: Frontier Engineering, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierEngineering"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsFrontierSecurity
+  suffix: Frontier Security, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierSecurity"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsFrontierJanitor
+  suffix: Frontier Janitor, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierJanitor"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsFrontierPostOffice
+  suffix: Frontier Post Office, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierPostOffice"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsMercenary
+  suffix: Mercenary, Locked
+  components:
+  - type: AccessReader
+    access: [["Mercenary"]]
+
+# SSS
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSectorSecurity
+  suffix: Sector Security, Locked
+  components:
+  - type: AccessReader
+    access: [["SectorSecurity"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSSSOfficer
+  suffix: Sector Security Officer, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSOfficer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSSSArmory
+  suffix: Sector Security Armory, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSArmory"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSSSDetective
+  suffix: Sector Security Detective, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSDetective"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSSSWarden
+  suffix: Sector Security Warden, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSWarden"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSSSLawyer
+  suffix: Sector Security Lawyer, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSLawyer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsJudge
+  suffix: Judge, Locked
+  components:
+  - type: AccessReader
+    access: [["Judge"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsCourt
+  suffix: Court, Locked
+  components:
+  - type: AccessReader
+    access: [["Court"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsAttorney
+  suffix: Attorney, Locked
+  components:
+  - type: AccessReader
+    access: [["Attorney"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsHeadOfSectorSecurity
+  suffix: Head of Sector Security, Locked
+  components:
+  - type: AccessReader
+    access: [["HeadOfSectorSecurity"]]
+
+# Shuttle
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleCrew
+  suffix: Shuttle Crew, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleCrew"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttlePilot
+  suffix: Shuttle Pilot, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttlePilot"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleCaptain
+  suffix: Shuttle Captain, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleCaptain"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleEngineer
+  suffix: Shuttle Engineer, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleEngineer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleMedic
+  suffix: Shuttle Medic, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleMedic"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleSecurity
+  suffix: Shuttle Security, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleSecurity"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsShuttleMercenary
+  suffix: Shuttle Mercenary, Locked
+  components:
+  - type: AccessReader
+    access: [["ShuttleMercenary"]]

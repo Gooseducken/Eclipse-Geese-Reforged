@@ -1,0 +1,41 @@
+- type: job
+  id: Attorney
+  name: job-name-attorney
+  description: job-description-attorney
+  playTimeTracker: JobAttorney
+  icon: JobIconVisitor
+  startingGear: AttorneyGear
+  supervisors: job-supervisors-sr
+  access:
+  - Court
+  - Attorney
+  - Maintenance
+  - External
+
+- type: startingGear
+  id: AttorneyGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: AttorneyPDA
+    ears: ClothingHeadsetCargo
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: AttorneyChameleonOutfit
+  job: Attorney
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: ClothingOuterWinterMiner
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: LawyerPDA
+  id: AttorneyPDA
+  components:
+  - type: Pda
+    id: AttorneyIDCard

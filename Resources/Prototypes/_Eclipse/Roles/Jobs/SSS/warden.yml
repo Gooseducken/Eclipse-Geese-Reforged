@@ -1,0 +1,62 @@
+- type: job
+  id: SSSWarden
+  name: job-name-ssswarden
+  description: job-description-ssswarden
+  playTimeTracker: JobSSSWarden
+  icon: JobIconWarden
+  startingGear: SSSWardenGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 9
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 15h
+    - !type:RoleTimeRequirement
+      role: JobSergeant
+      time: 5h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSWarden
+  - SSSArmory
+  - Court
+  - Attorney
+  - SSSLawyer
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SSSWardenGear
+  equipment:
+    id: SSSWardenPDA
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: SSSWardenChameleonOutfit
+  job: SSSWarden
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatWarden
+    mask: ClothingMaskGasSecurity
+    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    neck: Dinkystar
+    belt: ClothingBeltSecurity
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+
+- type: entity
+  parent: WardenPDA
+  id: SSSWardenPDA
+  components:
+  - type: Pda
+    id: SSSWardenIDCard

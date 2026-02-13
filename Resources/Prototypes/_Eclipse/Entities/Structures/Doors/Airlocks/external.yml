@@ -1,0 +1,26 @@
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalFrontierEngineering
+  suffix: External, Frontier Engineering
+  components:
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalSectorSecurity
+  suffix: External, Sector Security
+  components:
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockExternalGlass
+  id: AirlockExternalGlassSectorSecurity
+  suffix: External, Glass, Sector Security
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Glass/externalnfsd.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+

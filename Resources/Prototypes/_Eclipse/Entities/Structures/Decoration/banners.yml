@@ -1,0 +1,19 @@
+- type: entity
+  id: BannerSSS
+  parent: BannerBase
+  name: SSS banner
+  #description: TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Decoration/banner.rsi
+    state: nfsd-banner
+
+- type: entity
+  id: FlagSSS
+  parent: BannerBase
+  name: SSS flag
+  #description: TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Decoration/banner.rsi
+    state: nfsd-flag

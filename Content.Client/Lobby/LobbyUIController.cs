@@ -104,7 +104,8 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
             }
 
             if (obj.WasModified<JobPrototype>() ||
-                obj.WasModified<DepartmentPrototype>())
+                obj.WasModified<DepartmentPrototype>() ||
+                obj.WasModified<DepartmentConfigPrototype>()) // Eclipse : configurable enabled departments
             {
                 _profileEditor.RefreshJobs();
             }

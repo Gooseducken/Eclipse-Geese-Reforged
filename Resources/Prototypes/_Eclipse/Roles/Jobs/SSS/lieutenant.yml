@@ -1,0 +1,57 @@
+- type: job
+  id: Lieutenant
+  name: job-name-lieutenant
+  description: job-description-lieutenant
+  playTimeTracker: JobLieutenant
+  icon: JobIconSecurityOfficer
+  startingGear: LieutenantGear
+  supervisors: job-supervisors-hoss
+  canBeAntag: false
+  displayWeight: 8
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 20h
+    - !type:RoleTimeRequirement
+      role: JobSergeant
+      time: 10h
+  access:
+  - SectorSecurity
+  - SSSOfficer
+  - SSSArmory
+  - Court
+  - Attorney
+  - SSSLawyer
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: LieutenantGear
+  equipment:
+    id: LieutenantPDA
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: LieutenantChameleonOutfit
+  job: Lieutenant
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SecurityPDA
+  id: LieutenantPDA
+  components:
+  - type: Pda
+    id: LieutenantIDCard

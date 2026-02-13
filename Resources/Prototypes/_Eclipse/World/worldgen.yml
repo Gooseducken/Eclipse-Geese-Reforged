@@ -1,0 +1,10 @@
+- type: worldgenConfig
+  id: DefaultFrontier
+  components:
+    - type: WorldController
+    - type: BiomeSelection
+      biomes:
+        - Failsafe
+        - AsteroidsInner
+        - AsteroidsCircle
+        - DenseFarSpace

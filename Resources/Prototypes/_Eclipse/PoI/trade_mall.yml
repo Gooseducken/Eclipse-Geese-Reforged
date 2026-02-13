@@ -1,0 +1,14 @@
+- type: poi
+  id: PoITradeMall
+  mapName: 'Trade Mall'
+  mapPath: /Maps/_Eclipse/PoI/trade_mall.yml
+  stations:
+    PointOfInterest:
+      stationProto: PoIStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Trade Mall {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'TG'
+

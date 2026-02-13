@@ -1,0 +1,45 @@
+- type: job
+  id: Mercenary
+  name: job-name-mercenary
+  description: job-description-mercenary
+  playTimeTracker: JobMercenary
+  icon: JobIconVisitor
+  startingGear: MercenaryGear
+  supervisors: job-supervisors-hire
+  canBeAntag: false
+  displayWeight: -1
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  access:
+  - Mercenary
+  - Maintenance
+  - External
+
+- type: startingGear
+  id: MercenaryGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: MercenaryPDA
+    ears: ClothingHeadsetCargo
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: MercenaryChameleonOutfit
+  job: Mercenary
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: ClothingOuterWinterMiner
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: entity
+  parent: SalvagePDA
+  id: MercenaryPDA
+  components:
+  - type: Pda
+    id: MercenaryIDCard

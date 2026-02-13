@@ -20,7 +20,8 @@ using Robust.Shared.Collections;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Content.Shared.Maps; // Eclipse
+using Content.Shared.Maps;
+using Content.Shared.Station; // Eclipse
 
 namespace Content.Shared.Access.Systems;
 
@@ -35,6 +36,8 @@ public sealed class AccessReaderSystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SharedStationRecordsSystem _recordsSystem = default!;
+    [Dependency] private readonly PerStationAccessSystem _perStationAccess = default!; // Eclipse
+    [Dependency] private readonly SharedStationSystem _station = default!; // Eclipse
 
     private static readonly ProtoId<TagPrototype> PreventAccessLoggingTag = "PreventAccessLogging";
 
@@ -214,7 +217,7 @@ public sealed class AccessReaderSystem : EntitySystem
             return true;
 
         var accessSources = FindPotentialAccessItems(user);
-        var access = FindAccessTags(user, accessSources);
+        var access = FindAccessTags(user, target, accessSources); // Eclipse
         FindStationRecordKeys(user, out var stationKeys, accessSources);
 
         if (!IsAllowed(access, stationKeys, target, reader))
@@ -374,8 +377,9 @@ public sealed class AccessReaderSystem : EntitySystem
     /// Finds the access tags on an entity.
     /// </summary>
     /// <param name="uid">The entity that is being searched.</param>
+    /// <param name="target">The entity to search for an access reader</param> // Eclipse
     /// <param name="items">All of the items to search for access. If none are passed in, <see cref="FindPotentialAccessItems"/> will be used.</param>
-    public ICollection<ProtoId<AccessLevelPrototype>> FindAccessTags(EntityUid uid, HashSet<EntityUid>? items = null)
+    public ICollection<ProtoId<AccessLevelPrototype>> FindAccessTags(EntityUid uid, EntityUid? target = null, HashSet<EntityUid>? items = null)
     {
         HashSet<ProtoId<AccessLevelPrototype>>? tags = null;
         var owned = false;
@@ -386,6 +390,16 @@ public sealed class AccessReaderSystem : EntitySystem
         {
             FindAccessTagsItem(ent, ref tags, ref owned);
         }
+
+        // Eclipse-Start
+        if (_station.GetOwningStation(target) is { Valid: true } stationUid)
+        {
+            foreach (var ent in items)
+            {
+                _perStationAccess.FindAccessTagsItem(stationUid, ent, ref tags, ref owned);
+            }
+        }
+        // Eclipse-End
 
         return (ICollection<ProtoId<AccessLevelPrototype>>?)tags ?? Array.Empty<ProtoId<AccessLevelPrototype>>();
     }

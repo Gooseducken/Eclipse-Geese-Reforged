@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointFrontierJanitor
+  parent: SpawnPointJobBase
+  name: frontier janitor
+  components:
+  - type: SpawnPoint
+    job_id: FrontierJanitor
+  - type: Sprite
+    layers:
+      - state: green
+      - state: janitor
