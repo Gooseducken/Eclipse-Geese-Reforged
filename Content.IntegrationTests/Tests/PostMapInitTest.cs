@@ -104,7 +104,11 @@ namespace Content.IntegrationTests.Tests
             "Exo",
             "Snowball",
             */
-            "Frontier", // Eclipse : only test relevant maps
+            // Eclipse-Start : only test relevant maps
+            "Frontier",
+            // PoI
+            "PoITradeMall"
+            // Eclipse-End
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
