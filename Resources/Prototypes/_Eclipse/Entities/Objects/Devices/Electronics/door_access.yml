@@ -98,6 +98,38 @@
 
 - type: entity
   parent: DoorElectronics
+  id: DoorElectronicsSSSLawyer
+  suffix: Sector Security Lawyer, Locked
+  components:
+  - type: AccessReader
+    access: [["SSSLawyer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsJudge
+  suffix: Judge, Locked
+  components:
+  - type: AccessReader
+    access: [["Judge"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsCourt
+  suffix: Court, Locked
+  components:
+  - type: AccessReader
+    access: [["Court"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsAttorney
+  suffix: Attorney, Locked
+  components:
+  - type: AccessReader
+    access: [["Attorney"]]
+
+- type: entity
+  parent: DoorElectronics
   id: DoorElectronicsHeadOfSectorSecurity
   suffix: Head of Sector Security, Locked
   components:

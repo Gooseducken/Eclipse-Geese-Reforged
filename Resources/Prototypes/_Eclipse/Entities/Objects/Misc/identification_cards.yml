@@ -318,3 +318,21 @@
       state: SecurityOfficer
   - type: PresetIdCard
     job: SSSWarden
+
+- type: entity
+  parent: BaseFrontierIDCard
+  id: JudgeIDCard
+  name: judge ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: *color-security-top
+    - state: stripe_bottom
+      color: *color-security-bottom
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: SecurityOfficer
+  - type: PresetIdCard
+    job: Judge

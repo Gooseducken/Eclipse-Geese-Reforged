@@ -21,3 +21,11 @@
 - type: accessLevel
   id: HeadOfSectorSecurity
   name: id-card-access-level-head-of-sector-security
+
+- type: accessLevel
+  id: SSSLawyer
+  name: id-card-access-level-sss-lawyer
+
+- type: accessLevel
+  id: Judge
+  name: id-card-access-level-judge

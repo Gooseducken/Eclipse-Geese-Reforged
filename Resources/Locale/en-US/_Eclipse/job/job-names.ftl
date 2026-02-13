@@ -18,6 +18,7 @@ job-name-sssmedic = Sector Security Medic
 job-name-sssspeaker = Sector Security Speaker
 job-name-ssswarden = Warden
 job-name-sergeant = Sergeant
+job-name-judge = Judge
 
 # Role timers
 # Frontier

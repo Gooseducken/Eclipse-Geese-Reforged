@@ -14,6 +14,7 @@
       time: 5h
   access:
   - SectorSecurity
+  - Court
   - Maintenance
   - External
   special:

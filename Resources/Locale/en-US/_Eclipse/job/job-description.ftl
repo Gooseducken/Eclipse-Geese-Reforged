@@ -18,3 +18,4 @@ job-description-sssmedic = TODO
 job-description-sssspeaker = TODO
 job-description-ssswarden = TODO
 job-description-sergeant = TODO
+job-description-judge = TODO

@@ -117,6 +117,42 @@
 
 - type: entity
   parent: WindoorSecure
+  id: WindoorSecureSSSLawyerLocked
+  suffix: Sector Security Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSLawyer ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureJudgeLocked
+  suffix: Judge, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJudge ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureCourtLocked
+  suffix: Court, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCourt ]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureAttorneyLocked
+  suffix: Attorney, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAttorney ]
+
+- type: entity
+  parent: WindoorSecure
   id: WindoorSecureShuttleCrewLocked
   suffix: Shuttle Crew, Locked
   components:

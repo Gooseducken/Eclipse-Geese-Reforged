@@ -25,3 +25,11 @@
 - type: accessLevel
   id: Mercenary
   name: id-card-access-level-mercenary
+
+- type: accessLevel
+  id: Court
+  name: id-card-access-level-court
+
+- type: accessLevel
+  id: Attorney
+  name: id-card-access-level-attorney

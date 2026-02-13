@@ -5,3 +5,5 @@ id-card-access-level-frontier-security = Security
 id-card-access-level-frontier-janitor = Janitor
 id-card-access-level-frontier-post-office = Post Office
 id-card-access-level-mercenary = Mercenary
+id-card-access-level-court = Court
+id-card-access-level-attorney = Attorney

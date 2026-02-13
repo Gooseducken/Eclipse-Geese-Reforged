@@ -1,19 +1,23 @@
 - type: job
-  id: SSSLawyer
-  name: job-name-ssslawyer
-  description: job-description-ssslawyer
-  playTimeTracker: JobSSSLawyer
+  id: Judge
+  name: job-name-judge
+  description: job-description-judge
+  playTimeTracker: JobJudge
   icon: JobIconLawyer
-  startingGear: SSSLawyerGear
-  supervisors: job-supervisors-hoss
+  startingGear: JudgeGear
+  supervisors: job-supervisors-centcom
   canBeAntag: false
+  displayWeight: 3
   requirements:
     - !type:OverallPlaytimeRequirement
+      time: 25h
+    - !type:RoleTimeRequirement
+      role: JobLieutenant
       time: 5h
   access:
   - SectorSecurity
   - Court
-  - SSSLawyer
+  - Judge
   - Maintenance
   - External
   special:
@@ -21,10 +25,10 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: SSSLawyerGear
+  id: JudgeGear
   equipment:
     shoes: ClothingShoesBootsLaceup
-    id: SSSLawyerPDA
+    id: JudgePDA
     ears: ClothingHeadsetSecurity
   inhand:
     - BriefcaseBrownFilled
@@ -34,8 +38,8 @@
     - BookSpaceLaw
 
 - type: chameleonOutfit
-  id: SSSLawyerChameleonOutfit
-  job: SSSLawyer
+  id: JudgeChameleonOutfit
+  job: Judge
   equipment:
     head: ClothingHeadHatBowlerHat
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -46,7 +50,7 @@
 
 - type: entity
   parent: LawyerPDA
-  id: SSSLawyerPDA
+  id: JudgePDA
   components:
   - type: Pda
-    id: SSSLawyerIDCard
+    id: JudgeIDCard

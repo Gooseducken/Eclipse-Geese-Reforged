@@ -118,6 +118,42 @@
       board: [ DoorElectronicsHeadOfSectorSecurity ]
 
 - type: entity
+  parent: AirlockSSS
+  id: AirlockSSSLawyerLocked
+  suffix: Sector Security Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSLawyer ]
+
+- type: entity
+  parent: AirlockSSS
+  id: AirlockJudgeLocked
+  suffix: Judge, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJudge ]
+
+- type: entity
+  parent: AirlockSSS
+  id: AirlockCourtLocked
+  suffix: Court, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCourt ]
+
+- type: entity
+  parent: AirlockSSS
+  id: AirlockAttorneyLocked
+  suffix: Attorney, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAttorney ]
+
+- type: entity
   parent: Airlock
   id: AirlockShuttleCrewLocked
   suffix: Shuttle Crew, Locked
@@ -300,6 +336,42 @@
       board: [ DoorElectronicsHeadOfSectorSecurity ]
 
 - type: entity
+  parent: AirlockSSSGlass
+  id: AirlockSSSLawyerGlassLocked
+  suffix: Sector Security Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSLawyer ]
+
+- type: entity
+  parent: AirlockSSSGlass
+  id: AirlockJudgeGlassLocked
+  suffix: Judge, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJudge ]
+
+- type: entity
+  parent: AirlockSSSGlass
+  id: AirlockCourtGlassLocked
+  suffix: Court, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCourt ]
+
+- type: entity
+  parent: AirlockSSSGlass
+  id: AirlockAttorneyGlassLocked
+  suffix: Attorney, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAttorney ]
+
+- type: entity
   parent: AirlockGlass
   id: AirlockShuttleCrewGlassLocked
   suffix: Shuttle Crew, Locked
@@ -411,3 +483,23 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSectorSecurity ]
+
+# High Security Doors
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecFrontierCommandLocked
+  suffix: Frontier Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierCommand ]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecSSSArmoryLocked
+  suffix: Sector Security Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSSSArmory ]
