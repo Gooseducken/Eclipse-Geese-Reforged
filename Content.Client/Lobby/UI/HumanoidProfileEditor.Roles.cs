@@ -28,6 +28,10 @@ public sealed partial class HumanoidProfileEditor
 
     private readonly Dictionary<string, BoxContainer> _jobCategories;
 
+    // Eclipse-Start : configurable enabled departments
+    private readonly ProtoId<DepartmentConfigPrototype> _departmentConfigId;
+    // Eclipse-End
+
     /// <summary>
     /// Updates selected job priorities to the profile's.
     /// </summary>
@@ -118,9 +122,19 @@ public sealed partial class HumanoidProfileEditor
         var firstCategory = true;
 
         // Get all displayed departments
+
+        // Eclipse-Start : configurable enabled departments
+        var config = _prototypeManager.Index(_departmentConfigId);
+        // Eclipse-End
+
         var departments = new List<DepartmentPrototype>();
         foreach (var department in _prototypeManager.EnumeratePrototypes<DepartmentPrototype>())
         {
+            // Eclipse-Start : configurable enabled departments
+            if (!config.EnabledDepartments.Contains(department))
+                continue;
+            // Eclipse-End
+
             if (department.EditorHidden)
                 continue;
 
