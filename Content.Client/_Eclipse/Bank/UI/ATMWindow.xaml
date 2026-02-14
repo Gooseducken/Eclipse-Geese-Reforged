@@ -1,0 +1,19 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                           xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                           xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
+                           Title="{Loc 'atm-window-title'}"
+                           MinSize="400 230">
+<BoxContainer Orientation="Vertical" Margin="2">
+    <BoxContainer Orientation="Vertical" Margin="5 2 5 2">
+        <Label Name="BalanceLabel" Text="{Loc 'atm-window-no-account'}" />
+        <Label Name="InsertedLabel" Text="{Loc 'atm-window-no-cash-inserted'}" />
+    </BoxContainer>
+    <cc:HSeparator Margin="0 7 0 7" />
+    <Button Name="DepositButton" Text="{Loc 'atm-window-deposit-button'}"/>
+    <cc:HSeparator Margin="0 7 0 7" />
+    <LineEdit Name="WithdrawLineEdit" />
+    <Button Name="WithdrawButton" Text="{Loc 'atm-window-withdraw-button'}"/>
+    <cc:HSeparator/>
+    <Label Name="ResultLabel" />
+</BoxContainer>
+</controls:FancyWindow>

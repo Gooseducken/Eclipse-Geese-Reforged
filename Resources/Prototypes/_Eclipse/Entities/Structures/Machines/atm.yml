@@ -27,3 +27,25 @@
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver
+  - type: ATM
+    cashSlot:
+      name: atm-cash-slot
+      insertSound: /Audio/Machines/scanning.ogg
+      ejectSound: /Audio/Machines/tray_eject.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+        - Cash
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.ATMUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.ATMUiKey.Key:
+        type: ATMBoundUserInterface
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      cashSlot: !type:ContainerSlot

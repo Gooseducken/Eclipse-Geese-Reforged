@@ -160,6 +160,9 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  # Eclipse-Start
+  - type: BankAccount
+  # Eclipse-End
 
 - type: entity
   abstract: true
