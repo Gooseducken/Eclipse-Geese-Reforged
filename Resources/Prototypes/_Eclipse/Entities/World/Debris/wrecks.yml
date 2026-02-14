@@ -1,0 +1,121 @@
+- type: entity
+  id: BaseScrapDebrisExtended
+  parent: BaseDebris
+  name: scrap debris
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+        - Plating
+        - Plating
+        - Plating
+        - FloorSteel
+        - FloorSteelDirty
+        - FloorMetalFoam
+        - FloorPlastic
+        - Lattice
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+    - type: SimpleFloorPlanPopulator
+      entries:
+        Plating:
+          - prob: 3 # Intentional blank.
+          - id: SalvageMaterialCrateSpawner
+            prob: 1
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageMobSpawner
+            prob: 0.7
+          - id: WallSolid
+            prob: 1
+          - id: Grille
+            prob: 0.5
+          - id: SalvageSpawnerScrapCommon75
+        Lattice:
+          - prob: 2
+          - id: Grille
+            prob: 0.2
+          - id: SalvageMaterialCrateSpawner
+            prob: 0.3
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageSpawnerScrapCommon75
+        FloorSteel:
+          - prob: 3 # Intentional blank.
+          - id: SalvageMaterialCrateSpawner
+            prob: 1
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageMobSpawner
+            prob: 0.7
+          - id: Grille
+            prob: 0.5
+          - id: SalvageSpawnerScrapCommon75
+        FloorSteelDirty:
+          - prob: 3 # Intentional blank.
+          - id: SalvageMaterialCrateSpawner
+            prob: 1
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageMobSpawner
+            prob: 0.7
+          - id: Grille
+            prob: 0.5
+          - id: SalvageSpawnerScrapCommon75
+        FloorMetalFoam:
+          - prob: 3 # Intentional blank.
+          - id: SalvageMaterialCrateSpawner
+            prob: 1
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageMobSpawner
+            prob: 0.7
+          - id: Grille
+            prob: 0.5
+          - id: SalvageSpawnerScrapCommon75
+        FloorPlastic:
+          - prob: 3 # Intentional blank.
+          - id: SalvageMaterialCrateSpawner
+            prob: 1
+          - id: SalvageCanisterSpawner
+            prob: 0.2
+          - id: SalvageMobSpawner
+            prob: 0.7
+          - id: Grille
+            prob: 0.5
+          - id: SalvageSpawnerScrapCommon75
+    - type: IFF
+      flags: HideLabel
+      color: "#88b0d1"
+
+- type: entity
+  id: ScrapDebrisExtendedSmall
+  parent: BaseScrapDebrisExtended
+  name: scrap debris small
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 8
+
+- type: entity
+  id: ScrapDebrisExtendedMedium
+  parent: BaseScrapDebrisExtended
+  name: scrap debris medium
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 16
+
+- type: entity
+  id: ScrapDebrisExtendedLarge
+  parent: BaseScrapDebrisExtended
+  name: scrap debris large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 24

@@ -1,0 +1,11 @@
+# Larger than AsteroidDebrisLarger (12r 36f)
+- type: entity
+  id: AsteroidDebris14r48f
+  parent: BaseAsteroidDebris
+  name: asteroid debris 14r 48f
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 14
+      floorPlacements: 48

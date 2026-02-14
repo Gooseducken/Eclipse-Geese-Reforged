@@ -15,12 +15,14 @@
           prob: 0.7
         - id: AsteroidDebrisLarger
           prob: 0.4
+        - id: AsteroidDebris14r48f
+          prob: 0.1
     - type: NoiseDrivenDebrisSelector
       noiseChannel: Wreck
       debrisTable:
-        - id: ScrapDebrisSmall
-        - id: ScrapDebrisMedium
-        - id: ScrapDebrisLarge
+        - id: ScrapDebrisExtendedSmall
+        - id: ScrapDebrisExtendedMedium
+        - id: ScrapDebrisExtendedLarge
           prob: 0.5
     - type: NoiseRangeCarver
       ranges:
@@ -33,54 +35,25 @@
   noiseRanges: {}
   distanceRanges:
     - 3500, 4500
-  chunkComponents:
-    - type: DebrisFeaturePlacerController
-      densityNoiseChannel: Density
-    - type: SimpleDebrisSelector
-      debrisTable:
-        - id: AsteroidDebrisSmall
-        - id: AsteroidDebrisMedium
-        - id: AsteroidDebrisLarge
-          prob: 0.7
-        - id: AsteroidDebrisLarger
-          prob: 0.4
-    - type: NoiseDrivenDebrisSelector
-      noiseChannel: Wreck
-      debrisTable:
-        - id: ScrapDebrisSmall
-        - id: ScrapDebrisMedium
-        - id: ScrapDebrisLarge
-          prob: 0.5
-    - type: NoiseRangeCarver
-      ranges:
-        - 0.4, 0.6
-      noiseChannel: Carver
-
-- type: spaceBiome
-  id: DenseFarSpace
-  priority: 0
-  noiseRanges: {}
-  distanceRanges:
     - 20000, 200000
   chunkComponents:
     - type: DebrisFeaturePlacerController
-      densityNoiseChannel: Density
+      densityNoiseChannel: DensityHighDensity
     - type: SimpleDebrisSelector
       debrisTable:
         - id: AsteroidDebrisSmall
+          prob: 0.3
         - id: AsteroidDebrisMedium
+          prob: 0.5
         - id: AsteroidDebrisLarge
           prob: 0.7
         - id: AsteroidDebrisLarger
-          prob: 0.4
+        - id: AsteroidDebris14r48f
+          prob: 0.7
     - type: NoiseDrivenDebrisSelector
-      noiseChannel: Wreck
+      noiseChannel: WreckLowDensity
       debrisTable:
-        - id: ScrapDebrisSmall
-        - id: ScrapDebrisMedium
-        - id: ScrapDebrisLarge
+        - id: ScrapDebrisExtendedSmall
+        - id: ScrapDebrisExtendedMedium
+        - id: ScrapDebrisExtendedLarge
           prob: 0.5
-    - type: NoiseRangeCarver
-      ranges:
-        - 0.4, 0.6
-      noiseChannel: Carver
