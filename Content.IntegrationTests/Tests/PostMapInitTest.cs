@@ -111,6 +111,7 @@ namespace Content.IntegrationTests.Tests
             "dm01-entryway",
             "Exo",
             "Snowball",
+            "Serpentcrest"
             */
             // Eclipse-Start : only test relevant maps
             "Frontier",
