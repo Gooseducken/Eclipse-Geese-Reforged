@@ -22559,7 +22559,7 @@ entities:
     - type: Transform
       pos: 34.5,5.5
       parent: 2
-- proto: TelecomServerFilled
+- proto: TelecomServerFilledEclipse
   entities:
   - uid: 2307
     components:

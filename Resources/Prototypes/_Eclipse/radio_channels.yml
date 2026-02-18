@@ -1,0 +1,6 @@
+- type: radioChannel
+  id: Traffic
+  name: chat-radio-traffic
+  keycode: 'r'
+  frequency: 1455
+  color: "#b48b57"

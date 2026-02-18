@@ -1,0 +1,17 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyTraffic
+  name: traffic encryption key
+  description: # TODO
+  components:
+  - type: EncryptionKey
+    channels:
+    - Traffic
+    defaultChannel: Traffic
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: cargo_label # TODO
+  - type: Tag
+    tags:
+    - EncryptionTraffic

@@ -1,0 +1,85 @@
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerEclipse
+  name: telecommunication server
+  description: When powered and filled with encryption keys it allows radio headset communication.
+  components:
+  - type: ItemMapper
+    sprite: Structures/Machines/telecomms.rsi
+    mapLayers:
+      variant-nokey:
+        whitelist:
+          components:
+          - EncryptionKey  #Shown when no keys are present
+        minCount: 0
+      variant-default:
+        whitelist:
+          components:
+          - EncryptionKey
+        minCount: 1
+      variant-common:
+        whitelist:
+          tags:
+          - EncryptionCommon
+      variant-cargo:
+        whitelist:
+          tags:
+          - EncryptionTraffic
+          - EncryptionCargo
+      variant-engineering:
+        whitelist:
+          tags:
+          - EncryptionEngineering
+      variant-medical:
+        whitelist:
+          tags:
+          - EncryptionMedical
+      variant-science:
+        whitelist:
+          tags:
+          - EncryptionScience
+      variant-sec:
+        whitelist:
+          tags:
+          - EncryptionSecurity
+      variant-service:
+        whitelist:
+          tags:
+          - EncryptionService
+      variant-command:
+        whitelist:
+          tags:
+          - EncryptionCommand
+      variant-multiple:
+        whitelist:
+          components:
+          - EncryptionKey  #Shown when multiple keys are present
+        minCount: 2
+
+- type: entity
+  parent: TelecomServerEclipse
+  id: TelecomServerFilledTraffic
+  suffix: Traffic
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyTraffic
+
+- type: entity
+  parent: TelecomServerEclipse
+  id: TelecomServerFilledEclipse
+  suffix: Filled All
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyCargo
+      - EncryptionKeyEngineering
+      - EncryptionKeyMedical
+      - EncryptionKeyScience
+      - EncryptionKeySecurity
+      - EncryptionKeyService
+      - EncryptionKeyCommand
+      - EncryptionKeyTraffic
