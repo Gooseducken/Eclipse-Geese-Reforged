@@ -1,0 +1,11 @@
+- type: entity
+  id: ContrabandPallet
+  name: contraband selling pallet
+  description: Designates valid items to sell. Made of plastitanium to discourage pesky vandals.
+  parent: BaseCargoPallet
+  components:
+  - type: Sprite
+    drawdepth: FloorTiles
+    layers:
+    - sprite: _NF/Structures/Machines/contraband_pallet.rsi
+      state: base
