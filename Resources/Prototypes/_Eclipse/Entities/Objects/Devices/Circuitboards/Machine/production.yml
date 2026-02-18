@@ -1,0 +1,16 @@
+- type: entity
+  id: SSSTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: sector security techfab machine board
+  description: A machine printed circuit board for a sector security techfab.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: SSSTechFab
+      stackRequirements:
+        Manipulator: 4
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
