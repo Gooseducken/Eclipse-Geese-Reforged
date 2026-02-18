@@ -1,0 +1,170 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineAstroVend
+  name: AstroVend
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/astrovend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["External"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineFlatpackVend
+  name: FlatpackVend
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/flatpackvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBountyVend
+  name: BountyVend
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/bountyvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: LessLethalVendingMachine
+  name: LessLethalVend
+  description: # TODO
+  components:
+    - type: Sprite
+      sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
+      layers:
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.Base"]
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+        shader: unshaded
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: AccessReader
+      access: [["SectorSecurity"]]
+
+- type: entity
+  parent: VendingMachine
+  id: NonLethalVendingMachine
+  name: NonLethalVend
+  description: # TODO
+  components:
+    - type: Sprite
+      sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
+      layers:
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.Base"]
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+        shader: unshaded
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: AccessReader
+      access: [["SectorSecurity"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineNfsdDrobe
+  name: NFSDDrobe
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["SectorSecurity"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineNfsdTech
+  name: NFSDTech
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["SectorSecurity"]]
+
+- type: entity
+  parent: VendingMachineCart
+  id: NFVendingMachineCartNfsd
+  suffix: NFSD
+  components:
+  - type: AccessReader
+    access: [["HeadOfSectorSecurity"]]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineFuelVend
+  name: FuelVend
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/fuelvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachinePickNPack
+  name: Pick-n-Pack
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/picknpackvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
