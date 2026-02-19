@@ -16,7 +16,7 @@ using Content.Shared.StoreVendingMachines.Components;
 namespace Content.Client._Eclipse.StoreVendingMachines.UI;
 
 [GenerateTypedNameReferences]
-public sealed partial class StoreVendingMachineMenu : FancyWindow
+public sealed partial class StoreMachineMenu : FancyWindow
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
@@ -31,7 +31,7 @@ public sealed partial class StoreVendingMachineMenu : FancyWindow
 
     public event Action<GUIBoundKeyEventArgs, ListData>? OnItemSelected;
 
-    public StoreVendingMachineMenu()
+    public StoreMachineMenu()
     {
         MinSize = SetSize = new Vector2(250, 150);
         RobustXamlLoader.Load(this);

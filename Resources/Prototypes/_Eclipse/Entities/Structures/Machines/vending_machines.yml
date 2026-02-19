@@ -56,7 +56,7 @@
   - type: UserInterface
     interfaces:
       enum.StoreVendingMachineUiKey.Key:
-        type: StoreVendingMachineBoundUserInterface
+        type: StoreMachineBoundUserInterface
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
   - type: WiresPanel
@@ -139,9 +139,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/flatpackvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -161,9 +161,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/bountyvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -188,9 +188,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -217,9 +217,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -241,9 +241,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -265,9 +265,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -285,9 +285,9 @@
     sprite: Structures/Machines/VendingMachines/cart.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -318,9 +318,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/fuelvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -342,9 +342,9 @@
     sprite: _NF/Structures/Machines/VendingMachines/picknpackvend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
