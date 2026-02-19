@@ -23,7 +23,7 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
 
-        private const float WallVendEjectDistanceFromWall = 1f;
+        public const float WallVendEjectDistanceFromWall = 1f; // Eclipse: private -> public
 
         public override void Initialize()
         {

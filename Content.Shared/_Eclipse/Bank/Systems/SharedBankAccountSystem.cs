@@ -8,6 +8,7 @@ public abstract class SharedBankAccountSystem : EntitySystem
             return;
 
         ent.Comp.StoredMoney += amount;
+        Dirty(ent);
 
         var ev = new MoneyAmountChangedEvent();
         RaiseLocalEvent(ent, ref ev);
@@ -22,6 +23,7 @@ public abstract class SharedBankAccountSystem : EntitySystem
             return false;
 
         ent.Comp.StoredMoney -= amount;
+        Dirty(ent);
 
         var ev = new MoneyAmountChangedEvent();
         RaiseLocalEvent(ent, ref ev);

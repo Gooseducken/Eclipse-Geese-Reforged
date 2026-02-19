@@ -1,16 +1,121 @@
 - type: entity
-  parent: VendingMachine
+  id: StoreVendingMachine
+  parent: BaseMachinePowered
+  name: vending machine
+  description: Just add capitalism!
+  abstract: true
+  components:
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/empty.rsi
+    snapCardinals: true
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.45,0.25,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Destructible
+    thresholds:
+    - trigger: # Excess damage, don't do anything
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+      - !type:EjectVendorItems
+  - type: Repairable
+    doAfterDelay: 8
+  - type: ActivatableUI
+    key: enum.StoreVendingMachineUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.StoreVendingMachineUiKey.Key:
+        type: StoreVendingMachineBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: WiresPanel
+  #- type: Wires
+  #  boardName: wires-board-name-vendingmachine
+  #  layoutId: Vending
+  - type: Anchorable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: Vocalizer
+    minVocalizeInterval: 8m
+    maxVocalizeInterval: 10m
+    hideChat: true
+  - type: VocalizerRequiresPower
+  - type: SpookySpeaker
+    messageSet: SpookySpeakerMessagesGeneric
+    speakChance: 0.2
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Common
+  - type: DoAfter
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 1.5
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Actions
+  - type: StaticPrice
+    price: 100
+  - type: Appearance
+  - type: WiresVisuals
+
+- type: entity
+  parent: StoreVendingMachine
   id: VendingMachineAstroVend
   name: AstroVend
   description: # TODO
   components:
+  - type: StoreVendingMachine
+    inventoryId: AstroVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/astrovend.rsi
     layers:
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: ["enum.StoreVendingMachineVisualLayers.Base"]
     - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: ["enum.StoreVendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
@@ -18,11 +123,18 @@
     access: [["External"]]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachineFlatpackVend
   name: FlatpackVend
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: FlatpackVendInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
+  #  ejectState: eject-unshaded
+  #  denyState: deny-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/flatpackvend.rsi
     layers:
@@ -35,11 +147,16 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachineBountyVend
   name: BountyVend
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: BountyVendInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/bountyvend.rsi
     layers:
@@ -52,49 +169,74 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: LessLethalVendingMachine
   name: LessLethalVend
   description: # TODO
   components:
-    - type: Sprite
-      sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
-      layers:
-      - state: "off"
-        map: ["enum.VendingMachineVisualLayers.Base"]
-      - state: "off"
-        map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-        shader: unshaded
-      - state: panel
-        map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: AccessReader
-      access: [["SectorSecurity"]]
+  #- type: StoreVendingMachine
+  #  pack: LessLethalVendInventory
+  #  dispenseOnHitChance: 0.25
+  #  dispenseOnHitThreshold: 2
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
+  #  ejectState: eject-unshaded
+  #  denyState: deny-unshaded
+  #  ejectDelay: 3
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["SectorSecurity"]]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: NonLethalVendingMachine
   name: NonLethalVend
   description: # TODO
   components:
-    - type: Sprite
-      sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
-      layers:
-      - state: "off"
-        map: ["enum.VendingMachineVisualLayers.Base"]
-      - state: "off"
-        map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-        shader: unshaded
-      - state: panel
-        map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: AccessReader
-      access: [["SectorSecurity"]]
+  #- type: StoreVendingMachine
+  #  pack: NonLethalVendInventory
+  #  dispenseOnHitChance: 0.25
+  #  dispenseOnHitThreshold: 2
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
+  #  ejectState: eject-unshaded
+  #  denyState: deny-unshaded
+  #  ejectDelay: 3
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["SectorSecurity"]]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachineNfsdDrobe
   name: NFSDDrobe
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: NfsdDrobeInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
     layers:
@@ -109,11 +251,16 @@
     access: [["SectorSecurity"]]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachineNfsdTech
   name: NFSDTech
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: NfsdTechInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
     layers:
@@ -128,19 +275,45 @@
     access: [["SectorSecurity"]]
 
 - type: entity
-  parent: VendingMachineCart
-  id: NFVendingMachineCartNfsd
+  parent: StoreVendingMachine
+  id: VendingMachineCartNfsd
+  name: PTech
+  description: PTech vending! Providing a ROBUST selection of PDAs, cartridges, and anything else a dull paper pusher needs!
   suffix: NFSD
   components:
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/cart.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  #- type: StoreVendingMachine
+  #  pack: NFPTechNfsdInventory
   - type: AccessReader
     access: [["HeadOfSectorSecurity"]]
+  - type: PointLight
+    radius: 1
+    energy: 2.0
+    color: "#ffb0b0"
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachineFuelVend
   name: FuelVend
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: VendingMachineFuelVendInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
+  #  ejectState: eject-unshaded
+  #  denyState: deny-unshaded
+  #  ejectDelay: 2.1
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/fuelvend.rsi
     layers:
@@ -153,11 +326,18 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
-  parent: VendingMachine
+  parent: StoreVendingMachine
   id: VendingMachinePickNPack
   name: Pick-n-Pack
   description: # TODO
   components:
+  #- type: StoreVendingMachine
+  #  pack: PickNPackInventory
+  #  offState: off
+  #  brokenState: broken
+  #  normalState: normal-unshaded
+  #  ejectState: eject-unshaded
+  #  denyState: deny-unshaded
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/picknpackvend.rsi
     layers:

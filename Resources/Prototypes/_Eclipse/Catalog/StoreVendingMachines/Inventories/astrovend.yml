@@ -1,0 +1,27 @@
+- type: storeVendingMachineInventory
+  id: AstroVendInventory
+  inventory:
+    Flare:
+      price: 500
+    ClothingShoesBootsMag:
+      price: 500
+    ClothingOuterHardsuitEVA:
+      price: 500
+    RadioHandheld:
+      price: 500
+    ClothingMaskGas:
+      price: 500
+    JetpackMiniFilled:
+      price: 500
+    HandHeldMassScanner:
+      price: 500
+    EncryptionKeyCommon:
+      price: 500
+    EncryptionKeyTraffic:
+      price: 500
+    EncryptionKeyMedical:
+      price: 500
+    EncryptionKeyEngineering:
+      price: 500
+    EncryptionKeyScience:
+      price: 500
