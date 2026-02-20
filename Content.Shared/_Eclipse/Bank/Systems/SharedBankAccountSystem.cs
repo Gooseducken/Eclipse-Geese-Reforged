@@ -1,36 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Content.Shared.Bank.Systems;
 
 public abstract class SharedBankAccountSystem : EntitySystem
 {
-    public void Deposit(Entity<BankAccountComponent?> ent, uint amount)
-    {
-        if (!Resolve(ent, ref ent.Comp))
-            return;
+    public abstract bool TryGetBalance(EntityUid uid, [NotNullWhen(true)] out int? balance);
 
-        ent.Comp.StoredMoney += amount;
-        Dirty(ent);
+    public abstract bool Deposit(EntityUid uid, uint amount);
 
-        var ev = new MoneyAmountChangedEvent();
-        RaiseLocalEvent(ent, ref ev);
-    }
-
-    public bool TryWithdraw(Entity<BankAccountComponent?> ent, uint amount)
-    {
-        if (!Resolve(ent, ref ent.Comp))
-            return false;
-
-        if (ent.Comp.StoredMoney < amount)
-            return false;
-
-        ent.Comp.StoredMoney -= amount;
-        Dirty(ent);
-
-        var ev = new MoneyAmountChangedEvent();
-        RaiseLocalEvent(ent, ref ev);
-
-        return true;
-    }
+    public abstract bool TryWithdraw(EntityUid uid, uint amount);
 }
-
-[ByRefEvent]
-public record struct MoneyAmountChangedEvent();

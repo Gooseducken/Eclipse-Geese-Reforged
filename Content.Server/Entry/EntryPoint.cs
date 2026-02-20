@@ -3,6 +3,7 @@ using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
+using Content.Server.Bank.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Database;
@@ -80,6 +81,9 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
         [Dependency] private readonly ServerFeedbackManager _feedbackManager = null!;
+        // Eclipse-Start
+        [Dependency] private readonly BankAccountManager _bankAccount = default!;
+        // Eclipse-End
 
         public override void PreInit()
         {
@@ -136,6 +140,9 @@ namespace Content.Server.Entry
             _watchlistWebhookManager.Initialize();
             _job.Initialize();
             _rateLimit.Initialize();
+            // Eclipse-Start
+            _bankAccount.Initialize();
+            // Eclipse-End
         }
 
         public override void PostInit()

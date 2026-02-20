@@ -166,12 +166,9 @@ public abstract partial class SharedStoreVendingMachineSystem : EntitySystem
     /// <param name="ent"></param>
     /// <param name="type">The type of inventory the item is from</param>
     /// <param name="itemId">The prototype ID of the item</param>
-    public void TryEjectVendorItem(Entity<StoreVendingMachineComponent?> ent, EntProtoId itemId, Entity<BankAccountComponent?> user)
+    public void TryEjectVendorItem(Entity<StoreVendingMachineComponent?> ent, EntProtoId itemId, EntityUid user)
     {
         if (!Resolve(ent, ref ent.Comp))
-            return;
-
-        if (!Resolve(user, ref user.Comp))
             return;
 
         if (ent.Comp.Ejecting || ent.Comp.Broken || !_receiver.IsPowered(ent.Owner))

@@ -81,15 +81,17 @@ public sealed class ATMSystem : EntitySystem
             return;
         }
 
-        if (!TryComp<BankAccountComponent>(args.Actor, out var bankAccount))
-        {
-            _popup.PopupClient(Loc.GetString("atm-component-no-user-bank-account"), ent, args.Actor);
-            _audio.PlayLocal(ent.Comp.SoundDeny, ent, args.Actor);
-            UpdateUi(ent, args.Actor, "atm-window-transaction-result-no-account");
-            return;
-        }
 
-        if (!_bankAccount.TryWithdraw((args.Actor, bankAccount), amount))
+
+        //if (!TryComp<BankAccountComponent>(args.Actor, out var bankAccount))
+        //{
+        //    _popup.PopupClient(Loc.GetString("atm-component-no-user-bank-account"), ent, args.Actor);
+        //    _audio.PlayLocal(ent.Comp.SoundDeny, ent, args.Actor);
+        //    UpdateUi(ent, args.Actor, "atm-window-transaction-result-no-account");
+        //    return;
+        //}
+
+        if (!_bankAccount.TryWithdraw(args.Actor, amount))
         {
             _popup.PopupClient(Loc.GetString("atm-component-not-enough-money"), ent, args.Actor);
             _audio.PlayLocal(ent.Comp.SoundDeny, ent, args.Actor);
@@ -138,17 +140,25 @@ public sealed class ATMSystem : EntitySystem
 
         var amount = (uint)stackComponent.Count;
 
-        if (!TryComp<BankAccountComponent>(args.Actor, out var bankAccount))
+        //if (!TryComp<BankAccountComponent>(args.Actor, out var bankAccount))
+        //{
+        //    _popup.PopupClient(Loc.GetString("atm-component-no-user-bank-account"), ent, args.Actor);
+        //    _audio.PlayLocal(ent.Comp.SoundDeny, ent, args.Actor);
+        //    UpdateUi(ent, args.Actor, "atm-window-transaction-result-no-account");
+        //    return;
+        //}
+
+        if (_bankAccount.Deposit(args.Actor, amount))
         {
-            _popup.PopupClient(Loc.GetString("atm-component-no-user-bank-account"), ent, args.Actor);
+            _container.CleanContainer(ent.Comp.CashSlot.ContainerSlot);
+        }
+        else
+        {
+            _popup.PopupClient(Loc.GetString("atm-component-invalid-cash"), ent, args.Actor);
             _audio.PlayLocal(ent.Comp.SoundDeny, ent, args.Actor);
-            UpdateUi(ent, args.Actor, "atm-window-transaction-result-no-account");
+            UpdateUi(ent, args.Actor, "atm-window-transaction-result-invalid-cash");
             return;
         }
-
-        _container.CleanContainer(ent.Comp.CashSlot.ContainerSlot);
-
-        _bankAccount.Deposit((args.Actor, bankAccount), amount);
 
         _popup.PopupClient(Loc.GetString("atm-component-deposit-success"), ent, args.Actor);
         _audio.PlayLocal(ent.Comp.SoundAccept, ent, args.Actor);
@@ -171,10 +181,10 @@ public sealed class ATMSystem : EntitySystem
 
     private void UpdateUi(Entity<ATMComponent> ent, EntityUid user, LocId? resultMessage = null)
     {
-        uint? money = null;
-        if (TryComp<BankAccountComponent>(user, out var comp))
+        int? money = null;
+        if (_bankAccount.TryGetBalance(user, out var balance))
         {
-            money = comp.StoredMoney;
+            money = balance;
         }
 
         uint? inserted = null;

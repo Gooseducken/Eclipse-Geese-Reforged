@@ -3,6 +3,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
 using Content.Server.Afk;
+using Content.Server.Bank.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Database;
@@ -84,5 +85,8 @@ internal static class ServerContentIoC
         deps.Register<DiscordChatLink>();
         deps.Register<ServerFeedbackManager>();
         deps.Register<ISharedFeedbackManager, ServerFeedbackManager>();
+        // Eclipse-Start
+        deps.Register<BankAccountManager>();
+        // Eclipse-End
     }
 }

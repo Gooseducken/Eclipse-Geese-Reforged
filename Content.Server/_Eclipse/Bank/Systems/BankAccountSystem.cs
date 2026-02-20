@@ -1,32 +1,94 @@
-using Content.Shared.Bank;
+using System.Diagnostics.CodeAnalysis;
+using Content.Server.Bank.Managers;
+using Content.Server.Preferences.Managers;
 using Content.Shared.Bank.Systems;
-using Content.Shared.CCVar;
-using Content.Shared.Roles;
-using Robust.Shared.Configuration;
+using Robust.Server.Player;
 
 namespace Content.Server.Bank.Systems;
 
 public sealed class BankAccountSystem : SharedBankAccountSystem
 {
-    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
+    [Dependency] private readonly BankAccountManager _bankAccountManager = default!;
 
-    public override void Initialize()
+    public override bool TryGetBalance(EntityUid uid, [NotNullWhen(true)] out int? balance)
     {
-        base.Initialize();
+        if (!_playerManager.TryGetSessionByEntity(uid, out var session))
+        {
+            // TODO: cancel + log
+            balance = null;
+            return false;
+        }
 
-        SubscribeLocalEvent<BankAccountComponent, MoneyAmountChangedEvent>(OnMoneyAmountChanged);
-        SubscribeLocalEvent<BankAccountComponent, StartingGearEquippedEvent>(OnStartingGear);
+        if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var playerPreferences))
+        {
+            // TODO: cancel
+            balance = null;
+            return false;
+        }
+
+        if (!_bankAccountManager.TryGetCachedBalance(session.UserId, playerPreferences.SelectedCharacterIndex, out balance))
+        {
+            return false;
+        }
+
+        return true;
     }
 
-    private void OnStartingGear(EntityUid uid, BankAccountComponent component, ref StartingGearEquippedEvent args)
+    public override bool Deposit(EntityUid uid, uint amount)
     {
-        // TODO: load money from DB
-        component.StoredMoney = _cfgManager.GetCVar(EclipseCCVars.StartingMoney);
-        Dirty(uid, component);
+        if (!_playerManager.TryGetSessionByEntity(uid, out var session))
+        {
+            // TODO: cancel + log
+            return false;
+        }
+
+        if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var playerPreferences))
+        {
+            // TODO: cancel
+            return false;
+        }
+
+        if (!_bankAccountManager.TryGetCachedBalance(session.UserId, playerPreferences.SelectedCharacterIndex, out var balance))
+        {
+            return false;
+        }
+
+        if (amount > int.MaxValue)
+            return false;
+
+        var newBalance = balance.Value + (int)amount;
+
+        _bankAccountManager.ChangeStoredBalance(session.UserId, playerPreferences.SelectedCharacterIndex, newBalance);
+        return true;
     }
 
-    private void OnMoneyAmountChanged(EntityUid uid, BankAccountComponent component, ref MoneyAmountChangedEvent args)
+    public override bool TryWithdraw(EntityUid uid, uint amount)
     {
-        // TODO: save to DB
+        if (!_playerManager.TryGetSessionByEntity(uid, out var session))
+        {
+            // TODO: cancel + log
+            return false;
+        }
+
+        if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var playerPreferences))
+        {
+            // TODO: cancel
+            return false;
+        }
+
+        if (!_bankAccountManager.TryGetCachedBalance(session.UserId, playerPreferences.SelectedCharacterIndex, out var balance))
+        {
+            return false;
+        }
+
+        if (balance.Value < amount)
+            return false;
+
+        var newBalance = balance.Value - (int)amount;
+
+        _bankAccountManager.ChangeStoredBalance(session.UserId, playerPreferences.SelectedCharacterIndex, newBalance);
+        return true;
     }
 }

@@ -102,7 +102,7 @@ namespace Content.Server.Database
             NetUserId? userId,
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
-            bool includeUnbanned=true,
+            bool includeUnbanned = true,
             BanType type = BanType.Server);
 
         Task<BanDef> AddBanAsync(BanDef ban);
@@ -329,6 +329,18 @@ namespace Content.Server.Database
         Task SendNotification(DatabaseNotification notification);
 
         #endregion
+
+        // Eclipse-Start
+        #region Bank Balance
+
+        Task<Dictionary<int, int>> LoadBankBalance(Guid player);
+
+        Task SetBankBalance(Guid player, int slot, int balance);
+
+        Task RemoveBankBalance(Guid player, int slot);
+
+        #endregion
+        // Eclipse-End
     }
 
     /// <summary>
@@ -511,7 +523,7 @@ namespace Content.Server.Database
             NetUserId? userId,
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
-            bool includeUnbanned=true,
+            bool includeUnbanned = true,
             BanType type = BanType.Server)
         {
             DbReadOpsMetric.Inc();
@@ -996,6 +1008,26 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SendNotification(notification));
         }
+
+        // Eclipse-Start
+        public Task<Dictionary<int, int>> LoadBankBalance(Guid player)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetBankBalance(player));
+        }
+
+        public Task SetBankBalance(Guid player, int slot, int balance)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SaveBankBalance(player, slot, balance));
+        }
+
+        public Task RemoveBankBalance(Guid player, int slot)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.RemoveBankBalance(player, slot));
+        }
+        // Eclipse-End
 
         private async void HandleDatabaseNotification(DatabaseNotification notification)
         {
