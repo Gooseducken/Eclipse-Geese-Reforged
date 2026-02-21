@@ -7,12 +7,10 @@ namespace Content.Shared.Shuttles.BUIStates;
 public sealed class ShipyardConsoleBoundUserInterfaceState : BoundUserInterfaceState
 {
     public bool IsIdPresent { get; }
-    public List<ShipyardShuttleEntry> Shuttles { get; }
 
-    public ShipyardConsoleBoundUserInterfaceState(bool isIdPresent, List<ShipyardShuttleEntry> shuttles)
+    public ShipyardConsoleBoundUserInterfaceState(bool isIdPresent)
     {
         IsIdPresent = isIdPresent;
-        Shuttles = shuttles;
     }
 }
 
