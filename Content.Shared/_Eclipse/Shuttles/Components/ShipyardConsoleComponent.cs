@@ -56,7 +56,7 @@ public sealed partial class ShipyardConsoleComponent : Component
     /// Console type for shuttle types.
     /// </summary>
     [DataField]
-    public ShuttleType AllowedType = ShuttleType.Normal;
+    public ShuttleType AllowedType = ShuttleType.Common;
 }
 
 [Serializable, NetSerializable]
