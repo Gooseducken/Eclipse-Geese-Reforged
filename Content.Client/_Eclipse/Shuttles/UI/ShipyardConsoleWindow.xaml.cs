@@ -23,7 +23,7 @@ public sealed partial class ShipyardConsoleWindow : FancyWindow,
     private readonly IGameTiming _timing;
     private List<ShuttlePrototype> _shuttles = new();
     private string? _selectedFilter;
-    private ShuttleType _allowedType = ShuttleType.Normal;
+    private ShuttleType _allowedType = ShuttleType.Common;
     public ShipyardConsoleWindow()
     {
         _timing = IoCManager.Resolve<IGameTiming>();
