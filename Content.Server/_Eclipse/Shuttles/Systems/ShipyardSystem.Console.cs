@@ -74,6 +74,13 @@ public sealed partial class ShipyardSystem
             return;
         }
 
+        if (shuttle.RequiredType != ent.Comp.AllowedType)
+        {
+            _popup.PopupEntity(Loc.GetString("shipyard-console-invalid-vessel"), ent, player);
+            PlayDenySound(ent, ent.Comp);
+            return;
+        }
+
         if (!TryComp<ShuttleComponent>(grid, out var shuttleComp))
         {
             _popup.PopupEntity(Loc.GetString("shipyard-console-invalid-vessel"), ent, player);
@@ -128,16 +135,22 @@ public sealed partial class ShipyardSystem
 
     private void UpdateUserInterface(Entity<ShipyardConsoleComponent> ent)
     {
-        ShipyardConsoleBoundUserInterfaceState newState;
-        if (ent.Comp.IdSlot.Item is not { Valid: true })
+        var hasId = ent.Comp.IdSlot.Item is { Valid: true };
+
+        var shuttles = new List<ShipyardShuttleEntry>();
+        foreach (var proto in _prototypeManager.EnumeratePrototypes<ShuttlePrototype>())
         {
-            newState = new ShipyardConsoleBoundUserInterfaceState(false);
-        }
-        else
-        {
-            newState = new ShipyardConsoleBoundUserInterfaceState(true);
+            if (proto.RequiredType == ent.Comp.AllowedType)
+            {
+                shuttles.Add(new ShipyardShuttleEntry
+                {
+                    Id = proto.ID,
+                    Name = Loc.GetString(proto.Name)
+                });
+            }
         }
 
-        _userInterface.SetUiState(ent.Owner, ShipyardConsoleUiKey.Key, newState);
+        var state = new ShipyardConsoleBoundUserInterfaceState(hasId, shuttles);
+        _userInterface.SetUiState(ent.Owner, ShipyardConsoleUiKey.Key, state);
     }
 }

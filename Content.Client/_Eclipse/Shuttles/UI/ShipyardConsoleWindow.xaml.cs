@@ -23,12 +23,17 @@ public sealed partial class ShipyardConsoleWindow : FancyWindow,
     private readonly IGameTiming _timing;
     private List<ShuttlePrototype> _shuttles = new();
     private string? _selectedFilter;
-
+    private ShuttleType _allowedType = ShuttleType.Normal;
     public ShipyardConsoleWindow()
     {
         _timing = IoCManager.Resolve<IGameTiming>();
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
+    }
+
+    public void SetAllowedType(ShuttleType type)
+    {
+        _allowedType = type;
     }
 
     private void PopulateCategories()
@@ -99,16 +104,16 @@ public sealed partial class ShipyardConsoleWindow : FancyWindow,
     {
         IdButton.OnPressed += _ => cb.SendMessage(new ItemSlotButtonPressedEvent(IdCardSlotId));
 
-        _shuttles = _prototypeManager.EnumeratePrototypes<ShuttlePrototype>().ToList();
+        _shuttles = _prototypeManager.EnumeratePrototypes<ShuttlePrototype>()
+            .Where(p => p.RequiredType == _allowedType)
+            .ToList();
         _shuttles.Sort((x, y) => string.Compare(x.Name, y.Name, StringComparison.CurrentCulture));
 
         Categories.OnItemSelected += args =>
         {
             var entry = Categories[args.ItemIndex];
-
             if (entry.Metadata is not string category)
                 return;
-
             _selectedFilter = category;
             PopulateShuttles(cb);
         };
@@ -122,6 +127,7 @@ public sealed partial class ShipyardConsoleWindow : FancyWindow,
             ? Loc.GetString("id-card-console-window-eject-button")
             : Loc.GetString("id-card-console-window-insert-button");
     }
+
 
     protected override void Draw(DrawingHandleScreen handle)
     {

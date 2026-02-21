@@ -1,4 +1,5 @@
 using Content.Shared.Access;
+using Content.Shared.Shuttles.Components;
 using Content.Shared.Station;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -26,4 +27,7 @@ public sealed partial class ShuttlePrototype : IPrototype
 
     [DataField]
     public required StationConfig Station;
+
+    [DataField]
+    public ShuttleType RequiredType = ShuttleType.Normal;
 }

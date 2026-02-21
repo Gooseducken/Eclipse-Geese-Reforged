@@ -17,3 +17,14 @@
   station:
     stationProto: ShuttleStation
     components: []
+
+- type: shuttle
+  id: TestMedical
+  name: TestMedical
+  requiredType: Medical
+  category: shuttle-category-other
+  mapPath: /Maps/_NF/Shuttles/construct.yml
+  buyerAccess: [ShuttleCaptain, ShuttlePilot, ShuttleCrew]
+  station:
+    stationProto: ShuttleStation
+    components: []

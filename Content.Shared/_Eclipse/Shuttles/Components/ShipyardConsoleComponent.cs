@@ -9,6 +9,16 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Shuttles.Components;
 
+public enum ShuttleType : byte
+{
+    Normal,
+    Pirate,
+    Scrap,
+    DSBF,
+    Medical,
+    Frontier
+}
+
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
 public sealed partial class ShipyardConsoleComponent : Component
 {
@@ -40,6 +50,12 @@ public sealed partial class ShipyardConsoleComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<RadioChannelPrototype> RadioChannel;
+
+    /// <summary>
+    /// Console type for shuttle types.
+    /// </summary>
+    [DataField]
+    public ShuttleType AllowedType = ShuttleType.Normal;
 }
 
 [Serializable, NetSerializable]
