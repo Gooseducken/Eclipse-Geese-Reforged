@@ -11,6 +11,7 @@
 - type: shuttle
   id: Construct
   name: shuttle-construct-name
+  requiredType: Normal
   category: shuttle-category-other
   mapPath: /Maps/_NF/Shuttles/construct.yml
   buyerAccess: [ShuttleCaptain, ShuttlePilot, ShuttleCrew]
