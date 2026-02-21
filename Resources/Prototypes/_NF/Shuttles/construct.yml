@@ -11,18 +11,7 @@
 - type: shuttle
   id: Construct
   name: shuttle-construct-name
-  requiredType: Normal
-  category: shuttle-category-other
-  mapPath: /Maps/_NF/Shuttles/construct.yml
-  buyerAccess: [ShuttleCaptain, ShuttlePilot, ShuttleCrew]
-  station:
-    stationProto: ShuttleStation
-    components: []
-
-- type: shuttle
-  id: TestMedical
-  name: TestMedical
-  requiredType: Medical
+  requiredType: Common
   category: shuttle-category-other
   mapPath: /Maps/_NF/Shuttles/construct.yml
   buyerAccess: [ShuttleCaptain, ShuttlePilot, ShuttleCrew]
