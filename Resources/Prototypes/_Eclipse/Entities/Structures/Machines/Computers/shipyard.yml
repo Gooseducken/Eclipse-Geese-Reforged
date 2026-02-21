@@ -48,7 +48,7 @@
         components:
         - IdCard
     radioChannel: Common
-    allowedType: Normal
+    allowedType: Common
   - type: ItemSlots
   - type: ContainerContainer
     containers:
