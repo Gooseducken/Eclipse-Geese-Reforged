@@ -67,3 +67,12 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai
+
+    
+- type: entity
+  parent: ComputerShipyard
+  id: ComputerShipyardMedical
+  name: medical shipyard console
+  components:
+  - type: ShipyardConsole
+    allowedType: Medical
