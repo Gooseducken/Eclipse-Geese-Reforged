@@ -29,5 +29,5 @@ public sealed partial class ShuttlePrototype : IPrototype
     public required StationConfig Station;
 
     [DataField]
-    public ShuttleType RequiredType = ShuttleType.Normal;
+    public ShuttleType RequiredType = ShuttleType.Common;
 }
