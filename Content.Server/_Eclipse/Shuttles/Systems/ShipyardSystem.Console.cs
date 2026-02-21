@@ -150,7 +150,6 @@ public sealed partial class ShipyardSystem
             }
         }
 
-        var state = new ShipyardConsoleBoundUserInterfaceState(hasId, shuttles);
         _userInterface.SetUiState(ent.Owner, ShipyardConsoleUiKey.Key, state);
     }
 }
