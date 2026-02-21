@@ -25,7 +25,7 @@ public sealed class ShipyardConsoleBoundUserInterface : ComputerBoundUserInterfa
     {
         base.Open();
         _consoleComponent = _entMan.GetComponentOrNull<ShipyardConsoleComponent>(Owner);
-        var allowedType = _consoleComponent?.AllowedType ?? ShuttleType.Normal;
+        var allowedType = _consoleComponent?.AllowedType ?? ShuttleType.Common;
 
         _window = new ShipyardConsoleWindow();
         _window.SetAllowedType(allowedType);
