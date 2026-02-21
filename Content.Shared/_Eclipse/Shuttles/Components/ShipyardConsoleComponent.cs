@@ -11,12 +11,13 @@ namespace Content.Shared.Shuttles.Components;
 
 public enum ShuttleType : byte
 {
-    Normal,
+    Common,
     Pirate,
     Scrap,
-    DSBF,
+    SSS,
     Medical,
-    Frontier
+    FrontierStaff,
+    Expeditionary
 }
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
