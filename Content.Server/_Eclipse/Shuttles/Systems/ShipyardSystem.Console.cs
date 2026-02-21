@@ -149,7 +149,5 @@ public sealed partial class ShipyardSystem
                 });
             }
         }
-
-        _userInterface.SetUiState(ent.Owner, ShipyardConsoleUiKey.Key, state);
     }
 }
